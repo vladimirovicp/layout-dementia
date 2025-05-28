@@ -1,0 +1,13 @@
+@use '../../helpers/_mixins.sass' as *;
+@use '../../helpers/_variables.scss' as *;
+
+.header {
+    color: red;
+    display: flex;
+}
+
+@include r($phone) {
+    .header {
+        display: none;
+    }
+}
