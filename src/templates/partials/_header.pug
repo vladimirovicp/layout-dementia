@@ -1,6 +1,12 @@
 header.header
   .container
-    a.logo(href="index.html") LOGO
+    .header__item
+       a(href='index.html' class="header__site-link")
+        .logo.header__site-logo
+          img(src='/img/logo.png', class="header__site-img" alt="логотип Хэсэд Авраам")
+        .header__site-text
+          .header__site-slogan Проект благотворительного центра
+          .header__site-name Хэсэд Авраам
 
     h1.header This is the Header
     ul

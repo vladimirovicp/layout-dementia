@@ -2,8 +2,51 @@
 @use '../../helpers/_variables.scss' as *;
 
 .header {
-    color: red;
-    display: flex;
+
+    &__item{
+
+    }
+
+    &__site{
+        &-link{
+            display: flex;
+            gap: 13px;
+            text-decoration: none;
+            color: #35333D;
+        }
+
+        &-logo{
+            height: 50px;
+        }
+
+        &-img{
+            height: 50px;
+            width: auto;
+        }
+
+        &-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+        }
+
+        &-slogan{
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &-name{
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 1;
+
+        }
+
+    }
+
 }
 
 @include r($phone) {
