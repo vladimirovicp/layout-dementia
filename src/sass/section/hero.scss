@@ -1,0 +1,43 @@
+.hero{
+    background: #F3F5FD;
+    padding-bottom: 5rem;
+    &__item{
+       
+
+    }
+
+    &__title{
+        font-size: 9.6rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 100%;
+
+        span{
+            display: block;
+        }
+    }
+
+    &__slogan{
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__picture{
+        position: relative;
+        display: block;
+        &:before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 14rem;
+            height: 14rem;
+            background-color: #f3f5fd;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -7rem;
+        }
+    }
+}

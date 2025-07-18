@@ -5,24 +5,29 @@
     padding: 4rem 0;
     background: #F3F5FD;
 
-    &__item{
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
 
+    &__item{
+        width: 33.5rem;
     }
 
     &__site{
         &-link{
             display: flex;
-            gap: 13px;
+            gap: 1.3rem;
             text-decoration: none;
             color: #35333D;
         }
 
         &-logo{
-            height: 50px;
+            height: 6rem;
         }
 
         &-img{
-            height: 50px;
+            height: 6rem;
             width: auto;
         }
 
@@ -34,14 +39,14 @@
         }
 
         &-slogan{
-            font-size: 10px;
+            font-size: 1.3rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
         }
 
         &-name{
-            font-size: 24px;
+            font-size: 3.2rem;
             font-weight: 900;
             line-height: 1;
 
