@@ -1,6 +1,12 @@
 .hero{
     background: #F3F5FD;
     padding-bottom: 5rem;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__item{
        
 
@@ -18,10 +24,11 @@
     }
 
     &__slogan{
-        font-size: 32px;
+        font-size: 3.2rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        max-width: 45.3rem;
     }
 
     &__picture{
