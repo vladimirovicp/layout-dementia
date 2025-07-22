@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","names":["console","log","console","log"],"sources":["../../src/js/lib/app.js","../../src/js/main.js"],"sourcesContent":["console.log('Привет!!!')","// import \"./lib/app\";\r\n\r\nconsole.log('Привет!')\r\n"],"mappings":"AAAAA,OAAO,CAACC,GAAG,CAAC,WAAW,CAAC;ACAxB;;AAEAC,OAAO,CAACC,GAAG,CAAC,SAAS,CAAC","ignoreList":[]}
