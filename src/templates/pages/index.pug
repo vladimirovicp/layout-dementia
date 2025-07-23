@@ -24,7 +24,7 @@ block content
         'description': 'Я подозреваю деменцию у себя или у родственника: что делать?'
       },
       {
-        'name': 'square-academic-cap',
+        'name': 'easel',
         'title': 'Искусство',
         'description': 'Восприятие деменции в литературе, театре и кино'
       },
@@ -49,41 +49,24 @@ block content
             img(src='./img/section/hero-img.png' alt="") 
     section.hero-categories
       .container
-        .cards 
+        .cards.cards__circle-bottom
+          - var featured = true
           each el in heroCategories
             .card 
               .card__content 
                 .card-top__img 
                   +svgData(el.name)
-                .card-top__title 
+                .card__title 
                   != el.title
-                .card-top__description 
+                .card__description 
                   != el.description
+              
+              div(class=featured ? 'card__circle featured' : 'card__circle')
+                +svgDataArrow('topRight')
+            - featured = false
 
-        .cards 
-          .card 
-            .card__content 
-              .card-top__img 
-                +svgData(heroCategories[0].name)
-              .card-top__title 
-                != heroCategories[0]['title']
-              .card-top__description 
-                != heroCategories[0]['description']
-          .card 
-            .card-top__img
-              include ../../icons/categories/book.svg
-            .card-top__title Конференции
-            .card-top__description Материалы отраслевых мероприятий о деменции
-          .card 
-            .card-top__img
-              include ../../icons/categories/sheet-and-pen.svg
-            .card-top__title Рекомендации
-            .card-top__description Я подозреваю деменцию у себя или у родственника: что делать?
-          .card
-            .card-top__img
-              include ../../icons/categories/square-academic-cap.svg
-            .card-top__title Искусство
-            .card-top__description Восприятие деменции в литературе, театре и кино
+    
+
 
 
     h2 Страницы сайта
