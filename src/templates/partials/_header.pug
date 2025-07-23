@@ -1,11 +1,12 @@
-header
+header.header
   .container
-    a.logo(href="index.html") LOGO
-
-
-    h1.header This is the Header
-    ul
-      li: a(href="index.html") Главная
-      li: a(href="about.html") О нас
-      li: a(href="contact.html") Контакты
-      li: a(href="example.html") Пример`
+    .header__item
+       a(href='index.html' class="header__site-link")
+        .logo.header__site-logo
+          img(src='./img/logo.png', class="header__site-img" alt="логотип Хэсэд Авраам")
+        .header__site-text
+          .header__site-slogan Проект благотворительного центра
+          .header__site-name Хэсэд Авраам
+    .header__item Меню
+    .header__item поиск
+        

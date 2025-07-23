@@ -2,8 +2,58 @@
 @use '../../helpers/_variables.scss' as *;
 
 .header {
-    color: red;
-    display: flex;
+    padding: 4rem 0;
+    background: #F3F5FD;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item{
+        width: 33.5rem;
+    }
+
+    &__site{
+        &-link{
+            display: flex;
+            gap: 1.3rem;
+            text-decoration: none;
+            color: #35333D;
+        }
+
+        &-logo{
+            height: 6rem;
+        }
+
+        &-img{
+            height: 6rem;
+            width: auto;
+        }
+
+        &-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+        }
+
+        &-slogan{
+            font-size: 1.3rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &-name{
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1;
+
+        }
+
+    }
+
 }
 
 @include r($phone) {

@@ -1,10 +1,74 @@
 extends ../layouts/_layout.pug
 
 block title
-  title Все страницы
+  title Все страницы - index.pug
+
 
 block content
+
+  - 
+    var heroCategories = [
+      {
+        'name': 'square-academic-cap',
+        'title': 'Оставить заявку',
+        'description': 'Заявка на обучение, стажировку или консультацию'
+      },
+      {
+        'name': 'book',
+        'title': 'Конференции',
+        'description': 'Материалы отраслевых мероприятий о деменции'
+      },
+      {
+        'name': 'sheet-and-pen',
+        'title': 'Рекомендации',
+        'description': 'Я подозреваю деменцию у себя или у родственника: что делать?'
+      },
+      {
+        'name': 'easel',
+        'title': 'Искусство',
+        'description': 'Восприятие деменции в литературе, театре и кино'
+      },
+      
+    ]
+
   main
+    section.hero
+      .container
+        .hero__item
+          .hero__title
+            span.text-accent Деменция.
+            span Главное
+          .hero__slogan Актуальные знания от специалистов-практиков с 30-летним опытом
+        .hero__item.hero__item-picture
+          a(href="index.html" class="hero__anchor")
+            .hero__circle
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16L2.92357e-07 9.88494L1.46757 8.76127L8 13.7559L14.5304 8.76128L16 9.88494L8 16ZM8 11.2387L5.1999e-07 5.12366L1.46757 4L8 8.99458L14.5304 4L16 5.12208L8 11.2387Z" fill="#35333D"/>
+              </svg>
+          picture.hero__picture
+            img(src='./img/section/hero-img.png' alt="") 
+    section.hero-categories
+      .container
+        .cards.cards__circle-bottom
+          - var featured = true
+          each el in heroCategories
+            .card 
+              .card__content 
+                .card-top__img 
+                  +svgData(el.name)
+                .card__title 
+                  != el.title
+                .card__description 
+                  != el.description
+              
+              div(class=featured ? 'card__circle featured' : 'card__circle')
+                +svgDataArrow('topRight')
+            - featured = false
+
+    
+
+
+
     h2 Страницы сайта
     ul
       li: a(href="index.html") Главная
