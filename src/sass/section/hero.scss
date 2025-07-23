@@ -63,31 +63,14 @@
 
     &__circle{
         position: absolute;
-        width: 11rem;
-        height: 11rem;
+        width: 8rem;
+        height: 8rem;
         background: linear-gradient(87deg, #f6ac42 2.75%, #fbcf8f 97.36%);
         border-radius: 50%;
         z-index: 1;
-        top: 50%;
-        transform: translateY(-50%);
-        left: -6rem;
-        // &:before{
-
-        //     content: '';
-        //     position: absolute;
-        //     display: block;
-        //     width: 1.6rem;
-        //     height: 1.6rem;
-        //     //background-color: red;
-        //     left: 50%;
-        //     top: 50%;
-        //     transform: translate(-50%, -50%);
-
-        //     background-image: url(./icons/two-downward-arrows.svg);
-        // }
-
-        //two-downward-arrows.svg
-
+        top: -4rem;
+        transform: translateX(-50%);
+        left: 50%;
         svg{
             position: absolute;
             left: 50%;
@@ -140,6 +123,14 @@
                 transform: translateY(-50%);
                 left: -7rem;
             }
+        }
+
+        &__circle{
+            width: 11rem;
+            height: 11rem;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -6rem;
         }
     }
 

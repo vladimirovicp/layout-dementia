@@ -3,7 +3,34 @@ extends ../layouts/_layout.pug
 block title
   title Все страницы - index.pug
 
+
 block content
+
+  - 
+    var heroCategories = [
+      {
+        'name': 'square-academic-cap',
+        'title': 'Оставить заявку',
+        'description': 'Заявка на обучение, стажировку или консультацию'
+      },
+      {
+        'name': 'book',
+        'title': 'Конференции',
+        'description': 'Материалы отраслевых мероприятий о деменции'
+      },
+      {
+        'name': 'sheet-and-pen',
+        'title': 'Рекомендации',
+        'description': 'Я подозреваю деменцию у себя или у родственника: что делать?'
+      },
+      {
+        'name': 'square-academic-cap',
+        'title': 'Искусство',
+        'description': 'Восприятие деменции в литературе, театре и кино'
+      },
+      
+    ]
+
   main
     section.hero
       .container
@@ -20,8 +47,43 @@ block content
               </svg>
           picture.hero__picture
             img(src='./img/section/hero-img.png' alt="") 
+    section.hero-categories
+      .container
+        .cards 
+          each el in heroCategories
+            .card 
+              .card__content 
+                .card-top__img 
+                  +svgData(el.name)
+                .card-top__title 
+                  != el.title
+                .card-top__description 
+                  != el.description
 
-
+        .cards 
+          .card 
+            .card__content 
+              .card-top__img 
+                +svgData(heroCategories[0].name)
+              .card-top__title 
+                != heroCategories[0]['title']
+              .card-top__description 
+                != heroCategories[0]['description']
+          .card 
+            .card-top__img
+              include ../../icons/categories/book.svg
+            .card-top__title Конференции
+            .card-top__description Материалы отраслевых мероприятий о деменции
+          .card 
+            .card-top__img
+              include ../../icons/categories/sheet-and-pen.svg
+            .card-top__title Рекомендации
+            .card-top__description Я подозреваю деменцию у себя или у родственника: что делать?
+          .card
+            .card-top__img
+              include ../../icons/categories/square-academic-cap.svg
+            .card-top__title Искусство
+            .card-top__description Восприятие деменции в литературе, театре и кино
 
 
     h2 Страницы сайта
