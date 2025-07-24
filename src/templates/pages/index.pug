@@ -52,7 +52,7 @@ block content
         .cards.cards__circle-bottom
           - var featured = true
           each el in heroCategories
-            .card 
+            a(href="#" class= featured ? 'card card__link featured' : 'card card__link') 
               .card__content 
                 .card-top__img 
                   +svgData(el.name)
@@ -61,9 +61,23 @@ block content
                 .card__description 
                   != el.description
               
-              div(class=featured ? 'card__circle featured' : 'card__circle')
+              div(class="card__circle")
                 +svgDataArrow('topRight')
             - featured = false
+    section.info
+      .container
+        .info__title Поддержка людей с деменцией и их близких — одно из приоритетных направлений работы Благотворительного центра «Хэсэд Авраам» в Санкт-Петербурге
+        .info__text.block-max-width-1110.text-center Созданный на его базе в 2023 году Центр знаний о деменции призван консолидировать усилия профессионального сообщества в борьбе с деменцией, координировать обмен знаниями и практическим опытом среди специалистов со всей России, а также популяризировать актуальную информацию о когнитивных нарушениях
+        .text-center
+          a(href="#" class="btn btn__icon")
+            span.btn__text Подробнее
+            span.btn__svg
+              +svgDataArrow('arrow-right')
+      section.info-people
+        .container
+          .cards
+          .cards
+          .cards  
 
     
 

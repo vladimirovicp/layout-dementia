@@ -1,0 +1,56 @@
+.btn{
+
+    display: inline-flex;
+    padding: 1.8rem 3rem 2rem;
+    //background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%); 
+    //background-size: 100% 100%;
+    color: #35333D; 
+    border-radius: 9.9rem; 
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    &__icon{
+
+    }
+
+    &__svg{
+        padding-left: 2rem;
+        svg{
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+}
+
+
+@media (hover: hover){
+   .btn{
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 1;
+        }
+        &:before{
+            transition: opacity 0.8s ease-in-out;
+            background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
+            z-index: -1;
+        }
+        &:after {
+            background-image: linear-gradient(87deg, #B3DBFF 2.75%, #D5EBFF 97.36%);
+            z-index: -2;
+        }
+
+        &:hover{
+            &:before{
+                opacity: 0;
+            }
+        }
+   } 
+}
+   
