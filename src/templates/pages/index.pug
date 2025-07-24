@@ -52,7 +52,7 @@ block content
         .cards.cards__circle-bottom
           - var featured = true
           each el in heroCategories
-            .card 
+            a(href="#" class= featured ? 'card card__link featured' : 'card card__link') 
               .card__content 
                 .card-top__img 
                   +svgData(el.name)
@@ -61,7 +61,7 @@ block content
                 .card__description 
                   != el.description
               
-              div(class=featured ? 'card__circle featured' : 'card__circle')
+              div(class="card__circle")
                 +svgDataArrow('topRight')
             - featured = false
 
