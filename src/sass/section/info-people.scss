@@ -1,0 +1,53 @@
+.info-people{
+    .cards{
+        flex-wrap: wrap;
+    }
+
+    .card__description{
+        padding-bottom: 4rem;
+    }
+
+    &__colleagues{
+        flex-basis: 100%;
+        box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
+        border-radius: 3.3rem;
+        padding: 6rem 5rem 2rem;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__employees{
+        padding: 5rem 6rem 4.6rem 5.1rem;
+        position: relative;
+        .content{
+            max-width: 4.4rem;
+        }
+        .card__img-last{
+            position: absolute;
+            bottom: 4.6rem;
+            right: 5.1rem;
+            width: 19rem;
+            height: 33.3rem;
+        }
+    }
+
+    &__list-ico{
+        padding-bottom: 2rem;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 3rem;
+        font-size: 2.6rem;
+        font-weight: 700;
+        .svg{
+            padding-right: 2rem;
+            svg{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+}

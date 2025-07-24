@@ -58,7 +58,7 @@ block content
                   +svgData(el.name)
                 .card__title 
                   != el.title
-                .card__description 
+                .card__description.text-center 
                   != el.description
               
               div(class="card__circle")
@@ -73,11 +73,62 @@ block content
             span.btn__text Подробнее
             span.btn__svg
               +svgDataArrow('arrow-right')
-      section.info-people
-        .container
-          .cards
-          .cards
-          .cards  
+
+    section.info-people
+      .container
+        .cards
+          .card.info-people__colleagues
+            .content
+              .card__title-red Коллегам
+              .card__description в сфере заботы о людях с деменцией
+              ul.info-people__list-ico
+                li.info-people__list-item  
+                  span.svg
+                    +svgDataIco('training')
+                  span.text Обучение
+                li.info-people__list-item
+                  span.svg
+                    +svgDataIco('briefcase')
+                  span.text Стажировка
+                li.info-people__list-item
+                  span.svg
+                    +svgDataIco('book-open')
+                  span.text База знаний
+              a(href="#" class="btn__red btn__icon")
+                span.btn__text Подробнее
+                span.btn__svg
+                  +svgDataArrow('arrow-right-white')
+            .card__img-last
+              picture
+                img(src='./img/section/colleagues.png' class="img-adaptive" alt="Коллегам") 
+              
+          .card.info-people__employees
+            .content
+              .card__title-red Сотрудникам
+              .card__description банков, МФЦ и других учреждений, которые посещают люди с когнитивными нарушениями
+              ul.info-people__list-ico
+                li.info-people__list-item  
+                  span.svg
+                    +svgDataIco('message')
+                  span.text Руководство по общению
+                li.info-people__list-item
+                  span.svg
+                    +svgDataIco('sheet-text')
+                  span.text Полезные практики
+                
+              a(href="#" class="btn__red btn__icon")
+                span.btn__text Подробнее
+                span.btn__svg
+                  +svgDataArrow('arrow-right-white')
+            .card__img-last
+              picture
+                img(src='./img/section/employees.png' class="img-adaptive" alt="Сотрудникам")
+
+
+          .card.info-people__relatives
+            .content
+              .card__title-red Родственникам 
+            .card__img-last
 
     
 
