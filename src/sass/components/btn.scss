@@ -1,7 +1,7 @@
 .btn{
 
     display: inline-flex;
-    padding: 1.8rem 3rem 2rem;
+    padding: 1.8rem 3rem 1.5rem;
     color: #35333D; 
     border-radius: 9.9rem; 
     cursor: pointer;
@@ -34,7 +34,8 @@
 
     &__red{
         display: inline-flex;
-        padding: 1.8rem 3rem 2rem;
+        //padding: 1.8rem 3rem 2rem;
+        padding: 1.8rem 3rem 1.2rem;
         color: #fff; 
         border-radius: 9.9rem; 
         cursor: pointer;
@@ -90,4 +91,11 @@
         }
    } 
 }
+
+@media (max-width: 768px){
+    .btn{
+
+    }
+}
+
    
