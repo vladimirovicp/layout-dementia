@@ -17,6 +17,13 @@ a
     color: #35333D
     text-decoration: none
 
+a.link__red
+    color: #9E396E
+    font-weight: 700
+    .svg
+        fill: #9E396E
+
+
 .text-accent
     color: #9E396E
 
@@ -36,3 +43,12 @@ a
     html
         font-size: 10px
 
+@media (hover: hover)
+    a.link__red
+        transition: color .4s ease-in-out
+        .svg
+            transition: fill .4s ease-in-out
+        &:hover
+           color: #D24A91
+           .svg
+                fill:#D24A91

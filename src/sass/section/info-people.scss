@@ -153,7 +153,7 @@
         }
 
         &__employees, &__relatives{
-            padding: 5rem 6rem 4.6rem 5.1rem;
+            padding: 5rem 6rem 4.6rem 6.2rem;
             position: relative;
             height: 53rem;
         }
@@ -170,6 +170,10 @@
                 height: 33.3rem;
                 margin: unset;
             }
+
+            .info-people__list-ico{
+                max-width: 35rem;
+            }
         }
 
         &__relatives{
@@ -178,8 +182,8 @@
             }
             .card__img-last{
                 position: absolute;
-                bottom: 4.6rem;
-                right: 5.1rem;
+                bottom: 4rem;
+                right: 2rem;
                 width: 28.2rem;
                 height: 31.2rem;
                 margin: unset;
