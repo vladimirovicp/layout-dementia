@@ -58,6 +58,21 @@
 
 @include r($phone) {
     .header {
-        display: none;
+        //display: none;
+        &__nav{
+            display: none;
+        }
+        &__search{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .hero{
+        
+        &__title{
+            padding-bottom: 2rem;
+        }
     }
 }

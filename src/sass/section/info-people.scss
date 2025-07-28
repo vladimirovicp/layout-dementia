@@ -30,9 +30,7 @@
     }
 
     &__employees, &__relatives{
-        padding: 5rem 4rem;
-        //position: relative;
-        //height: 53rem;
+        padding: 6rem 4rem;
         box-shadow: 0 0 5rem 0 rgba(182, 218, 251, 0.50); 
     }
 
@@ -114,12 +112,29 @@
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
     .info-people{
+        .cards{
+            gap: 3rem;
+        }
+
         .card{
             &__title-red, &__description{
                 text-align: center;
             }
+
+            &__title{
+                font-size: 4rem;
+            }
+
+            &__description{
+                //padding-bottom: 3.6rem;
+                max-width: 100%;
+            }
+        }
+
+        &__list-item{
+            padding-bottom: 4rem;
         }
 
         .btn__container{
@@ -131,7 +146,22 @@
             .info-people__list-ico{
                 padding-left: 2.5rem;
             }
+            .card__title{
+                padding-bottom: .5rem;
+            }
         }
+
+        &__employees{
+            &.card{
+                padding: 5rem 4rem 3rem;
+            }     
+        }
+
+        // &__colleagues{
+        //     &.card{
+        //         padding: 5rem 4rem 3rem;
+        //     }
+        // }
 
     }
     
@@ -190,6 +220,7 @@
             }
 
         }
+
 
         &__background{
             width: 158rem;
