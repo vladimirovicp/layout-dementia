@@ -2,7 +2,7 @@
 @use '../../helpers/_variables.scss' as *;
 
 .header {
-    padding: 4rem 0;
+    padding: 3.6rem 0 4.2rem;
     background: #F3F5FD;
 
     .container{
@@ -58,6 +58,21 @@
 
 @include r($phone) {
     .header {
-        display: none;
+        //display: none;
+        &__nav{
+            display: none;
+        }
+        &__search{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .hero{
+        
+        &__title{
+            padding-bottom: 2rem;
+        }
     }
 }

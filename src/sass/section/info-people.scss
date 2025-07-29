@@ -1,0 +1,247 @@
+.info-people{
+    position: relative;
+    padding-bottom: 9rem;
+    .cards{
+        flex-wrap: wrap;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card__description{
+        padding-bottom: 4rem;
+    }
+
+    &__colleagues{
+        flex-basis: 100%;
+        box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
+        padding: 5rem 1.5rem 3rem;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__colleagues, &__employees, &__relatives{
+        border-radius: 3.3rem;
+        background-color: #fff;
+    }
+
+    &__employees, &__relatives{
+        padding: 6rem 4rem;
+        box-shadow: 0 0 5rem 0 rgba(182, 218, 251, 0.50); 
+    }
+
+    &__employees{
+        .content{
+            max-width: 44rem;
+        }
+        .card__img-last{
+            width: 16.7rem;
+            height: 29.4rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__relatives{
+        .content{
+            max-width: 40rem;
+        }
+        .card__img-last{
+            width: 21.8rem;
+            height: 24.1rem;
+            margin: 0 auto;
+        }
+
+    }
+
+    &__list{
+        &-ico{
+            padding-bottom: 2rem;
+        }
+        &-link{
+            display: flex;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 3rem;
+        font-size: 2.6rem;
+        font-weight: 700;
+        .svg{
+            padding-right: 2rem;
+            svg{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+
+    &__background{
+        position: absolute;
+        background-color: #F3F5FD;
+        width: 100%;
+        height: 217.8rem;
+        z-index: -1;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 4.4rem;
+    }
+
+    .btn__red{
+        z-index: 1;
+    }
+           
+}
+
+@media (hover: hover){
+    .info-people{
+        &__list{
+            &-link{
+                transition: color 0.4s ease-in-out;
+                &:hover{
+                    color: #9E396E;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .info-people{
+        .cards{
+            gap: 3rem;
+        }
+
+        .card{
+            &__title-red, &__description{
+                text-align: center;
+            }
+
+            &__title{
+                font-size: 4rem;
+            }
+
+            &__description{
+                //padding-bottom: 3.6rem;
+                max-width: 100%;
+            }
+        }
+
+        &__list-item{
+            padding-bottom: 4rem;
+        }
+
+        .btn__container{
+            text-align: center;
+            padding-bottom: 4rem;
+        }
+
+        &__colleagues{
+            .info-people__list-ico{
+                padding-left: 2.5rem;
+            }
+            .card__title{
+                padding-bottom: .5rem;
+            }
+        }
+
+        &__employees{
+            &.card{
+                padding: 5rem 4rem 3rem;
+            }     
+        }
+
+        &__relatives{
+            &.card{
+                padding: 5rem 4rem 3rem;
+            }     
+        }
+
+        // &__colleagues{
+        //     &.card{
+        //         padding: 5rem 4rem 3rem;
+        //     }
+        // }
+
+    }
+    
+}
+
+@media (min-width: 768px){
+    .info-people{
+        .card{
+            flex-direction: row;
+
+            &__list-item {
+                padding-bottom: 3rem;
+            }
+
+        }
+
+        &__colleagues{
+            padding: 5rem 6.1rem 2rem;
+        }
+
+        &__employees, &__relatives{
+            padding: 5rem 6rem 4.6rem 6.2rem;
+            position: relative;
+            height: 53rem;
+
+            .card__title{
+                padding-bottom: 0;
+                text-align: left;
+                font-size: 4.8rem;
+            }
+        }
+
+        &__employees{
+            .content{
+                max-width: 44rem;
+            }
+            .card__img-last{
+                position: absolute;
+                bottom: 4.6rem;
+                right: 5.1rem;
+                width: 19rem;
+                height: 33.3rem;
+                margin: unset;
+            }
+
+            .info-people__list-ico{
+                max-width: 35rem;
+            }
+        }
+
+        &__relatives{
+            .content{
+                max-width: 40rem;
+            }
+            .card__img-last{
+                position: absolute;
+                bottom: 4rem;
+                right: 2rem;
+                width: 28.2rem;
+                height: 31.2rem;
+                margin: unset;
+            }
+
+        }
+
+
+        &__background{
+            width: 158rem;
+            max-width: 100%;
+            height: 90rem;
+        }
+
+
+
+
+    }
+}

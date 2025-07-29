@@ -1,18 +1,27 @@
 .btn{
 
     display: inline-flex;
-    padding: 1.8rem 3rem 2rem;
-    //background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%); 
-    //background-size: 100% 100%;
+    padding: 1.8rem 3rem 1.5rem;
     color: #35333D; 
     border-radius: 9.9rem; 
     cursor: pointer;
-
     position: relative;
     overflow: hidden;
 
-    &__icon{
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+    }
 
+    &:before{
+        transition: opacity 0.8s ease-in-out;
+        background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
+        z-index: -1;
     }
 
     &__svg{
@@ -22,11 +31,18 @@
             height: 2.4rem;
         }
     }
-}
+
+    &__red{
+        display: inline-flex;
+        //padding: 1.8rem 3rem 2rem;
+        padding: 1.8rem 3rem 1.2rem;
+        color: #fff; 
+        border-radius: 9.9rem; 
+        cursor: pointer;
+        position: relative;
+        overflow: hidden; 
 
 
-@media (hover: hover){
-   .btn{
         &:before, &:after {
             content: '';
             position: absolute;
@@ -36,11 +52,20 @@
             bottom: 0;
             opacity: 1;
         }
+
         &:before{
             transition: opacity 0.8s ease-in-out;
-            background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
+            background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
             z-index: -1;
         }
+        
+    }
+}
+
+
+@media (hover: hover){
+   .btn{
+
         &:after {
             background-image: linear-gradient(87deg, #B3DBFF 2.75%, #D5EBFF 97.36%);
             z-index: -2;
@@ -51,6 +76,26 @@
                 opacity: 0;
             }
         }
+
+        &__red{
+            &:after {
+                background-image: linear-gradient(87deg, #A6316E 2.75%, #F66DB5 97.36%);
+                z-index: -2;
+            }
+
+            &:hover{
+                &:before{
+                    opacity: 0;
+                }
+            }
+        }
    } 
 }
+
+@media (max-width: 768px){
+    .btn{
+
+    }
+}
+
    

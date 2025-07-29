@@ -1,6 +1,6 @@
 .hero{
     background: #F3F5FD;
-    padding-bottom: 7rem;
+    padding-bottom: 4.8rem;
 
     .container{
         display: flex;
@@ -104,6 +104,8 @@
         }
 
         &__title{
+            padding-top: 2.3rem;
+            padding-bottom: 1.8rem;
             font-size: 9.6rem;
         }
 
