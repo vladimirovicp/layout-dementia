@@ -157,6 +157,12 @@
             }     
         }
 
+        &__relatives{
+            &.card{
+                padding: 5rem 4rem 3rem;
+            }     
+        }
+
         // &__colleagues{
         //     &.card{
         //         padding: 5rem 4rem 3rem;
@@ -186,6 +192,12 @@
             padding: 5rem 6rem 4.6rem 6.2rem;
             position: relative;
             height: 53rem;
+
+            .card__title{
+                padding-bottom: 0;
+                text-align: left;
+                font-size: 4.8rem;
+            }
         }
 
         &__employees{
