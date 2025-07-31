@@ -1,0 +1,32 @@
+.front-facts{
+    padding: 9rem 0;
+
+    &__title{
+        padding-bottom: 1rem;
+
+        span{
+            font-weight: 700;
+            font-size: 2.6rem;
+            display: block;
+        }
+
+        .text-accent{
+            font-weight: 900;
+            font-size: 7.2rem;
+        }
+    }
+
+    .stats{
+        max-width: 57.2rem;
+        padding-bottom: 6rem;
+    }
+
+    .awareness{
+        &__title{
+            font-size: 2.6rem;
+            font-weight: 900;
+
+            width: 45.3rem;
+        }
+    }
+}
