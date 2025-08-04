@@ -28,8 +28,9 @@ block content
         'title': 'Искусство',
         'description': 'Восприятие деменции в литературе, театре и кино'
       },
-      
     ]
+
+
 
   main
     section.hero
@@ -174,7 +175,27 @@ block content
               
 
 
-          .card 2
+          .card.front-facts__sources
+            .awareness__title Ключевые источники информации о деменции*
+            .item
+              .progress__box
+                .progress__ico
+                  +svgDataIco('person')
+                .progress__bar-text
+                  .progress.progress__green
+                    span(class="progress-bar" data-progress="42")
+                  .progress__text личный опыт (наличие знакомых с деменцией)
+
+              .progress__box
+                .progress__ico
+                  +svgDataIco('person')
+                .progress__bar-text
+                  .progress.progress__light-blue
+                    span(class="progress-bar" data-progress="42")
+                  .progress__text интернет
+
+                  
+
     
 
 
