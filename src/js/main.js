@@ -1,55 +1,52 @@
-// import "./lib/app";
+//const appModule = require('./lib/app');
 
-console.log('Привет!')
+//import "./lib/app"
+// import "./lib/swiper/swiper-bundle.min.css";
+// import "./lib/swiper/swiper-bundle.min.js";
 
+//import "../lib/swiper/swiper-bundle.min.js";
 
-// $(".progress span").each(function () {
-//   $(this).animate(
-//     {
-//       width: $(this).attr("data-progress") + "%",
-//     },
-//     1000
-//   );
-//   $(this).text($(this).attr("data-progress") + "%");
-// });
-
-
+//console.log('Привет main!');
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Получаем все элементы span внутри элементов с классом progress
   const progressSpans = document.querySelectorAll('.progress-bar');
-
-  // Перебираем каждый элемент span
   progressSpans.forEach(function(span) {
-    // Получаем значение data-progress
-    // const progress = span.getAttribute('data-progress');
-
-    // // Устанавливаем ширину и текст
-    // span.style.width = progress + '%';
-    // //span.textContent = progress + '%';
-
-    // const parent = span.parentElement;
-    // const progressText = progress + '%';
-    //  parent.appendChild(progressText);
-
-
     const progress = span.getAttribute('data-progress');
-
-    // Устанавливаем ширину для span
     span.style.width = progress + '%';
 
-    // Создаем новый элемент для отображения текста
     const progressText = document.createElement('div');
     progressText.className = 'progress__number';
     progressText.textContent = progress + '%';
 
-    // Добавляем текстовый элемент в родителя
     const parent = span.parentElement;
     parent.appendChild(progressText);
-
 
   });
 });
 
 
+const swiperHero = new Swiper('.hero__slider', {
+    // direction: 'vertical',
+    loop: true,
+    spaceBetween: 30,
+
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+
+    pagination: {
+        el: '.hero__pagination',
+    },
+
+    navigation: {
+        nextEl: '.hero__arrow-next',
+        prevEl: '.hero__arrow-prev',
+    },
+
+      scrollbar: {
+    el: '.hero__swiper-scrollbar',
+  },
+
+});
 
