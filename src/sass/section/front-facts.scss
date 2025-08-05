@@ -1,0 +1,87 @@
+.front-facts{
+    padding: 9rem 0;
+
+    &__title{
+        padding-bottom: 1rem;
+
+        span{
+            font-weight: 700;
+            font-size: 2.6rem;
+            display: block;
+        }
+
+        .text-accent{
+            font-weight: 900;
+            font-size: 7.2rem;
+        }
+    }
+
+    &__sources{
+        .awareness__title{
+            padding-bottom: 5rem;
+
+        }
+
+        .item__last{
+            padding-top: 2rem;
+            padding-bottom: 7rem;
+        }
+
+    }
+
+    .stats{
+        max-width: 57.2rem;
+        padding-bottom: 6rem;
+    }
+
+    .awareness{
+        &__title{
+            font-size: 2.6rem;
+            font-weight: 900;
+            padding-bottom: 4rem;
+        }
+
+        &__desktop{
+            display: none;
+        }
+
+        &__mobile{
+            width: 40.7rem;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .front-facts{
+        .awareness{
+
+            &__title{
+                width: 45.3rem;
+                padding-bottom: 0;
+            }
+            &__desktop{
+                display: block;
+            }
+
+            &__mobile{
+                display: none;
+            }
+
+            &__picture{
+                width: 57.2rem;
+            }
+        }
+
+        &__sources{
+            .item__last{
+                padding-top: 2rem;
+                padding-bottom: 0;
+            } 
+        }
+
+        
+    }
+
+}
