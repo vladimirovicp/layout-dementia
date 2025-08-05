@@ -28,8 +28,40 @@ block content
         'title': 'Искусство',
         'description': 'Восприятие деменции в литературе, театре и кино'
       },
-    ]
+    ];
 
+    var sources = [
+      {
+        'title': 'Ключевые источники информации о деменции*',
+        'class': 'progress__green',
+        'dataProgress': '42',
+        'icoName': 'person',
+      },
+      {
+        'title': 'интернет',
+        'class': 'progress__light-blue',
+        'dataProgress': '30',
+        'icoName': 'training',
+      },
+      {
+        'title': 'телевидение',
+        'class': 'progress__orange',
+        'dataProgress': '24',
+        'icoName': 'tv',
+      },
+      {
+        'title': 'литература, кино',
+        'class': 'progress__purple',
+        'dataProgress': '14',
+        'icoName': 'play',
+      },
+      {
+        'title': 'профессиональный опыт и знания',
+        'class': 'progress__coral',
+        'dataProgress': '13',
+        'icoName': 'briefcase2',
+      },
+    ];
 
 
   main
@@ -169,30 +201,33 @@ block content
             .item.awareness
               .awareness__title Осведомленность россиян о проблеме деменции*
 
-              picture.awareness__picture
-                img(src='./img/section/awareness.png' alt="") 
-
-              
-
-
+              picture.awareness__picture.awareness__desktop
+                img(src='./img/section/awareness.png' class="img-adaptive" alt="") 
+              picture.awareness__picture.awareness__mobile
+                img(src='./img/section/awareness-mobile.png' class="img-adaptive" alt="") 
+      
           .card.front-facts__sources
             .awareness__title Ключевые источники информации о деменции*
             .item
-              .progress__box
-                .progress__ico
-                  +svgDataIco('person')
-                .progress__bar-text
-                  .progress.progress__green
-                    span(class="progress-bar" data-progress="42")
-                  .progress__text личный опыт (наличие знакомых с деменцией)
+              each source in sources
+                div(class = `progress__box ${source.class}`)
+                  .progress__ico
+                    +svgDataIco(source.icoName)
+                  .progress__bar-text
+                    .progress
+                      span(class="progress-bar" data-progress=`${source.dataProgress}`)
+                    .progress__text 
+                      != source.title
+            .item.item__last
+              .text-center * - по материалам опроса 
+                a(href="#" class="link__red") ВЦИОМ
+                | , 2023 год
 
-              .progress__box
-                .progress__ico
-                  +svgDataIco('person')
-                .progress__bar-text
-                  .progress.progress__light-blue
-                    span(class="progress-bar" data-progress="42")
-                  .progress__text интернет
+        .text-center
+          a(href="#" class="btn btn__icon")
+            span.btn__text В базу знаний
+            span.btn__svg
+              +svgDataArrow('topRight')
 
                   
 
