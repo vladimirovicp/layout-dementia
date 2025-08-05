@@ -25,23 +25,24 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-const swiperHero = new Swiper('.hero__slider', {
+const swiperHero = new Swiper('.news__slider', {
     // direction: 'vertical',
     loop: true,
+    slidesPerView: 3,
     spaceBetween: 30,
 
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
+    // effect: 'fade',
+    // fadeEffect: {
+    //     crossFade: true
+    // },
 
     pagination: {
-        el: '.hero__pagination',
+        el: '.news__pagination',
     },
 
     navigation: {
-        nextEl: '.hero__arrow-next',
-        prevEl: '.hero__arrow-prev',
+        nextEl: '.news__arrow-next',
+        prevEl: '.news__arrow-prev',
     },
 
       scrollbar: {

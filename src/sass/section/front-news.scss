@@ -1,0 +1,29 @@
+.front-news{
+    .news__slider{
+        width: 104.5rem;
+        margin: 0;
+    }
+
+    .swiper-slide{
+        picture{
+            display: block;
+            width: 33.5rem;
+            height: 43rem;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .swiper-controlling{
+        position: relative;
+    }
+
+    .swiper__container{
+        display: flex;
+    }
+}
+    

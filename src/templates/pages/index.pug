@@ -231,25 +231,38 @@ block content
 
     section.front-news 
       .container
-        <div class="swiper hero__slider">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination hero__pagination"></div>
+        .swiper__container
+          .swiper.news__slider
+            .swiper-wrapper
+              .swiper-slide
+                picture
+                  img(src='./img/section/front-slider/1.png' alt="") 
+              .swiper-slide
+                picture
+                  img(src='./img/section/front-slider/2.png' alt="") 
+              .swiper-slide
+                picture
+                  img(src='./img/section/front-slider/3.png' alt="") 
+              .swiper-slide
+                picture
+                  img(src='./img/section/front-slider/1.png' alt="") 
+              .swiper-slide
+                picture
+                  img(src='./img/section/front-slider/2.png' alt="") 
+              .swiper-slide
+                picture
+                  img(src='./img/section/front-slider/3.png' alt="")             
 
-          <!-- If we need navigation buttons -->
-          <div class="hero__arrow-prev swiper-button-prev"></div>
-          <div class="hero__arrow-next swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <div class="hero__swiper-scrollbar swiper-scrollbar"></div>
-        </div>
+          .swiper-controlling
+            .swiper-pagination.news__pagination
+            .swiper-arrow
+              .news__arrow-prev.swiper-button-prev
+              .news__arrow-next.swiper-button-next
+            .text Мы собираем ключевые новости, представляющие интерес для специалистов в сфере заботы о людях с деменцией, а также анонсы крупнейших отраслевых мероприятий
+            a(href="#" class="btn__gold btn__icon")
+              span.btn__text Все новости
+              span.btn__svg
+                +svgDataArrow('topRight')
 
 
 
