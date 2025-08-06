@@ -27,17 +27,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const swiperHero = new Swiper('.news__slider', {
     // direction: 'vertical',
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 30,
+    //loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    slidesPerGroup: 1,
 
     // effect: 'fade',
     // fadeEffect: {
     //     crossFade: true
     // },
 
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      }
+    },
+
     pagination: {
         el: '.news__pagination',
+        clickable: true,
     },
 
     navigation: {

@@ -234,24 +234,30 @@ block content
         .swiper__container
           .swiper.news__slider
             .swiper-wrapper
-              .swiper-slide
-                picture
-                  img(src='./img/section/front-slider/1.png' alt="") 
-              .swiper-slide
-                picture
-                  img(src='./img/section/front-slider/2.png' alt="") 
-              .swiper-slide
-                picture
-                  img(src='./img/section/front-slider/3.png' alt="") 
-              .swiper-slide
-                picture
-                  img(src='./img/section/front-slider/1.png' alt="") 
-              .swiper-slide
-                picture
-                  img(src='./img/section/front-slider/2.png' alt="") 
-              .swiper-slide
-                picture
-                  img(src='./img/section/front-slider/3.png' alt="")             
+              - var i = 0
+              while i < 3
+                .swiper-slide
+                  a(href="#" class="swiper-slide__link")
+                    .swiper-slide__img
+                      picture
+                        img(src='./img/section/front-slider/1.png' alt="") 
+                    .swiper-slide__text Ученые Гарварда выяснили, что всего 16 глотков этого напитка в день снизят риск деменции
+
+                .swiper-slide
+                  a(href="#" class="swiper-slide__link")
+                    .swiper-slide__img
+                      picture
+                        img(src='./img/section/front-slider/2.png' alt="") 
+                    .swiper-slide__text Заболеваемость возрастной деменцией снизилась вдвое       
+
+                .swiper-slide
+                  a(href="#" class="swiper-slide__link")
+                    .swiper-slide__img
+                      picture
+                        img(src='./img/section/front-slider/3.png' alt="") 
+                    .swiper-slide__text Ученые раскрыли, почему стареющий мозг теряет защиту от деменции
+
+                - i++     
 
           .swiper-controlling
             .swiper-pagination.news__pagination
