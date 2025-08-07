@@ -229,15 +229,107 @@ block content
             span.btn__svg
               +svgDataArrow('topRight')
 
-                  
+    section.front-news 
+      .container
+        h2.title-section Новости и анонсы
+        .swiper__container
+          .swiper.news__slider
+            .swiper-wrapper
+              - var i = 0
+              while i < 3
+                .swiper-slide
+                  a(href="#" class="swiper-slide__link")
+                    .swiper-slide__img
+                      picture
+                        img(src='./img/section/front-slider/1.png' alt="") 
+                    .swiper-slide__text Ученые Гарварда выяснили, что всего 16 глотков этого напитка в день снизят риск деменции
 
-    
+                .swiper-slide
+                  a(href="#" class="swiper-slide__link")
+                    .swiper-slide__img
+                      picture
+                        img(src='./img/section/front-slider/2.png' alt="") 
+                    .swiper-slide__text Заболеваемость возрастной деменцией снизилась вдвое       
+
+                .swiper-slide
+                  a(href="#" class="swiper-slide__link")
+                    .swiper-slide__img
+                      picture
+                        img(src='./img/section/front-slider/3.png' alt="") 
+                    .swiper-slide__text Ученые раскрыли, почему стареющий мозг теряет защиту от деменции
+
+                - i++     
+
+          .swiper-controlling
+            .swiper-pagination.news__pagination
+            .swiper-arrow
+              .news__arrow-prev.swiper-button-prev
+              .news__arrow-next.swiper-button-next
+            .text Мы собираем ключевые новости, представляющие интерес для специалистов в сфере заботы о людях с деменцией, а также анонсы крупнейших отраслевых мероприятий
+            a(href="#" class="btn__gold btn__icon")
+              span.btn__text Все новости
+              span.btn__svg
+                +svgDataArrow('topRight')
+
+    section.front-contact
+      .container
+        h2.title-section Наши контакты
+        .cards
+          .card.card__address
+            .card__head
+              .card__ico
+                +svgDataIco('address')
+              .card__title Адрес
+            .card__content
+              .card__text
+                .bold-font Благотворительный центр «Хэсэд Авраам»:
+              .card__text 197110, Санкт-Петербург, ул. Большая Разночинная, д. 25 (литера А)
+
+          .card
+            .card__head
+              .card__ico 
+                +svgDataIco('contacts')
+              .card__title Контакты
+            .card__content
+              .card__text
+                span.bold-font тел: 
+                span 8 (812) 309-48-49
+              .card__text  
+                span.bold-font e-mail: 
+                span office@hesed.spb.ru
+
+              ul.soc__list
+                li.soc__item
+                  a(href="#" class="soc__link")
+                    +svgDataSocialNetwork('telegram')
+                li.soc__item
+                  a(href="#" class="soc__link vk")
+                    +svgDataSocialNetwork('vk')
+
+          .card
+            .card__head
+              .card__ico
+                +svgDataIco('opening-hours')
+              .card__title Часы работы
+            .card__content
+              .card__text
+                span.bold-font воскресенье-четверг: 
+                span с 11.00 до 17.00
+              .card__text
+                span.bold-font пятница: 
+                span с 11.00 до 14.00
+              .card__text
+                span.bold-font суббота: 
+                span выходной
+              .card__text
+                span.bold-font в воскресенье приём документов: 
+                span до 15.00
 
 
 
-    h2 Страницы сайта
-    ul
-      li: a(href="index.html") Главная
-      li: a(href="about.html") О нас
-      li: a(href="contact.html") Контакты
-      li: a(href="example.html") Пример
+    //- h2 Страницы сайта
+    //- ul
+    //-   li: a(href="index.html") Главная
+    //-   li: a(href="about.html") О нас
+    //-   li: a(href="contact.html") Контакты
+    //-   li: a(href="example.html") Пример

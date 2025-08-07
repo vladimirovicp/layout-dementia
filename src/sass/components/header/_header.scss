@@ -17,7 +17,8 @@
     &__site{
         &-link{
             display: flex;
-            gap: 1.3rem;
+            align-items: center;
+            gap: 1rem;
             text-decoration: none;
             color: #35333D;
         }
@@ -39,14 +40,14 @@
         }
 
         &-slogan{
-            font-size: 1.3rem;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
         }
 
         &-name{
-            font-size: 3.2rem;
+            font-size: 2.6rem;
             font-weight: 900;
             line-height: 1;
 

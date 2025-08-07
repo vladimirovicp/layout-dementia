@@ -24,8 +24,13 @@
         z-index: -1;
     }
 
+    &__text{
+        z-index: 3;
+    }
+
     &__svg{
         padding-left: 2rem;
+        z-index: 3;
         svg{
             width: 2.4rem;
             height: 2.4rem;
@@ -34,14 +39,12 @@
 
     &__red{
         display: inline-flex;
-        //padding: 1.8rem 3rem 2rem;
         padding: 1.8rem 3rem 1.2rem;
         color: #fff; 
         border-radius: 9.9rem; 
         cursor: pointer;
         position: relative;
         overflow: hidden; 
-
 
         &:before, &:after {
             content: '';
@@ -56,9 +59,47 @@
         &:before{
             transition: opacity 0.8s ease-in-out;
             background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
-            z-index: -1;
+            z-index: 2;
+        } 
+
+        &-menu{
+            font-size: 2.6rem;
+            padding: 1.8rem 4rem;
         }
-        
+    }
+
+    &__gold{
+        display: inline-flex;
+        padding: 1.8rem 3rem 1.2rem;
+        color: #000; 
+        border-radius: 9.9rem; 
+        cursor: pointer;
+        position: relative;
+        overflow: hidden; 
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 1;
+        }
+
+        &:before{
+            transition: opacity 0.8s ease-in-out;
+            background-image: linear-gradient(87deg, #F6AC42 2.75%, #FBCF8F 97.36%);
+            z-index: 2;
+        } 
+
+        .btn__svg{
+            z-index: 3;
+        }
+
+        .btn__text{
+            z-index: 3;
+        }
     }
 }
 
@@ -80,7 +121,20 @@
         &__red{
             &:after {
                 background-image: linear-gradient(87deg, #A6316E 2.75%, #F66DB5 97.36%);
-                z-index: -2;
+                z-index: 1;
+            }
+
+            &:hover{
+                &:before{
+                    opacity: 0;
+                }
+            }
+        }
+
+        &__gold{
+            &:after {
+                background-image: linear-gradient(87deg, #FFBC5C 2.75%, #FFD599 97.36%);
+                z-index: 1;
             }
 
             &:hover{

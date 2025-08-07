@@ -5,8 +5,16 @@ header.header
         .logo.header__site-logo
           img(src='./img/logo.png', class="header__site-img" alt="логотип Хэсэд Авраам")
         .header__site-text
-          .header__site-slogan Проект благотворительного центра
-          .header__site-name Хэсэд Авраам
-    .header__item.header__nav Меню
+          .header__site-slogan Проект благотворительного центра 
+            span.text-accent Хэсэд Авраам
+          .header__site-name 
+            span.text-accent Деменция. 
+            |Главное
+            
+    .header__item.header__nav
+      a(href="#" class="btn__red btn__red-menu btn__icon")
+        span.btn__text Меню
+        span.menu-wrap
+          .hamburger
     .header__item.header__search поиск
         
