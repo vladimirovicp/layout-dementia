@@ -1,0 +1,92 @@
+.front-contact{
+    background-color: #f3f5fd;
+    padding-bottom: 12rem;
+    .cards{
+
+    }
+
+    .card{
+        background-color: #fff;
+        border-radius: 3.3rem;
+        padding: 4rem 3rem;
+
+        &__head{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        &__ico{
+            svg{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        &__title{
+            padding-bottom: 0;
+
+        }
+
+        &__content{
+
+        }
+
+        &__address{
+
+        }
+
+        &__text{
+            padding-bottom: 1rem;
+        }
+
+
+    }
+
+    .soc{
+        &__list{
+            display: flex;
+            gap: 1rem;
+            padding-top: 1rem;
+
+        }
+
+        &__item{
+
+        }
+
+        &__link{
+            
+            display: block;
+            width: 5rem;
+            height: 5rem;
+            background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
+            border-radius: 50%;
+            position: relative;
+
+            svg{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+
+}
+
+
+@media (hover: hover){
+    .front-contact{
+        .soc{
+            &__link{
+                &:hover{
+                    background-image: linear-gradient(87deg, #B3DBFF 2.75%, #D5EBFF 97.36%)
+                }
+            }
+        }
+    }
+}
