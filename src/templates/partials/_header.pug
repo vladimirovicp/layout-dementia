@@ -11,10 +11,32 @@ header.header
             span.text-accent Деменция. 
             |Главное
             
-    .header__item.header__nav
-      a(href="#" class="btn__red btn__red-menu btn__icon")
-        span.btn__text Меню
-        span.menu-wrap
-          .hamburger
+    //- .header__item.header__nav
+    //-     .btn__text Меню
+    //-     .header__nav-wrap
+    //-       input(type="checkbox" class="toggler")
+    //-       .header__nav-hamburger
+    //-         div
+
+    .menu-wrap
+      input(type="checkbox" class="toggler")
+      .hamburger 
+        span Меню
+        div
+      .menu
+        div
+          div
+            ul
+              li
+                <a href="#">Home</a>
+              li
+                <a href="#">About</a>
+              li
+                <a href="#">Services</a>
+              li
+                <a href="#">Contact</a>
+          
+
+
     .header__item.header__search поиск
         
