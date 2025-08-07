@@ -1,4 +1,6 @@
 .front-news{
+    background-color: #F3F5FD;
+    padding: 9rem 0;
     .news__slider{
         // width: 104.5rem;
         width: 100%;
@@ -58,7 +60,7 @@
 
     .swiper-controlling{
         position: relative;
-        padding-left: 2rem;
+        // padding-left: 2rem;
         padding-top: 3rem;
 
         .swiper-arrow{
@@ -69,11 +71,8 @@
         }
 
         .text{
-            height: 23.5rem;
             display: flex;
             align-items: flex-end;
-            padding-bottom: 2rem;
-            overflow: hidden;
         }
 
     }
@@ -89,6 +88,8 @@
     &__pagination{
         position: relative;
         padding-bottom: 4rem;
+            display: flex;
+            justify-content: space-between;
 
         .swiper-pagination-bullet{
             // width: 9.8rem;
@@ -98,6 +99,7 @@
             background-color: #B3D9FB;
             border-radius: 0;
             opacity: 1;
+            margin: 0 !important;
         }
 
         .swiper-pagination-bullet-active{
@@ -171,6 +173,12 @@
             }
         }
 
+        .swiper-controlling{
+            .swiper-arrow{
+                height: 7rem;
+            }
+        }
+
         .news{
             &__arrow-prev,
             &__arrow-next{
@@ -184,14 +192,23 @@
 
 @media (min-width: 768px){
    .front-news{
-        .front-news{
+        .news__slider{
             width: 104.5rem;
         }
-
+        
         .swiper-slide{
             &__img{
                 width: 33.5rem;
                 height: 43rem;
+            }
+        }
+
+        .swiper-controlling{
+            padding-left: 2rem;
+            .text{
+                height: 23.5rem;
+                padding-bottom: 2rem;
+                overflow: hidden;
             }
         }
 
@@ -210,3 +227,46 @@
    }
 }
     
+
+@media (max-width: 768px){
+   .front-news{
+
+        .swiper-controlling{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .text{
+                text-align: center;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .btn__gold{
+                margin: 0 auto;
+            }
+        }
+
+        .news{
+            &__pagination{
+                width: 26rem;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                height: 7rem;
+            }
+        }
+   }
+
+   .news{
+        &__arrow-prev,
+        &__arrow-next{
+            height: 7rem;
+            width: 7rem;
+        }
+   }
+
+
+
+
+}
