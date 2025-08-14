@@ -15,36 +15,66 @@ header.header
       .header__nav-wrapper
         .header__nav-btn
           span.text Меню
-          .header__nav-hamburger
+          .header__nav-hamburger._active
             span
-      .header__nav-menu
+      .header__nav-menu._active
         .background-top
-          
-        
+        .background-bottom
+        .cards
+          .card
+            ul.menu__list
+              li.menu__item
+                a(href="#" class="menu__link") Экстренная помощь больному деменцией
+              li.menu__item
+                a(href="#" class="menu__link") Я подозреваю деменцию: первые шаги
+                ul.menu__list-nested 
+                  li.menu__item-nested 
+                    a(href="#" class="menu__link-nested") Онлайн-тесты для (само)диагностики
+                  li.menu__item-nested
+                    a(href="#" class="menu__link-nested") Как поговорить с близким о возможной деменции
+                  li.menu__item-nested
+                    a(href="#" class="menu__link-nested") К какому врачу обратиться
+                  li.menu__item-nested
+                    a(href="#" class="menu__link-nested") Контакты врачей и медицинских центров
+          .card
+            ul.menu__list
+              li.menu__item
+                a(href="#" class="menu__link") Родственникам больных деменцией
+                ul.menu__list-nested 
+                  li.menu__item-nested 
+                    a(href="#" class="menu__link-nested") Психологическая поддержка
+                    a(href="#" class="menu__link-nested") Юридические вопросы
+                    a(href="#" class="menu__link-nested") Руководства по уходу
+                    a(href="#" class="menu__link-nested") Социальные программы
+                    a(href="#" class="menu__link-nested") Личный опыт (истории семей)
 
-    //-     .btn__text Меню
-    //-     .header__nav-wrap
-    //-       input(type="checkbox" class="toggler")
-    //-       .header__nav-hamburger
-    //-         div
-
-    //- .menu-wrap
-    //-   input(type="checkbox" class="toggler")
-    //-   .hamburger 
-    //-     span.hamburger__text Меню
-    //-     div.hamburger__menu
-    //-   .menu
-    //-     div
-    //-       div
-    //-         ul
-    //-           li
-    //-             <a href="#">Home</a>
-    //-           li
-    //-             <a href="#">About</a>
-    //-           li
-    //-             <a href="#">Services</a>
-    //-           li
-    //-             <a href="#">Contact</a>
+          .card
+            ul.menu__list
+              li.menu__item
+                a(href="#" class="menu__link") Специалистам
+                ul.menu__list-nested 
+                  li.menu__item-nested 
+                    a(href="#" class="menu__link-nested") Обучение
+                    a(href="#" class="menu__link-nested") Стажировки
+                    a(href="#" class="menu__link-nested") Руководство по общению
+                    a(href="#" class="menu__link-nested") Шаблоны документов
+                    a(href="#" class="menu__link-nested") Статьи о деменции
+                    a(href="#" class="menu__link-nested") Опыт работы БЦ «Хэсэд Авраам»
+          .card 
+            ul.menu__list
+              li.menu__item
+                a(href="#" class="menu__link") База знаний 
+                ul.menu__list-nested 
+                  li.menu__item-nested 
+                    a(href="#" class="menu__link-nested") Обучение
+                  li.menu__item-nested 
+                    a(href="#" class="menu__link-nested") Вебинары для широкой аудитории
+                  li.menu__item-nested 
+                    a(href="#" class="menu__link-nested") Статьи о деменции
+                  li.menu__item-nested 
+                    a(href="#" class="menu__link-nested") Справочник организаций
+              li.menu__item
+                  a(href="#" class="menu__link") Новости и события 
           
 
 
