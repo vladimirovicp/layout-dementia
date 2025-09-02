@@ -8,10 +8,7 @@
     .container{
         display: flex;
         justify-content: space-between;
-    }
-
-    &__item{
-        width: 33.5rem;
+        align-items: center;
     }
 
     &__site{
@@ -144,17 +141,19 @@
         top: 13.8rem;
         left: 50%;
         transform: translateX(-50%);
+
         background-color: #fff;
 
         .cards{
-            padding: 0 8.5rem;
+            //padding: 0 8.5rem;
+            gap: 5.5rem;
         }
 
         .menu{
             &__list{
 
                 &-nested {
-
+                    padding-left: 3.2rem;
                 }
             }
 
@@ -193,7 +192,8 @@
 
     &__search{
         position: relative;
-        z-index: 6;
+        // z-index: 6;
+        z-index: 4;
         &-wrapper{
             width: 34rem;
             height: 8rem;
@@ -253,10 +253,11 @@
 
     .header{
 
+        padding: 3.6rem 0 2.4rem;
+
         &__search{
             display: none;
         }
-
 
         .container._menu-active{
             .header{
@@ -274,12 +275,54 @@
                 }
             }
         }
+
+        &__nav{
+            &-menu{
+                padding: 4rem 2rem 4rem 2rem;
+                border-radius: 4.4rem;
+                width: 44rem;
+                filter: drop-shadow(0 0 50px rgba(121, 191, 255, 0.50));
+                height: calc(100vh - 4.65rem - 9.5rem);
+                overflow-x: hidden;
+                overflow-y: auto;
+                
+                &::-webkit-scrollbar {
+                    width: 2rem;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: #B3D9FB;
+                    border-radius: 5rem;
+                    margin: 4rem 0;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                background: #fff;
+                
+                border: .3rem solid #B3D9FB;
+                border-radius: 1rem;
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #fff;
+                    width: 1.4rem;
+                }
+
+                .menu__link, .menu__link-nested{
+                    max-width: 32rem;
+                }
+            }
+        }
     }
 }
 
 @media (min-width: 768px){
 
     .header {
+        &__item{
+            width: 33.5rem;
+        }
+
         &__nav{
 
             justify-content: center;
@@ -288,6 +331,7 @@
 
                 padding: 1.5rem 4rem 1.2rem;
                 width: 20.9rem;
+                height: 6rem;
                 background-image: linear-gradient(87deg, #A6316E 2.75%, #F66DB5 97.36%);
                 border-radius: 2.9rem;
 
@@ -347,9 +391,14 @@
             }
 
             &-menu{
+                background-color: transparent;
                 background-image: url(../../../img/menu/back-line.png);
                 background-size: 100% auto;
                 background-position: 0 1rem;
+
+                .cards{
+                    padding: 0 8.5rem;
+                }
 
                 .background-top{
                     width: 100%;

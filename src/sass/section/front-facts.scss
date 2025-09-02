@@ -53,6 +53,16 @@
     }
 }
 
+@media (max-width: 768px){
+    .front-facts{
+        padding: 2.5rem 0 7rem;
+
+        &__sources{
+            padding-top: 5rem;
+        }
+    }
+}
+
 @media (min-width: 768px){
     .front-facts{
         .awareness{
