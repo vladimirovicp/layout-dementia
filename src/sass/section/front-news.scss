@@ -92,8 +92,6 @@
             justify-content: space-between;
 
         .swiper-pagination-bullet{
-            // width: 9.8rem;
-            // height: .5rem;
             width: 2rem;
             height: .5rem;
             background-color: #B3D9FB;
@@ -173,12 +171,6 @@
             }
         }
 
-        .swiper-controlling{
-            .swiper-arrow{
-                height: 7rem;
-            }
-        }
-
         .news{
             &__arrow-prev,
             &__arrow-next{
@@ -189,6 +181,63 @@
         }
     }
 }
+
+@media (max-width: 767px){
+    .front-news{
+         padding: 7rem 0;
+ 
+         .swiper-slide{
+             padding-bottom: 2rem;
+         }
+ 
+         .title-section{
+             font-size: 4rem;
+             text-align: center;
+         }
+ 
+         .swiper-controlling{
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: space-between;
+             //padding-top: 2rem;
+ 
+             .text{
+                 text-align: center;
+                 padding-top: 3rem;
+                 padding-bottom: 3rem;
+             }
+ 
+             .btn__gold{
+                 margin: 0 auto;
+             }
+ 
+             .swiper-arrow{
+                 gap: 2rem;
+             }
+ 
+ 
+         }
+ 
+         .news{
+             &__pagination{
+                 width: 26rem;
+                 padding: 0;
+                 display: flex;
+                 align-items: center;
+                 // height: 7rem;
+             }
+         }
+    }
+ 
+    .news{
+         &__arrow-prev,
+         &__arrow-next{
+             height: 7rem;
+             width: 7rem;
+         }
+    }
+ 
+ }
 
 @media (min-width: 768px){
    .front-news{
@@ -219,6 +268,10 @@
                 padding-bottom: 2rem;
                 overflow: hidden;
             }
+
+            .swiper-arrow{
+                height: 7rem;
+            }
         }
 
         .swiper__container{
@@ -238,62 +291,3 @@
 }
     
 
-@media (max-width: 768px){
-   .front-news{
-        padding: 7rem 0;
-
-        .swiper-slide{
-            padding-bottom: 2rem;
-        }
-
-        .title-section{
-            font-size: 4rem;
-            text-align: center;
-        }
-
-        .swiper-controlling{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            //padding-top: 2rem;
-
-            .text{
-                text-align: center;
-                padding-top: 3rem;
-                padding-bottom: 3rem;
-            }
-
-            .btn__gold{
-                margin: 0 auto;
-            }
-
-            .swiper-arrow{
-                gap: 2rem;
-            }
-
-
-        }
-
-        .news{
-            &__pagination{
-                width: 26rem;
-                padding: 0;
-                display: flex;
-                align-items: center;
-                // height: 7rem;
-            }
-        }
-   }
-
-   .news{
-        &__arrow-prev,
-        &__arrow-next{
-            height: 7rem;
-            width: 7rem;
-        }
-   }
-
-
-
-
-}

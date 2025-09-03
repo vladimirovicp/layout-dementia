@@ -5,7 +5,7 @@
 
 html
     scroll-behavior: smooth
-    
+
 body._lock
     overflow: hidden
 
@@ -226,21 +226,17 @@ body._lock:before
                     filter: drop-shadow(0 0 5rem rgba(229, 119, 177, 0.50))
 
 
-                 
+@media (max-width: 767px)
+    .card
+        &__description
+            max-width: 30rem
+            margin: 0 auto                 
 
 @media (min-width: 768px)
     .cards
         flex-direction: row
         gap: 3rem
-    
-    // .card
-    //     &__title-red
-    //         font-size: 4.8rem
 
 
-@media (max-width: 767px)
-    .card
-        &__description
-            max-width: 30rem
-            margin: 0 auto
+
 
