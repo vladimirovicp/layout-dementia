@@ -212,7 +212,18 @@
         }
 
         &__colleagues{
-            padding: 5rem 6.1rem 2rem;
+            padding: 5rem 7.2rem 7rem 6.1rem;
+
+            .card__title{
+                text-align: left;
+                font-size: 4.8rem;
+                padding-bottom: 0;
+            }
+
+            .card__img-last{
+                width: 90.2rem;
+                padding-top: 5rem;
+            }
         }
 
         &__employees, &__relatives{
@@ -232,12 +243,12 @@
                 max-width: 44rem;
             }
             .card__img-last{
-                position: absolute;
-                bottom: 4.6rem;
-                right: 5.1rem;
-                width: 19rem;
-                height: 33.3rem;
+                bottom: 6rem;
+                height: 31.75rem;
                 margin: unset;
+                position: absolute;
+                right: 4rem;
+                width: 20.4rem;
             }
 
             .info-people__list-ico{
@@ -247,12 +258,12 @@
 
         &__relatives{
             .content{
-                max-width: 40rem;
+                max-width: 42rem;
             }
             .card__img-last{
                 position: absolute;
-                bottom: 4rem;
-                right: 2rem;
+                bottom: 6rem;
+                right: 4rem;
                 width: 28.2rem;
                 height: 31.2rem;
                 margin: unset;

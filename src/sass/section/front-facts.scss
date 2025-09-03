@@ -31,7 +31,7 @@
 
     .stats{
         max-width: 57.2rem;
-        padding-bottom: 6rem;
+        padding-bottom: 7rem;
     }
 
     .awareness{
@@ -65,11 +65,23 @@
 
 @media (min-width: 768px){
     .front-facts{
+
+        .cards{
+            padding-bottom: 1rem;
+        }
+
+        &__title{
+            .text-accent{
+                line-height: .5;
+                padding-bottom: 2rem;
+            }
+        }
         .awareness{
 
             &__title{
                 width: 45.3rem;
                 padding-bottom: 0;
+
             }
             &__desktop{
                 display: block;
@@ -80,15 +92,38 @@
             }
 
             &__picture{
-                width: 57.2rem;
+                width: 56rem;
+                padding-left: 4rem;
             }
         }
 
+
         &__sources{
+
+            .awareness__title{
+                line-height: 1.2;
+                padding-bottom: 5rem;
+            }
+
             .item__last{
                 padding-top: 2rem;
                 padding-bottom: 0;
             } 
+
+            .item{
+                padding-left: 1.5rem;
+            }
+
+            .item__last{
+                .text-left{
+                    padding-left: 6.5rem;
+                }
+            }
+
+            .progress__text{
+                padding-top: 1rem;
+                padding-left: .8rem;
+            }
         }
 
         
