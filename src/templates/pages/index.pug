@@ -68,12 +68,12 @@ block content
     section.hero
       .container
         .hero__item
-          .hero__title
+          h1.hero__title
             span.text-accent Деменция.
             span Главное
           .hero__slogan Актуальные знания от специалистов-практиков с 15-летним опытом
         .hero__item.hero__item-picture
-          a(href="index.html" class="hero__anchor")
+          a(href="#section-info" class="hero__anchor")
             .hero__circle
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16L2.92357e-07 9.88494L1.46757 8.76127L8 13.7559L14.5304 8.76128L16 9.88494L8 16ZM8 11.2387L5.1999e-07 5.12366L1.46757 4L8 8.99458L14.5304 4L16 5.12208L8 11.2387Z" fill="#35333D"/>
@@ -81,6 +81,7 @@ block content
           picture.hero__picture
             img(src='./img/section/hero-img.png' alt="") 
     section.hero-categories
+      h2.hero-categories__title.display-none Категории
       .container
         .cards.cards__circle-bottom
           - var featured = true
@@ -97,7 +98,8 @@ block content
               div(class="card__circle")
                 +svgDataArrow('topRight')
             - featured = false
-    section.info
+    section#section-info.info
+      h2.info__title.display-none Поддержка людей с деменцией и их близких
       .container
         .info__title Поддержка людей с деменцией и их близких — одно из приоритетных направлений работы Благотворительного центра «<a href="#" class="link__red">Хэсэд Авраам</a>» в Санкт-Петербурге
         .info__text.block-max-width-1110.text-center Созданный на его базе в 2023 году Центр знаний о деменции призван консолидировать усилия профессионального сообщества в борьбе с деменцией, координировать обмен знаниями и практическим опытом среди специалистов со всей России, а также популяризировать актуальную информацию о когнитивных нарушениях
@@ -108,6 +110,7 @@ block content
               +svgDataArrow('arrow-right')
 
     section.info-people
+      h2.info-people__title.display-none Поддержка коллег, сотрудников и родственников
       .info-people__background
       .container
         .cards
@@ -190,6 +193,7 @@ block content
                   img(src='./img/section/relatives.png' class="img-adaptive" alt="Родственникам")
             
     section.front-facts
+      h2.front-facts__title.display-none Статистика
       .container
         .cards
           .card
@@ -283,7 +287,7 @@ block content
             .card__content
               .card__text
                 .bold-font Благотворительный центр «Хэсэд&nbsp;Авраам»:
-              .card__text 197110, Санкт-Петербург,</br>ул. Большая Разночинная, д. 25 (литера А)
+              .card__text 197110, Санкт-Петербург,<br>ул. Большая Разночинная, д. 25 (литера А)
 
           .card
             .card__head
