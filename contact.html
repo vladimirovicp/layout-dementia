@@ -20,14 +20,77 @@
     <div class="out">
       <header class="header">
         <div class="container">
-          <div class="header__item"><a class="header__site-link" href="index.html">
+          <div class="header__item header__logo"><a class="header__site-link" href="index.html">
               <div class="logo header__site-logo"><img class="header__site-img" src="./img/logo.png" alt="логотип Хэсэд Авраам"></div>
               <div class="header__site-text">
-                <div class="header__site-slogan">Проект благотворительного центра</div>
-                <div class="header__site-name">Хэсэд Авраам</div>
+                <div class="header__site-slogan">Проект благотворительного центра <span class="text-accent">Хэсэд Авраам</span></div>
+                <div class="header__site-name"> <span class="text-accent">Деменция. </span>Главное</div>
               </div></a></div>
-          <div class="header__item header__nav">Меню</div>
-          <div class="header__item header__search">поиск</div>
+          <div class="header__item header__nav">
+            <div class="header__nav-wrapper">
+              <div class="header__nav-btn"><span class="text">Меню</span>
+                <div class="header__nav-hamburger"><span></span></div>
+              </div>
+            </div>
+            <div class="header__nav-menu">
+              <div class="background-top"></div>
+              <div class="background-bottom"></div>
+              <div class="cards">
+                <div class="card">
+                  <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Экстренная помощь больному деменцией</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Я подозреваю деменцию: первые шаги</a>
+                      <ul class="menu__list-nested"> 
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Онлайн-тесты для (само)диагностики</a></li>
+                        <li class="menu__item-nested"><a class="menu__link-nested" href="#">Как поговорить с близким о возможной деменции</a></li>
+                        <li class="menu__item-nested"><a class="menu__link-nested" href="#">К какому врачу обратиться</a></li>
+                        <li class="menu__item-nested"><a class="menu__link-nested" href="#">Контакты врачей и медицинских центров</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Родственникам больных деменцией</a>
+                      <ul class="menu__list-nested"> 
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Психологическая поддержка</a><a class="menu__link-nested" href="#">Юридические вопросы</a><a class="menu__link-nested" href="#">Руководства по уходу</a><a class="menu__link-nested" href="#">Социальные программы</a><a class="menu__link-nested" href="#">Личный опыт (истории семей)</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Специалистам</a>
+                      <ul class="menu__list-nested"> 
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Обучение</a><a class="menu__link-nested" href="#">Стажировки</a><a class="menu__link-nested" href="#">Руководство по общению</a><a class="menu__link-nested" href="#">Шаблоны документов</a><a class="menu__link-nested" href="#">Статьи о деменции</a><a class="menu__link-nested" href="#">Опыт работы БЦ «Хэсэд Авраам»</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card"> 
+                  <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">База знаний </a>
+                      <ul class="menu__list-nested"> 
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Обучение</a></li>
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Вебинары для широкой аудитории</a></li>
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Статьи о деменции</a></li>
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Справочник организаций</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="#">Новости и события </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__item header__search">
+            <div class="header__search-wrapper">
+              <input class="search__input-text" name="text" type="search" value="" placeholder="Поиск по сайту" autocomplete="off">
+              <div class="circle__btn"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M17.7832 16.3911L22 20.6069C22 22 22 22 20.6069 22L16.3911 17.7832C14.8224 19.0407 12.8713 19.7246 10.8609 19.7218C5.96968 19.7218 2 15.7521 2 10.8609C2 5.96968 5.96968 2 10.8609 2C15.7521 2 19.7218 5.96968 19.7218 10.8609C19.7246 12.8713 19.0407 14.8224 17.7832 16.3911ZM15.8082 15.6605C17.0574 14.3754 17.7552 12.6531 17.7527 10.8609C17.7527 7.05366 14.6681 3.96909 10.8609 3.96909C7.05366 3.96909 3.96909 7.05366 3.96909 10.8609C3.96909 14.6681 7.05366 17.7527 10.8609 17.7527C12.6531 17.7552 14.3754 17.0574 15.6605 15.8082L15.8082 15.6605Z" fill="#35333D"/></svg>
+                <input class="search__submit" type="button" value="">
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <main>

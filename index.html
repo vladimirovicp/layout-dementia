@@ -20,14 +20,77 @@
     <div class="out">
       <header class="header">
         <div class="container">
-          <div class="header__item"><a class="header__site-link" href="index.html">
+          <div class="header__item header__logo"><a class="header__site-link" href="index.html">
               <div class="logo header__site-logo"><img class="header__site-img" src="./img/logo.png" alt="логотип Хэсэд Авраам"></div>
               <div class="header__site-text">
-                <div class="header__site-slogan">Проект благотворительного центра</div>
-                <div class="header__site-name">Хэсэд Авраам</div>
+                <div class="header__site-slogan">Проект благотворительного центра <span class="text-accent">Хэсэд Авраам</span></div>
+                <div class="header__site-name"> <span class="text-accent">Деменция. </span>Главное</div>
               </div></a></div>
-          <div class="header__item header__nav">Меню</div>
-          <div class="header__item header__search">поиск</div>
+          <div class="header__item header__nav">
+            <div class="header__nav-wrapper">
+              <div class="header__nav-btn"><span class="text">Меню</span>
+                <div class="header__nav-hamburger"><span></span></div>
+              </div>
+            </div>
+            <div class="header__nav-menu">
+              <div class="background-top"></div>
+              <div class="background-bottom"></div>
+              <div class="cards">
+                <div class="card">
+                  <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Экстренная помощь больному деменцией</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Я подозреваю деменцию: первые шаги</a>
+                      <ul class="menu__list-nested"> 
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Онлайн-тесты для (само)диагностики</a></li>
+                        <li class="menu__item-nested"><a class="menu__link-nested" href="#">Как поговорить с близким о возможной деменции</a></li>
+                        <li class="menu__item-nested"><a class="menu__link-nested" href="#">К какому врачу обратиться</a></li>
+                        <li class="menu__item-nested"><a class="menu__link-nested" href="#">Контакты врачей и медицинских центров</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Родственникам больных деменцией</a>
+                      <ul class="menu__list-nested"> 
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Психологическая поддержка</a><a class="menu__link-nested" href="#">Юридические вопросы</a><a class="menu__link-nested" href="#">Руководства по уходу</a><a class="menu__link-nested" href="#">Социальные программы</a><a class="menu__link-nested" href="#">Личный опыт (истории семей)</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Специалистам</a>
+                      <ul class="menu__list-nested"> 
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Обучение</a><a class="menu__link-nested" href="#">Стажировки</a><a class="menu__link-nested" href="#">Руководство по общению</a><a class="menu__link-nested" href="#">Шаблоны документов</a><a class="menu__link-nested" href="#">Статьи о деменции</a><a class="menu__link-nested" href="#">Опыт работы БЦ «Хэсэд Авраам»</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card"> 
+                  <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">База знаний </a>
+                      <ul class="menu__list-nested"> 
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Обучение</a></li>
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Вебинары для широкой аудитории</a></li>
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Статьи о деменции</a></li>
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Справочник организаций</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="#">Новости и события </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__item header__search">
+            <div class="header__search-wrapper">
+              <input class="search__input-text" name="text" type="search" value="" placeholder="Поиск по сайту" autocomplete="off">
+              <div class="circle__btn"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M17.7832 16.3911L22 20.6069C22 22 22 22 20.6069 22L16.3911 17.7832C14.8224 19.0407 12.8713 19.7246 10.8609 19.7218C5.96968 19.7218 2 15.7521 2 10.8609C2 5.96968 5.96968 2 10.8609 2C15.7521 2 19.7218 5.96968 19.7218 10.8609C19.7246 12.8713 19.0407 14.8224 17.7832 16.3911ZM15.8082 15.6605C17.0574 14.3754 17.7552 12.6531 17.7527 10.8609C17.7527 7.05366 14.6681 3.96909 10.8609 3.96909C7.05366 3.96909 3.96909 7.05366 3.96909 10.8609C3.96909 14.6681 7.05366 17.7527 10.8609 17.7527C12.6531 17.7552 14.3754 17.0574 15.6605 15.8082L15.8082 15.6605Z" fill="#35333D"/></svg>
+                <input class="search__submit" type="button" value="">
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <main>
@@ -35,7 +98,7 @@
           <div class="container">
             <div class="hero__item">
               <div class="hero__title"><span class="text-accent">Деменция.</span><span>Главное</span></div>
-              <div class="hero__slogan">Актуальные знания от специалистов-практиков с 30-летним опытом</div>
+              <div class="hero__slogan">Актуальные знания от специалистов-практиков с 15-летним опытом</div>
             </div>
             <div class="hero__item hero__item-picture"><a class="hero__anchor" href="index.html">
                 <div class="hero__circle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -171,7 +234,7 @@
                     </div>
                     <div class="progress__bar-text">
                       <div class="progress"><span class="progress-bar" data-progress="42"></span></div>
-                      <div class="progress__text"> Ключевые источники информации о деменции*
+                      <div class="progress__text"> личный опыт (наличие знакомых с деменцией)
                       </div>
                     </div>
                   </div>
@@ -213,20 +276,125 @@
                   </div>
                 </div>
                 <div class="item item__last">
-                  <div class="text-center">* - по материалам опроса <a class="link__red" href="#">ВЦИОМ</a>, 2023 год</div>
+                  <div class="text-left">* - по материалам опроса <a class="link__red" href="#">ВЦИОМ</a>, 2023 год</div>
                 </div>
               </div>
             </div>
             <div class="text-center"><a class="btn btn__icon" href="#"><span class="btn__text">В базу знаний</span><span class="btn__svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.42473 6.3033H18.0313M18.0313 6.3033V16.9099M18.0313 6.3033L5.30341 19.0312" stroke="#35333D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg></span></a></div>
           </div>
         </section>
-        <h2>Страницы сайта</h2>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-          <li><a href="example.html">Пример</a></li>
-        </ul>
+        <section class="front-news"> 
+          <div class="container">
+            <h2 class="title-section">Новости и анонсы</h2>
+            <div class="swiper__container">
+              <div class="swiper news__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a class="swiper-slide__link" href="#">
+                      <div class="swiper-slide__img">
+                        <picture><img src="./img/section/front-slider/1.png" alt=""></picture>
+                      </div>
+                      <div class="swiper-slide__text">Ученые Гарварда выяснили, что всего 16 глотков этого напитка в день снизят риск деменции</div></a></div>
+                  <div class="swiper-slide"><a class="swiper-slide__link" href="#">
+                      <div class="swiper-slide__img">
+                        <picture><img src="./img/section/front-slider/2.png" alt=""></picture>
+                      </div>
+                      <div class="swiper-slide__text">Заболеваемость возрастной деменцией снизилась вдвое       </div></a></div>
+                  <div class="swiper-slide"><a class="swiper-slide__link" href="#">
+                      <div class="swiper-slide__img">
+                        <picture><img src="./img/section/front-slider/3.png" alt=""></picture>
+                      </div>
+                      <div class="swiper-slide__text">Ученые раскрыли, почему стареющий мозг теряет защиту от деменции</div></a></div>
+                  <div class="swiper-slide"><a class="swiper-slide__link" href="#">
+                      <div class="swiper-slide__img">
+                        <picture><img src="./img/section/front-slider/1.png" alt=""></picture>
+                      </div>
+                      <div class="swiper-slide__text">Ученые Гарварда выяснили, что всего 16 глотков этого напитка в день снизят риск деменции</div></a></div>
+                  <div class="swiper-slide"><a class="swiper-slide__link" href="#">
+                      <div class="swiper-slide__img">
+                        <picture><img src="./img/section/front-slider/2.png" alt=""></picture>
+                      </div>
+                      <div class="swiper-slide__text">Заболеваемость возрастной деменцией снизилась вдвое       </div></a></div>
+                  <div class="swiper-slide"><a class="swiper-slide__link" href="#">
+                      <div class="swiper-slide__img">
+                        <picture><img src="./img/section/front-slider/3.png" alt=""></picture>
+                      </div>
+                      <div class="swiper-slide__text">Ученые раскрыли, почему стареющий мозг теряет защиту от деменции</div></a></div>
+                  <div class="swiper-slide"><a class="swiper-slide__link" href="#">
+                      <div class="swiper-slide__img">
+                        <picture><img src="./img/section/front-slider/1.png" alt=""></picture>
+                      </div>
+                      <div class="swiper-slide__text">Ученые Гарварда выяснили, что всего 16 глотков этого напитка в день снизят риск деменции</div></a></div>
+                  <div class="swiper-slide"><a class="swiper-slide__link" href="#">
+                      <div class="swiper-slide__img">
+                        <picture><img src="./img/section/front-slider/2.png" alt=""></picture>
+                      </div>
+                      <div class="swiper-slide__text">Заболеваемость возрастной деменцией снизилась вдвое       </div></a></div>
+                  <div class="swiper-slide"><a class="swiper-slide__link" href="#">
+                      <div class="swiper-slide__img">
+                        <picture><img src="./img/section/front-slider/3.png" alt=""></picture>
+                      </div>
+                      <div class="swiper-slide__text">Ученые раскрыли, почему стареющий мозг теряет защиту от деменции</div></a></div>
+                </div>
+              </div>
+              <div class="swiper-controlling">
+                <div class="swiper-pagination news__pagination"></div>
+                <div class="swiper-arrow">
+                  <div class="news__arrow-prev swiper-button-prev"></div>
+                  <div class="news__arrow-next swiper-button-next"></div>
+                </div>
+                <div class="text">Мы собираем ключевые новости, представляющие интерес для специалистов в сфере заботы о людях с деменцией, а также анонсы крупнейших отраслевых мероприятий</div><a class="btn__gold btn__icon" href="#"><span class="btn__text">Все новости</span><span class="btn__svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.42473 6.3033H18.0313M18.0313 6.3033V16.9099M18.0313 6.3033L5.30341 19.0312" stroke="#35333D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg></span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="front-contact">
+          <div class="container">
+            <h2 class="title-section">Наши контакты</h2>
+            <div class="cards">
+              <div class="card card__address">
+                <div class="card__head">
+                  <div class="card__ico"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">  <g clip-path="url(#clip0_95_822)">    <path d="M15 30C15 30 26.25 19.3388 26.25 11.25C26.25 8.26631 25.0647 5.40483 22.955 3.29505C20.8452 1.18526 17.9837 0 15 0C12.0163 0 9.15483 1.18526 7.04505 3.29505C4.93526 5.40483 3.75 8.26631 3.75 11.25C3.75 19.3388 15 30 15 30ZM15 16.875C13.5082 16.875 12.0774 16.2824 11.0225 15.2275C9.96763 14.1726 9.375 12.7418 9.375 11.25C9.375 9.75816 9.96763 8.32742 11.0225 7.27252C12.0774 6.21763 13.5082 5.625 15 5.625C16.4918 5.625 17.9226 6.21763 18.9775 7.27252C20.0324 8.32742 20.625 9.75816 20.625 11.25C20.625 12.7418 20.0324 14.1726 18.9775 15.2275C17.9226 16.2824 16.4918 16.875 15 16.875Z" fill="#9E396E"/>  </g>  <defs>    <clipPath id="clip0_95_822">      <rect width="30" height="30" fill="white"/>    </clipPath>  </defs></svg>
+                  </div>
+                  <div class="card__title">Адрес</div>
+                </div>
+                <div class="card__content">
+                  <div class="card__text">
+                    <div class="bold-font">Благотворительный центр «Хэсэд&nbsp;Авраам»:</div>
+                  </div>
+                  <div class="card__text">197110, Санкт-Петербург,</br>ул. Большая Разночинная, д. 25 (литера А)</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__head">
+                  <div class="card__ico"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">  <path d="M2.5 7.96875C2.5 7.18139 2.81278 6.42628 3.36953 5.86953C3.92628 5.31278 4.68139 5 5.46875 5H24.5312C25.3186 5 26.0737 5.31278 26.6305 5.86953C27.1872 6.42628 27.5 7.18139 27.5 7.96875V11.6706L27.2062 11.5344C25.5562 10.7669 23.6369 11.6106 23.0494 13.3169L22.6144 14.5794C22.4557 15.0407 22.4272 15.5369 22.5319 16.0134C22.6367 16.4899 22.8706 16.9283 23.2081 17.2806L24.1394 18.2512C24.0025 19.1125 23.62 19.795 22.9744 20.3438L21.7175 20.0113C21.2423 19.8862 20.7413 19.899 20.2731 20.0482C19.805 20.1974 19.3889 20.4768 19.0737 20.8538L18.2219 21.8706C17.8645 22.2988 17.6287 22.8152 17.5392 23.3657C17.4497 23.9162 17.5098 24.4807 17.7131 25H5.46875C4.68139 25 3.92628 24.6872 3.36953 24.1305C2.81278 23.5737 2.5 22.8186 2.5 22.0312V7.96875ZM8.28125 14.0625C8.07405 14.0625 7.87534 14.1448 7.72882 14.2913C7.58231 14.4378 7.5 14.6365 7.5 14.8438C7.5 15.051 7.58231 15.2497 7.72882 15.3962C7.87534 15.5427 8.07405 15.625 8.28125 15.625H19.2188C19.426 15.625 19.6247 15.5427 19.7712 15.3962C19.9177 15.2497 20 15.051 20 14.8438C20 14.6365 19.9177 14.4378 19.7712 14.2913C19.6247 14.1448 19.426 14.0625 19.2188 14.0625H8.28125ZM7.5 18.9062C7.5 19.3375 7.85 19.6875 8.28125 19.6875H16.7188C16.926 19.6875 17.1247 19.6052 17.2712 19.4587C17.4177 19.3122 17.5 19.1135 17.5 18.9062C17.5 18.699 17.4177 18.5003 17.2712 18.3538C17.1247 18.2073 16.926 18.125 16.7188 18.125H8.28125C7.85 18.125 7.5 18.475 7.5 18.9062ZM8.28125 10C8.07405 10 7.87534 10.0823 7.72882 10.2288C7.58231 10.3753 7.5 10.574 7.5 10.7812C7.5 10.9885 7.58231 11.1872 7.72882 11.3337C7.87534 11.4802 8.07405 11.5625 8.28125 11.5625H14.2188C14.426 11.5625 14.6247 11.4802 14.7712 11.3337C14.9177 11.1872 15 10.9885 15 10.7812C15 10.574 14.9177 10.3753 14.7712 10.2288C14.6247 10.0823 14.426 10 14.2188 10H8.28125ZM23.7963 14.9862L24.2313 13.7238C24.5813 12.7063 25.7125 12.2181 26.6794 12.6675L27.1481 12.8863C27.9113 13.2406 28.5513 13.8769 28.6756 14.7219C29.2856 18.86 26.0556 24.5837 22.2469 26.1119C21.47 26.4244 20.6112 26.1756 19.9294 25.6769L19.5106 25.3706C18.6469 24.7394 18.4937 23.4925 19.18 22.6737L20.0319 21.6569C20.1941 21.4612 20.409 21.3161 20.6511 21.2387C20.8932 21.1613 21.1524 21.1548 21.3981 21.22L23.2356 21.7056C24.6248 20.7902 25.3594 19.4888 25.4394 17.8013L24.1094 16.415C23.9312 16.2285 23.8077 15.9965 23.7524 15.7445C23.6972 15.4925 23.7124 15.2302 23.7963 14.9862Z" fill="#9E396E"/></svg>
+                  </div>
+                  <div class="card__title">Контакты</div>
+                </div>
+                <div class="card__content">
+                  <div class="card__text"><span class="bold-font">тел: </span><span>8 (812) 309-48-49</span></div>
+                  <div class="card__text"> <span class="bold-font">e-mail: </span><span>office@hesed.spb.ru</span></div>
+                  <ul class="soc__list">
+                    <li class="soc__item"><a class="soc__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">  <g clip-path="url(#clip0_2039_196)">    <path d="M19.9359 6.17015L16.9059 20.3552C16.6799 21.3542 16.0999 21.5792 15.2619 21.1282L10.7169 17.7761L8.49191 19.9032C8.26691 20.1292 8.04091 20.3552 7.52491 20.3552L7.87991 15.6802L16.3579 7.97615C16.7119 7.62115 16.2609 7.49215 15.8099 7.78315L5.26891 14.4232L0.722913 13.0372C-0.276087 12.7152 -0.276087 12.0372 0.948913 11.5872L18.6139 4.72015C19.4839 4.46215 20.2259 4.91415 19.9359 6.17015Z" fill="#35333D"/>  </g>  <defs>    <clipPath id="clip0_2039_196"> <rect width="24" height="24" fill="white"/>    </clipPath> </defs></svg></a></li>
+                    <li class="soc__item"><a class="soc__link vk" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">  <path fill-rule="evenodd" clip-rule="evenodd" d="M1 7C1 7 1.05465 9.96151 1.40884 11.3728C1.8086 12.966 2.52927 14.6145 3.27263 15.6366C4.71927 17.6251 7.29968 19.1717 9.79856 19.626C11.5335 19.9414 13.5918 20.0915 13.6549 19.9414C13.7181 19.7913 13.7697 18.6278 13.7697 17.5842V15.6864L14.3843 15.8079C16.0065 16.1285 17.424 17.5822 18.1682 18.8416L18.8182 19.9414H20.8798H23C23 17.2306 20.5605 14.8388 18.1521 13.4411C18.1521 13.4411 18.3674 13.3415 19.0689 12.7387C20.7817 11.2671 22.1274 9.17677 22.1848 7L20.3009 7H18.4171C17.5316 8.58979 15.9721 11.8979 13.7697 11.8979C13.7697 11.8979 13.7697 7.14298 13.7697 7H9.54797C9.54797 7.1867 9.54797 15.1666 9.54797 15.1666C6.16925 15.1666 5.3256 9.07893 5.16555 7L1 7Z" fill="#35333D"/></svg></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__head">
+                  <div class="card__ico"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">  <path d="M18.75 16.25H20.625V19.775L23.675 21.5375L22.7375 23.1625L18.75 20.8625V16.25ZM23.75 10H6.25V23.75H12.0875C11.55 22.6125 11.25 21.3375 11.25 20C11.25 17.6794 12.1719 15.4538 13.8128 13.8128C15.4538 12.1719 17.6794 11.25 20 11.25C21.3375 11.25 22.6125 11.55 23.75 12.0875V10ZM6.25 26.25C5.58696 26.25 4.95107 25.9866 4.48223 25.5178C4.01339 25.0489 3.75 24.413 3.75 23.75V6.25C3.75 4.8625 4.8625 3.75 6.25 3.75H7.5V1.25H10V3.75H20V1.25H22.5V3.75H23.75C24.413 3.75 25.0489 4.01339 25.5178 4.48223C25.9866 4.95107 26.25 5.58696 26.25 6.25V13.875C27.8 15.45 28.75 17.6125 28.75 20C28.75 22.3206 27.8281 24.5462 26.1872 26.1872C24.5462 27.8281 22.3206 28.75 20 28.75C17.6125 28.75 15.45 27.8 13.875 26.25H6.25ZM20 13.9375C18.3921 13.9375 16.8501 14.5762 15.7132 15.7132C14.5762 16.8501 13.9375 18.3921 13.9375 20C13.9375 23.35 16.65 26.0625 20 26.0625C20.7961 26.0625 21.5845 25.9057 22.32 25.601C23.0556 25.2964 23.7239 24.8498 24.2868 24.2868C24.8498 23.7239 25.2964 23.0556 25.601 22.32C25.9057 21.5845 26.0625 20.7961 26.0625 20C26.0625 16.65 23.35 13.9375 20 13.9375Z" fill="#9E396E"/></svg>
+                  </div>
+                  <div class="card__title">Часы работы</div>
+                </div>
+                <div class="card__content">
+                  <div class="card__text"><span class="bold-font">воскресенье-четверг: </span><span>с 11.00 до 17.00</span></div>
+                  <div class="card__text"><span class="bold-font">пятница: </span><span>с 11.00 до 14.00</span></div>
+                  <div class="card__text"><span class="bold-font">суббота: </span><span>выходной</span></div>
+                  <div class="card__text"><span class="bold-font">в воскресенье приём документов: </span><span>до 15.00</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer>
         <p>© 2025 My Site</p>
