@@ -47,8 +47,8 @@
     .soc{
         &__list{
             display: flex;
-            gap: 1rem;
-            padding-top: 1rem;
+            gap: 3.4rem;
+            padding-top: 2rem;
 
         }
 
@@ -57,10 +57,9 @@
         }
 
         &__link{
-            
             display: block;
-            width: 5rem;
-            height: 5rem;
+            width: 7rem;
+            height: 7rem;
             background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
             border-radius: 50%;
             position: relative;
@@ -70,8 +69,8 @@
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                width: 2.4rem;
-                height: 2.4rem;
+                width: 3.36rem;
+                height: 3.36rem;
             }
         }
     }
@@ -85,6 +84,45 @@
             &__link{
                 &:hover{
                     background-image: linear-gradient(87deg, #B3DBFF 2.75%, #D5EBFF 97.36%)
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .front-contact{
+        .title-section{
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        .card__head{
+            padding-top: .5rem;
+        }
+
+        .cards{
+            gap: 3rem;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .front-contact{
+        .soc{
+
+            &__list{
+                gap: 1rem;
+                padding-top: 1rem;
+            }
+
+            &__link{
+                width: 5rem;
+                height: 5rem;
+
+                svg{
+                    width: 2.4rem;
+                    height: 2.4rem;
                 }
             }
         }

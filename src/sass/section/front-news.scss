@@ -49,10 +49,10 @@
             position: absolute;
             color: #fff;
             z-index: 1;
-            bottom: 3rem;
+            bottom: 4.7rem;
             font-size: 2.6rem;
             font-weight: 700;
-            width: 29.5rem;
+            width: 38.7rem;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -67,7 +67,7 @@
             display: flex;
             align-items: flex-end;
             gap: 1rem;
-            height: 4.4rem;
+            //height: 4.4rem;
         }
 
         .text{
@@ -201,12 +201,21 @@
                 width: 33.5rem;
                 height: 43rem;
             }
+
+            &__text{
+                bottom: 3rem;
+                width: 29.5rem;
+
+            }
+
+
         }
 
         .swiper-controlling{
             padding-left: 2rem;
+            padding-top: 4rem;
             .text{
-                height: 23.5rem;
+                height: 25rem;
                 padding-bottom: 2rem;
                 overflow: hidden;
             }
@@ -219,6 +228,7 @@
 
    .news{
         &__pagination{
+            padding-bottom: .5rem;
             .swiper-pagination-bullet{
                 width: 9.8rem;
                 height: .5rem;
@@ -230,11 +240,22 @@
 
 @media (max-width: 768px){
    .front-news{
+        padding: 7rem 0;
+
+        .swiper-slide{
+            padding-bottom: 2rem;
+        }
+
+        .title-section{
+            font-size: 4rem;
+            text-align: center;
+        }
 
         .swiper-controlling{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            //padding-top: 2rem;
 
             .text{
                 text-align: center;
@@ -245,6 +266,12 @@
             .btn__gold{
                 margin: 0 auto;
             }
+
+            .swiper-arrow{
+                gap: 2rem;
+            }
+
+
         }
 
         .news{
@@ -253,7 +280,7 @@
                 padding: 0;
                 display: flex;
                 align-items: center;
-                height: 7rem;
+                // height: 7rem;
             }
         }
    }

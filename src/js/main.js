@@ -1,13 +1,3 @@
-//const appModule = require('./lib/app');
-
-//import "./lib/app"
-// import "./lib/swiper/swiper-bundle.min.css";
-// import "./lib/swiper/swiper-bundle.min.js";
-
-//import "../lib/swiper/swiper-bundle.min.js";
-
-//console.log('Привет main!');
-
 document.addEventListener('DOMContentLoaded', function() {
   const progressSpans = document.querySelectorAll('.progress-bar');
   progressSpans.forEach(function(span) {
@@ -26,16 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const swiperHero = new Swiper('.news__slider', {
-    // direction: 'vertical',
-    //loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
     slidesPerGroup: 1,
-
-    // effect: 'fade',
-    // fadeEffect: {
-    //     crossFade: true
-    // },
 
     breakpoints: {
       768: {
