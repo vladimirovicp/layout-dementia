@@ -55,10 +55,6 @@
             width: 23.7rem;
         }
 
-        .info-people__list-ico{
-            padding-bottom: 0;
-        }
-
     }
 
     &__list{
@@ -163,7 +159,8 @@
 
         &__employees{
             &.card{
-                padding: 5rem 4rem 3rem;
+                // padding: 5rem 4rem 3rem;
+                padding: 5rem 2.5rem 3rem;
             } 
 
             .card__description{

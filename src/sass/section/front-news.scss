@@ -98,6 +98,7 @@
             border-radius: 0;
             opacity: 1;
             margin: 0 !important;
+            border-radius: .7rem;
         }
 
         .swiper-pagination-bullet-active{
@@ -117,12 +118,40 @@
         height: 4.4rem;
 
         border-radius: 50%;
-        background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
+        // background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
+        overflow: hidden;
 
         &:after{
             //width: 1rem;
-            font-size: 1.5rem;
-            color: #000;
+            // font-size: 1.5rem;
+            // color: #000;
+
+            all: unset;
+
+
+        }
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 1;
+        }
+
+        &:before{
+            transition: opacity 0.4s ease-in-out;
+            background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
+            z-index: 2;
+        } 
+
+        svg{
+            width: 1.68rem;
+            height: 3.36rem;
+            fill: #35333D;
+            z-index: 3;
         }
 
         &.swiper-button-disabled{
@@ -130,6 +159,17 @@
             background-image: none;
             border: .2rem solid #B3D9FB;
             color: #B3D9FB;
+
+            transition: border-color 0.4s ease-in-out, color 0.4s ease-in-out;
+
+            &:before, &:after{
+                transition: opacity 0.4s ease-in-out;
+                opacity: 0;
+            }
+
+            svg{
+                fill: #B3D9FB;
+            }
         }
     }
 }
@@ -174,9 +214,26 @@
         .news{
             &__arrow-prev,
             &__arrow-next{
-               &:hover{
+
+                &:after {
                     background-image: linear-gradient(87deg, #B3DBFF 2.75%, #D5EBFF 97.36%);
+                    z-index: -2;
+                }
+
+                box-shadow: 0 0 0 0 rgba(121, 191, 255, 0.50);
+                transition: box-shadow 0.4s ease-in-out;
+
+                &:hover{
+                    box-shadow: 0 0 5rem 0 rgba(121, 191, 255, 0.50);
+                    &:before{
+                        opacity: 0;
+                    }
+                }
+
+               &:hover{
+                    //background-image: linear-gradient(87deg, #B3DBFF 2.75%, #D5EBFF 97.36%);
                } 
+
             }
         }
     }
@@ -285,6 +342,15 @@
             .swiper-pagination-bullet{
                 width: 9.8rem;
                 height: .5rem;
+                border-radius: 1.1rem;
+            }
+        }
+
+        &__arrow-prev,
+        &__arrow-next{
+            svg{
+                width: 1.1rem;
+                height: 2.2rem; 
             }
         }
    }
