@@ -35,6 +35,9 @@
     &__picture{
         position: relative;
         display: block;
+        border-radius: 3.3rem;
+        overflow: hidden;
+        
         &:before{
             content: '';
             position: absolute;
@@ -135,6 +138,7 @@
         &__picture{
             width: 69rem;
             height: 40rem;
+
             &:before{
                 width: 14rem;
                 height: 14rem;
