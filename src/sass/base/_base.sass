@@ -3,6 +3,8 @@
     padding: 0
     box-sizing: border-box
 
+html
+    scroll-behavior: smooth
 
 body._lock
     overflow: hidden
@@ -10,7 +12,7 @@ body._lock
 body:before
         content: ""
         transition-property: height, width, background-color
-        transition-duration: 0.3s
+        transition-duration: 0.4s
         transition-timing-function: ease-in, ease, linear
         background-color: rgba(0, 0, 0, 0)
 
@@ -53,13 +55,7 @@ body._lock:before
         font-weight: 900
         text-align: center
         padding-bottom: 1rem
-    // &__title-red
-    //     font-size: 4rem
-    //     font-weight: 900
-    //     color:#9E396E
 
-    &__description
-        //text-align: center
     &__circle
         position: absolute
         width: 5.6rem
@@ -102,7 +98,6 @@ body._lock:before
             bottom: 0
             left: 50%
             transform: translateX(-50%)
-
 
 .img-adaptive
     height: 100%
@@ -152,8 +147,6 @@ body._lock:before
         svg
             width: 3rem
             height: 3rem
-        
-        
 
     &__box
         &.progress__green
@@ -198,19 +191,17 @@ body._lock:before
                 color: #F68282
     
   
+.display-none
+    display: none
   
-
-
-
-
 
 @media (hover: hover)
     .card
         &__link
             filter: drop-shadow(0 0 5rem rgba(121, 191, 255, 0))
-            transition: filter 0.8s ease-in-out   
+            transition: filter 0.4s ease-in-out   
             .card__title
-                transition: color 0.5s ease-in-out  
+                transition: color 0.4s ease-in-out  
             &:hover
                 filter: drop-shadow(0 0 50px rgba(121, 191, 255, 0.50))
                 .card__title
@@ -222,21 +213,17 @@ body._lock:before
                     filter: drop-shadow(0 0 5rem rgba(229, 119, 177, 0.50))
 
 
-                 
+@media (max-width: 767px)
+    .card
+        &__description
+            max-width: 30rem
+            margin: 0 auto                 
 
 @media (min-width: 768px)
     .cards
         flex-direction: row
         gap: 3rem
-    
-    // .card
-    //     &__title-red
-    //         font-size: 4.8rem
 
 
-@media (max-width: 767px)
-    .card
-        &__description
-            max-width: 30rem
-            margin: 0 auto
+
 
