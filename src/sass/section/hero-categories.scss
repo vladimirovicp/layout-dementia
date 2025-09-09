@@ -10,3 +10,14 @@
     }
 
 }
+
+@media (min-width: 768px){
+    .hero-categories{
+        .card{
+
+            &__content{
+                height: 23.8rem;
+            }
+        }
+    }
+}

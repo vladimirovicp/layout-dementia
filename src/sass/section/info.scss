@@ -24,8 +24,15 @@
    .info{
         padding: 10rem 0 9rem;
         &__title{
+            padding-top: .2rem;
             padding-bottom: 2rem;
         }
+
+        &__text{
+            margin: 0 auto;
+            max-width: 100rem;
+        }
+
    } 
 }
 
