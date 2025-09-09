@@ -37,4 +37,30 @@
             }
         }
     }
+
+    &__description{
+        padding-bottom: 9rem;
+        text-align: center;
+        .text{
+            font-size: 2.6rem;
+            font-weight: 700;
+            padding-bottom: 3rem;
+            max-width: 82.4rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__we-offer{
+        .title-section{
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .text{
+            text-align: center;
+            max-width: 87.4rem;
+            padding-bottom: 4rem;
+            margin: 0 auto;
+        }
+    }
 }
