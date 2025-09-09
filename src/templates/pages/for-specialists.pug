@@ -1,0 +1,50 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Специалистам
+
+block content
+
+  .title__page
+      .container Специалистам
+
+  .breadcrumbs
+    .container
+      ul.breadcrumbs__list
+        li.breadcrumbs__item 
+          a(href="index.html" class="breadcrumbs__link link__red") Главная
+        li.breadcrumbs__item  
+          span.breadcrumbs__current Специалистам 
+
+  main.page.page__for-specialists
+    .hero-image
+      .container
+        picture
+          img(src='./img/hero-image/for-specialists.png' alt="") 
+    .info-text.for-specialists__info Центр знаний о&nbsp;деменции был открыт на&nbsp;базе Благотворительного центра &laquo;Хэсэд Авраам&raquo; в&nbsp;2023 году для масштабирования модели помощи людям с&nbsp;деменцией в&nbsp;России
+
+    .for-specialists__cards
+      .container
+        .title-section Направления работы Центра знаний
+        .cards 
+          .card 
+            .picture 
+               +svgDataPages('1')
+              
+            .text разработка и&nbsp;проведение <strong>образовательных курсов и&nbsp;стажировок</strong> для специалистов
+          .card
+            picture
+            .text <strong>экспертиза программ,</strong> адресованных людям с&nbsp;деменцией и&nbsp;их&nbsp;родственникам
+          .card
+            picture
+            .text <strong>методическая поддержка</strong> специалистов, работающих в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией
+          .card 
+            picture
+            .text <strong>проведение исследований,</strong> поиск и&nbsp;апробация новых методик работы с&nbsp;людьми с&nbsp;деменцией
+          .card 
+            picture
+            .text <strong>организация отраслевых событий и&nbsp;публичных акций,</strong> посвящённых проблемам деменции
+          .card 
+            picture
+            .text систематизация накопленных знаний и&nbsp;публичная <strong>презентация успешных практик</strong>
+
