@@ -9,6 +9,7 @@
     }
 
     &__cards{
+        padding-bottom: 9rem;
         .title-section{
             text-align: center;
             padding-bottom: 4rem;
@@ -16,9 +17,10 @@
 
         .cards{
             flex-wrap: wrap;
-            padding: 0 9rem;
+            //padding: 0 9rem;
             gap: 2rem;
-            //width: 45.4rem;
+            justify-content: space-between;
+            // width: 45.4rem;
         }
 
         .card{
@@ -27,6 +29,8 @@
             padding: 3rem 3.4rem 3rem 4rem;
             box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
             border-radius: 3.3rem;
+            width: 45.3rem;
+            flex-grow: 0;
 
             .text{
                 width: 31rem;
