@@ -9,7 +9,13 @@
     }
 
     &__cards{
+        position: relative;
         padding-bottom: 9rem;
+
+        .highlight-background{
+           height: 32%;
+        }
+
         .title-section{
             text-align: center;
             padding-bottom: 4rem;
@@ -19,8 +25,9 @@
             flex-wrap: wrap;
             //padding: 0 9rem;
             gap: 2rem;
-            justify-content: space-between;
+            justify-content: center;
             // width: 45.4rem;
+           
         }
 
         .card{
@@ -31,6 +38,7 @@
             border-radius: 3.3rem;
             width: 45.3rem;
             flex-grow: 0;
+            background-color: #fff;
 
             .text{
                 width: 31rem;
@@ -39,6 +47,7 @@
     }
 
     &__description{
+        position: relative;
         padding-bottom: 9rem;
         text-align: center;
         .text{
@@ -51,6 +60,7 @@
     }
 
     &__we-offer{
+        position: relative;
         .title-section{
             text-align: center;
             padding-bottom: 1rem;
@@ -62,5 +72,12 @@
             padding-bottom: 4rem;
             margin: 0 auto;
         }
+    }
+
+    &__box-cards{
+        position: relative;
+        padding-bottom: 9rem; 
+
+        
     }
 }
