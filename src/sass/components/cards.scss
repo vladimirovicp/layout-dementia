@@ -27,20 +27,25 @@
 
         &-right{
              .card{
-                position: relative;
                 padding-bottom: 3.5rem;
-                 &::before{
-                    content: '';
-                    position: absolute;
-                    display: block;
-                    width: 7rem;
-                    height: 7rem;
-                    background-color: #F3F5FD;
-                    border-radius: 50%;
-                    top: 50%;
-                    right: -3.5rem;
-                    transform: translateY(-50%);
-                 }
+                .card__circle{
+                    // position: relative;
+                    // 
+                    // &::before{
+                    //     content: '';
+                    //     position: absolute;
+                    //     display: block;
+                    //     width: 7rem;
+                    //     height: 7rem;
+                    //     background-color: #F3F5FD;
+                    //     border-radius: 50%;
+                    //     //top: 50%;
+                    //     //right: -3.5rem;
+                    //     //transform: translateY(-50%);
+                    //     z-index: -1;
+                    // }
+                }
+
             }
         }
     }
@@ -122,15 +127,29 @@
             flex-basis: auto;
             width: 42.4rem;
             height: 15rem;
-
             border-radius: 3.3rem;
-            background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
             box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
-
             display: flex;
             gap: 3rem;
             padding: 2.5rem 3rem;
             align-items: center;
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 1;
+                border-radius: 3.3rem;
+            }
+
+            &:before{
+                transition: opacity 0.4s ease-in-out;
+                background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);;
+                z-index: -1;
+            }
 
             .icon{
                 width: 4rem;
@@ -142,16 +161,73 @@
                 font-weight: 700;
             }
 
-            .card__circle{
-                top: 50%;
-                transform: translate(0, -50%);
-                left: unset;
-                right: -2.7rem;
-                background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
+            // .card__circle{
+            //     top: 50%;
+            //     transform: translate(0, -50%);
+            //     left: unset;
+            //     right: -2.7rem;
+            //     background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
 
-                svg{
+            //     svg{
                     
-                    stroke: #fff;
+            //         stroke: #fff;
+            //     }
+            // }
+
+            .card__circle2{
+                position: absolute;
+                display: block;
+                width: 7rem;
+                height: 7rem;
+                background-color: #F3F5FD;
+                border-radius: 50%;
+                top: 50%;
+                right: -3.5rem;
+                transform: translateY(-50%);
+
+
+                &_back{
+                    position: absolute;
+                    height: 5.6rem;
+                    width: 5.6rem;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
+
+                    &:before, &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        opacity: 1;
+                        border-radius: 3.3rem;
+                    }
+
+                    &:before{
+                        transition: opacity 0.4s ease-in-out;
+                        background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);;
+                        z-index: -1;
+                    }
+
+                    &:after {
+                        background-image: linear-gradient(87deg, #A6316E 2.75%, #F66DB5 97.36%);
+                        z-index: -2;
+                    }
+
+                    svg{
+                        position: absolute;
+                        height: 2.4rem;
+                        width: 2.4rem;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        stroke: #fff;
+                    }
                 }
             }
 
@@ -168,13 +244,29 @@
 
     .cards{
         &__red{
-            .card{
-                &.card__link{
-                    &:hover{
-                        background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
+            .card__link{
+                &:after {
+                    background-image: linear-gradient(87deg, #A6316E 2.75%, #F66DB5 97.36%);
+                    z-index: -2;
+                }
+
+                &:hover{
+                    filter: drop-shadow(0 0 50px rgba(229, 119, 177, 0.50));
+                    &:before{
+                        opacity: 0;
+                    }
+
+                    .card__circle2{
+                        &_back{
+                            &:before{
+                                opacity: 0;
+                            }
+
+                        }
                     }
                 }
             }
+            
         }
     }
 
