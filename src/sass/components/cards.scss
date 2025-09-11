@@ -123,6 +123,7 @@
         justify-content: center;
 
         .card{
+            position: relative;
             flex-grow: 0;
             flex-basis: auto;
             width: 42.4rem;
@@ -157,22 +158,9 @@
             }
             .text{
                 color: #fff;
-                font-size: 26px;
+                font-size: 2.4rem;
                 font-weight: 700;
             }
-
-            // .card__circle{
-            //     top: 50%;
-            //     transform: translate(0, -50%);
-            //     left: unset;
-            //     right: -2.7rem;
-            //     background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
-
-            //     svg{
-                    
-            //         stroke: #fff;
-            //     }
-            // }
 
             .card__circle2{
                 position: absolute;
@@ -278,6 +266,24 @@
             max-width: 30rem;
             margin: 0 auto; 
         }
+
+
+    }
+
+    .cards{
+        &__red{
+            .card{
+                
+                width: calc(100% - 3.5rem);
+                height: 12rem;
+
+                &__link{
+                    margin-right: 3.5rem;
+                }
+
+
+            }
+        }
     }
 }
 
@@ -288,6 +294,12 @@
 
         &__red{
             gap: 5rem;
+
+            .card{
+                .text{
+                    font-size: 2.6rem;
+                }
+            }
         }
     }
 
