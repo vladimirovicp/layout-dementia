@@ -33,71 +33,27 @@ body._lock:before
     padding: 0 2rem
     margin: 0 auto
 
-.cards
-    display: flex
-    flex-direction: column
-    gap: 1.8rem
-
-.card
-    flex-grow: 1
-    flex-shrink: 1
-    flex-basis: 0
-
-    &-top__img
-        display: flex
-        justify-content: center
-        svg
-            width: 6rem
-            height: 6rem
-
-    &__title
-        font-size: 2.6rem
+.title__page
+    padding-bottom: 3rem
+    background-color: #f3f5fd
+    .container
+        text-align: left
+        font-size: 4.8rem
+        font-style: normal
         font-weight: 900
-        text-align: center
-        padding-bottom: 1rem
+        line-height: 4.8rem
 
-    &__circle
-        position: absolute
-        width: 5.6rem
-        height: 5.6rem
-        border-radius: 50%
-        left: 50%
-        transform: translateX(-50%)
-        bottom: .7rem
-        background: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%)
-
-        svg
-            position: absolute
-            left: 50%
-            top: 50%
-            transform: translate(-50%, -50%)
-            width: 2.4rem
-            height: 2.4rem
-
-    &__link
-        .card__title
-            color: #9E396E
-
-    &.featured
-        .card__circle 
-            background: linear-gradient(87deg, #F6AC42 2.75%, #FBCF8F 97.36%)
-
-
-.cards__circle-bottom
-    .card
-        position: relative
-        padding-bottom: 3.5rem
-        &::before
-            content: ''
-            position: absolute
-            display: block
-            width: 7rem
-            height: 7rem
-            background-color: #f3f5fd
-            border-radius: 50%
-            bottom: 0
-            left: 50%
-            transform: translateX(-50%)
+.hero-image
+    background: linear-gradient(to bottom, #f3f5fd 66%, #fff 0%)
+    padding-bottom: 3rem
+    picture
+        display: flex
+        height: 20rem
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 3.3rem
 
 .img-adaptive
     height: 100%
@@ -106,7 +62,6 @@ body._lock:before
     flex-shrink: 0
     -o-object-fit: contain
     object-fit: contain
-
 
 .progress
     width: 100%
@@ -190,7 +145,20 @@ body._lock:before
             .progress__number
                 color: #F68282
     
-  
+.highlight-background
+        position: absolute
+        background-color: #F3F5FD
+        width: 100%
+        height: 100%
+        z-index: -1
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+
+.highlight-background__radius-top
+    border-radius: 4.4rem 4.4rem 0 0
+.highlight-background__radius-bottom
+    border-radius: 0 0 4.4rem 4.4rem
 .display-none
     display: none
   
@@ -213,16 +181,23 @@ body._lock:before
                     filter: drop-shadow(0 0 5rem rgba(229, 119, 177, 0.50))
 
 
-@media (max-width: 767px)
-    .card
-        &__description
-            max-width: 30rem
-            margin: 0 auto                 
-
 @media (min-width: 768px)
-    .cards
-        flex-direction: row
-        gap: 3rem
+    .highlight-background
+        width: 158rem
+        max-width: 100%
+    .title__page
+        padding-bottom: 2.5rem
+
+    .title__page
+        .container
+            text-align: center
+            font-size: 6.4rem
+            line-height: 6.4rem
+
+    .hero-image
+        padding-bottom: 9rem
+        picture
+            height:40rem
 
 
 

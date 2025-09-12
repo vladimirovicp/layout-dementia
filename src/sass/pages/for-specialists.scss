@@ -1,0 +1,118 @@
+.for-specialists{
+    &__info{
+        margin: 0 auto;
+        max-width: 93rem;
+        padding-bottom: 4rem;
+        text-align: left;
+        font-size: 2.4rem;
+        font-weight: 400;
+    }
+
+    &__cards{
+        position: relative;
+        padding-bottom: 7rem;
+
+        .highlight-background{
+           height: 70%;
+        }
+
+        .title-section{
+            text-align: center;
+            padding-bottom: 4rem;
+        }
+
+        .cards{
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .card{
+            display: flex;
+            gap: 3rem;
+            padding: 3rem 3.4rem 3rem 4rem;
+            box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
+            border-radius: 3.3rem;
+            width: 100%;
+            flex-grow: 0;
+            background-color: #fff;
+
+            .text{
+                width: 31rem;
+            }
+        }
+    }
+
+    &__description{
+        position: relative;
+        padding-bottom: 7rem;
+        text-align: center;
+        .text{
+            font-size: 2.4rem;
+            font-weight: 400;
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__we-offer{
+        position: relative;
+        .title-section{
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .text{
+            text-align: center;
+            max-width: 87.4rem;
+            padding-bottom: 4rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__box-cards{
+        position: relative;
+        padding-bottom: 9rem; 
+
+        
+    }
+}
+
+@media (max-width: 767px){
+
+}
+
+@media (min-width: 768px){
+    .for-specialists{
+        &__info{
+            margin: 0 auto;
+            max-width: 93rem;
+            padding-bottom: 6rem;
+            text-align: center;
+            font-size: 2.6rem;
+            font-weight: 700;
+        }
+
+        &__cards{
+            padding-bottom: 9rem;
+            .highlight-background{
+                height: 32%;
+            }
+            .card{
+                padding: 3rem 3.4rem 3rem 4rem;
+                box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
+                border-radius: 3.3rem;
+                width: 45.3rem;
+            }
+        }
+
+        &__description{
+            padding-bottom: 9rem;
+            .text{
+                font-size: 2.6rem;
+                max-width: 82.4rem;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+}
