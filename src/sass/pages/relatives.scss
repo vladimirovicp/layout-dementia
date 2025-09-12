@@ -1,0 +1,47 @@
+.relatives{
+
+    &__box-cards{
+        position: relative;
+
+        .cards{
+            .card{
+
+                 
+                .card__circle2{
+                    background-color: #fff;
+                }
+                &:nth-child(-n+3){
+                    .card__circle2{
+                        background: linear-gradient(
+                        to bottom,
+                        #f3f5fd 0%,   /* первый цвет начинается сверху */
+                        #f3f5fd 50%,  /* до середины */
+                        #fff 50%,  /* со середины начинается второй цвет */
+                        #fff 100%  /* до самого низа */
+                        );
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+}
+
+.page__relatives{
+
+
+
+    .highlight-background{
+        height: 8rem;
+    }
+
+    .highlight-background__radius-bottom{
+        bottom: unset;
+        top: 0;
+    }
+
+
+}

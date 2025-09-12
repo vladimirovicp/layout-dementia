@@ -1,0 +1,69 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Специалистам
+
+block content
+
+  .title__page
+      .container Специалистам
+
+  .breadcrumbs
+    .container
+      ul.breadcrumbs__list
+        li.breadcrumbs__item 
+          a(href="index.html" class="breadcrumbs__link link__red") Главная
+        li.breadcrumbs__item  
+          span.breadcrumbs__current Родственникам
+
+  main.page.page__relatives
+    .hero-image
+      .container
+        picture
+          img(src='./img/hero-image/relatives.png' alt="Родственникам") 
+    
+    .relatives__box-cards
+      .highlight-background.highlight-background__radius-bottom
+      .container
+        .cards.cards__red.cards__circle-right
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('6')
+            .text Юридические вопросы
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('7')
+            .text Социальное обслуживание
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('8')
+            .text Психологическая поддержка
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+            
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('9')
+            .text Путеводитель
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link card__item_orange")
+            .icon
+              +svgDataCardsRed('10')
+            .text Онлайн-курс для родственников
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
