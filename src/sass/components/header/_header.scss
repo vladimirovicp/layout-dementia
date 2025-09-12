@@ -165,6 +165,7 @@
 
         background-color: #fff;
 
+
         .cards{
             //padding: 0 8.5rem;
             gap: 5.5rem;
@@ -368,11 +369,8 @@
         }
 
         &__nav{
-
             justify-content: center;
-
             &-btn{
-
                 padding: 1.5rem 4rem 1.2rem;
                 width: 20.9rem;
                 height: 6rem;
@@ -442,6 +440,41 @@
 
                 .cards{
                     padding: 0 8.5rem;
+
+                    height: 65rem;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+
+                    &::-webkit-scrollbar {
+                        width: 2rem;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background: #B3D9FB;
+                        border-radius: 5rem;
+                        margin: 4rem 0;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                    background: #fff;
+                    
+                    border: .3rem solid #B3D9FB;
+                    border-radius: 1rem;
+                    }
+                }
+
+                .card{
+                    &:nth-child(1) {
+                        flex: 0 0 30rem;
+                    }
+
+                    &:nth-child(2) {
+                        flex: 0 0 32rem;
+                    }
+
+                    &:nth-child(3) {
+
+                    }
                 }
 
                 .background-top{
