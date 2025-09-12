@@ -168,7 +168,7 @@
 
         .cards{
             //padding: 0 8.5rem;
-            gap: 5.5rem;
+            gap: 5rem;
         }
 
         .menu{
@@ -517,6 +517,24 @@
 
                     &__list-nested{
                         padding-bottom: 2rem;
+                    }
+
+                    &__list{
+                        .menu__item:last-child{
+
+                            .menu__list-nested{
+                                padding-bottom: 0;
+                            }
+                            .menu__item-nested{
+                                
+                                &:last-child{
+                                    
+                                    .menu__link-nested{
+                                        padding-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
                     }
 
                 }
