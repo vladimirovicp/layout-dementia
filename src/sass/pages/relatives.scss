@@ -27,6 +27,35 @@
         }
     }
 
+    &__info{
+        .cards{
+            &__first{
+                justify-content: space-between;
+                .card{
+                    &__one{
+                        flex: 0 0 60rem;
+
+                        &>.text{
+                            font-size: 2.6rem;
+                            width: 57.2rem;
+                            padding-bottom: 4rem;
+                        }
+                    } 
+
+                    &__two{
+                        flex: 0 0 70rem;
+
+                        .cards{
+                            flex-wrap: wrap;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
 
 }
 
