@@ -1,9 +1,6 @@
 .front-contact{
     background-color: #f3f5fd;
     padding-bottom: 12rem;
-    .cards{
-
-    }
 
     .card{
         background-color: #fff;
@@ -44,87 +41,12 @@
 
     }
 
-    .soc{
-        &__list{
-            display: flex;
-            gap: 3.4rem;
-            padding-top: 2rem;
-
-        }
-
-        &__item{
-
-        }
-
-        &__link{
-            display: block;
-            width: 7rem;
-            height: 7rem;
-            overflow: hidden;
-
-            //background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
-
-            &:before, &:after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                opacity: 1;
-            }
-
-            &:before{
-                transition: opacity 0.4s ease-in-out;
-                background-image: linear-gradient(87deg, #A6D2F9 2.75%, #C9E6FF 97.36%);
-                z-index: 2;
-            } 
-
-            border-radius: 50%;
-            position: relative;
-
-
-
-            svg{
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                width: 3.36rem;
-                height: 3.36rem;
-                z-index: 3;
-            }
-        }
-    }
-
 }
 
 
 @media (hover: hover){
-    .front-contact{
-        .soc{
-            &__link{
-                // &:hover{
-                //     background-image: linear-gradient(87deg, #B3DBFF 2.75%, #D5EBFF 97.36%)
-                // }
 
-                &:after {
-                    background-image: linear-gradient(87deg, #B3DBFF 2.75%, #D5EBFF 97.36%);
-                    z-index: 1;
-                }
 
-                box-shadow: 0 0 0 0 rgba(121, 191, 255, 0.50);
-                transition: box-shadow 0.4s ease-in-out;
-
-                &:hover{
-                    box-shadow: 0 0 5rem 0 rgba(121, 191, 255, 0.50);
-                    &:before{
-                        opacity: 0;
-                    }
-                }
-            }
-        }
-    }
 }
 
 @media (max-width: 768px){
@@ -146,23 +68,6 @@
 
 @media (min-width: 768px){
     .front-contact{
-        .soc{
-
-            &__list{
-                gap: 1rem;
-                padding-top: 1rem;
-            }
-
-            &__link{
-                width: 5rem;
-                height: 5rem;
-
-                svg{
-                    width: 2.4rem;
-                    height: 2.4rem;
-                }
-            }
-        }
     }
 }
 
