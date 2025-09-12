@@ -323,7 +323,7 @@
         &__nav{
             
             &-menu{
-                padding: 4rem 2rem 4rem 2rem;
+                padding: 4rem 2rem 10rem 2rem;
                 border-radius: 4.4rem;
                 width: 44rem;
                 filter: drop-shadow(0 0 50px rgba(121, 191, 255, 0.50));
@@ -355,6 +355,10 @@
 
                 .menu__link, .menu__link-nested{
                     max-width: 32rem;
+                }
+
+                .menu__list-nested{
+                    padding-bottom: 2rem;
                 }
             }
         }
@@ -503,11 +507,18 @@
                     transform: translateX(-50%);
                 }
 
-                .menu__link{
-                    padding-bottom: 3rem;
-                    &-nested{
+                .menu{
+                    &__link{
+                        padding-bottom: 3rem;
+                        &-nested{
+                            padding-bottom: 2rem;
+                        }
+                    }
+
+                    &__list-nested{
                         padding-bottom: 2rem;
                     }
+
                 }
 
             }
@@ -569,6 +580,15 @@
                     &:before{
                         opacity: 0;
                     }
+                }
+            }
+        }
+
+        .menu{
+            &__link, &__link-nested{
+                transition: color 0.4s ease-in-out;
+                &:hover{
+                    color: #9E396E;
                 }
             }
         }
