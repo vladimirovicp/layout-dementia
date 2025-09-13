@@ -2,6 +2,7 @@
 
     &__box-cards{
         position: relative;
+        padding-bottom: 7rem;
 
         .cards{
             .card{
@@ -25,28 +26,61 @@
 
             }
         }
+
+        .highlight-background{
+            height: 34rem;
+        }
+
+        .highlight-background__radius-bottom{
+            bottom: unset;
+            top: 0;
+        }
     }
 
     &__info{
+        padding-bottom: 7rem;
         .cards{
             &__first{
                 justify-content: space-between;
                 .card{
                     &__one{
-                        flex: 0 0 60rem;
-
                         &>.text{
-                            font-size: 2.6rem;
-                            width: 57.2rem;
+                            font-size: 2.4rem;
                             padding-bottom: 4rem;
                         }
                     } 
 
                     &__two{
-                        flex: 0 0 70rem;
 
                         .cards{
                             flex-wrap: wrap;
+                            gap: 2rem;
+                            justify-content: space-between;
+
+                            .card{
+                                background-color: #fff;
+                                box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
+                                padding: 2rem .8rem;
+                                border-radius: 3rem;
+
+                                flex: 0 0 21rem;
+                                width: 21rem;
+
+                                .picture{
+                                    text-align: center;
+                                    padding-bottom: 1rem;
+                                    svg{
+                                        width: 3rem;
+                                        height: 3rem;
+                                    }
+                                }
+
+                                .text{
+                                    text-align: center;
+                                }
+                            }
+
+
                         }
                     }
                 }
@@ -56,21 +90,175 @@
         }
     }
 
+    &__emphasis{
+        position: relative;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        .cards{
+            .card{
+                display: flex;
+                gap: 2rem;
+                border-radius: 3.3rem;
+                background-color: #fff;
+                padding: 3rem 2rem;
+
+                &__title{
+                    text-align: left;
+                }
+
+                .picture{
+                    width: 15.6rem;
+                    height: 19rem;
+                    flex: 0 0 auto;
+                }
+
+                .text{
+
+                }
+            }
+        }
+    }
+
 
 }
 
-.page__relatives{
+
+@media (hover: hover){
+    .relatives__info{
+        .cards__first{
+            .card__orange{
+
+                .card__orange-title,  .phone{
+                    transition: color .4s ease-in-out;
+                }
+
+                &:hover{
+                    .card__orange-title,  .phone{
+                        color:#9E396E;
+                    }
+                    .text{
+                        color: #35333D;
+                    }
+                }
+            }
+        }
 
 
+        
 
-    .highlight-background{
-        height: 8rem;
+    }
+}
+
+
+@media (max-width: 767px){
+    .relatives{
+        &__info{
+            .cards{
+                &__first{
+                    gap: 5.6rem;
+                    .card{
+                        &__one{
+
+                        }
+
+                        &__two{
+                            .title-section{
+                                text-align: center;
+                            }
+
+                            .cards{
+                                flex-direction: row;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+         &__emphasis{
+            .title-section{
+                text-align: center;
+            }
+
+            .cards{
+                gap: 3rem;
+                .card{
+                    flex-direction: column;
+
+                    &__title{
+                        text-align: center;
+                    }
+
+                    &__description{
+                        text-align: center;
+                    }
+                }
+            }
+
+            .picture{
+
+                &__box{
+                    display: flex;
+                    justify-content: center;
+                }
+
+            }
+         }
     }
 
-    .highlight-background__radius-bottom{
-        bottom: unset;
-        top: 0;
+}
+
+
+@media (min-width: 768px){
+    .relatives{
+       
+        &__info{
+            padding-bottom: 9rem;
+            .cards{
+                &__first{
+                    .card__one{
+                        flex: 0 0 60rem;
+                        width: 60rem;
+                        &>.text{
+                            font-size: 2.6rem;
+                            width: 57.2rem;
+                            padding-bottom: 4rem;
+                        }
+                    }
+
+                    .card__two{
+                        flex: 0 0 70rem;
+                        width: 70rem;
+
+                        .cards {
+                            .card{
+                                flex: 0 0 21.7rem;
+                                width: 21.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__emphasis{
+            padding-top: 9rem;
+            padding-bottom: 9rem;
+
+            .cards{
+                .card{
+                    padding: 4rem 4.2rem  4rem 5.3rem;
+                    gap: 3.5rem;
+                }
+            }
+        }
+
+        &__box-cards{
+            padding-bottom: 9rem;
+            .highlight-background{
+                height: 8rem;
+            }
+        }
     }
-
-
 }
