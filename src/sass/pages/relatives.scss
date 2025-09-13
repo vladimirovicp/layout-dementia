@@ -6,24 +6,9 @@
 
         .cards{
             .card{
-
-                 
                 .card__circle2{
                     background-color: #fff;
                 }
-                &:nth-child(-n+3){
-                    .card__circle2{
-                        background: linear-gradient(
-                        to bottom,
-                        #f3f5fd 0%,   /* первый цвет начинается сверху */
-                        #f3f5fd 50%,  /* до середины */
-                        #fff 50%,  /* со середины начинается второй цвет */
-                        #fff 100%  /* до самого низа */
-                        );
-                    }
-                }
-
-
             }
         }
 
@@ -67,7 +52,8 @@
                                 width: 21rem;
 
                                 .picture{
-                                    text-align: center;
+                                    display: flex;
+                                    justify-content: center;
                                     padding-bottom: 1rem;
                                     svg{
                                         width: 3rem;
@@ -168,6 +154,10 @@
 
                             .cards{
                                 flex-direction: row;
+
+                                .card{
+                                    padding: 2rem 0.7rem;
+                                }
                             }
                         }
                     }
@@ -205,6 +195,29 @@
 
             }
          }
+
+         &__box-cards{
+            .card{
+
+                &:nth-child(1),&:nth-child(2){
+                    .card__circle2{
+                        background-color: #F3F5FD;
+                    }
+                }
+
+                &:nth-child(3){
+                    .card__circle2{
+                        background: linear-gradient(
+                        to bottom,
+                        #f3f5fd 0%,   /* первый цвет начинается сверху */
+                        #f3f5fd 50%,  /* до середины */
+                        #fff 50%,  /* со середины начинается второй цвет */
+                        #fff 100%  /* до самого низа */
+                        );
+                    }
+                }
+            }
+         }
     }
 
 }
@@ -231,11 +244,17 @@
                         flex: 0 0 70rem;
                         width: 70rem;
 
+                        .title-section{
+                            text-align: center;
+                        }
+
                         .cards {
                             .card{
                                 flex: 0 0 21.7rem;
                                 width: 21.7rem;
                             }
+
+
                         }
                     }
                 }
@@ -245,6 +264,12 @@
         &__emphasis{
             padding-top: 9rem;
             padding-bottom: 9rem;
+
+            .title-section{
+                text-align: center;
+                margin: 0 auto;
+                max-width: 110rem;
+            }
 
             .cards{
                 .card{
@@ -257,8 +282,24 @@
         &__box-cards{
             padding-bottom: 9rem;
             .highlight-background{
-                height: 8rem;
+                height: 7.5rem;
             }
+
+            .card{
+                &:nth-child(-n+3){
+                    .card__circle2{
+                        background: linear-gradient(
+                        to bottom,
+                        #f3f5fd 0%,   /* первый цвет начинается сверху */
+                        #f3f5fd 50%,  /* до середины */
+                        #fff 50%,  /* со середины начинается второй цвет */
+                        #fff 100%  /* до самого низа */
+                        );
+                    }
+                }
+            }
+
+
         }
     }
 }
