@@ -26,26 +26,8 @@
         }
 
         &-right{
-             .card{
+            .card{
                 padding-bottom: 3.5rem;
-                .card__circle{
-                    // position: relative;
-                    // 
-                    // &::before{
-                    //     content: '';
-                    //     position: absolute;
-                    //     display: block;
-                    //     width: 7rem;
-                    //     height: 7rem;
-                    //     background-color: #F3F5FD;
-                    //     border-radius: 50%;
-                    //     //top: 50%;
-                    //     //right: -3.5rem;
-                    //     //transform: translateY(-50%);
-                    //     z-index: -1;
-                    // }
-                }
-
             }
         }
     }
@@ -153,8 +135,10 @@
             }
 
             .icon{
-                width: 4rem;
-                height: 4rem;
+                svg{
+                    width: 3.8rem;
+                    height: 3.8rem;
+                }
             }
             .text{
                 color: #fff;
@@ -220,7 +204,136 @@
             }
 
            &__link{
-                margin-right: .7rem;
+                margin-right: 2.7rem;
+            }
+        }
+    }
+
+    .card{
+        &__item{
+            &_orange{
+                &:before{  
+                    background-image: linear-gradient(87deg, #F6AC42 2.75%, #FBCF8F 97.36%);
+                }
+
+                .text{
+                    color: #35333D;
+                    font-weight: 900;
+                }
+
+                .card__circle2_back{
+                    background-image: linear-gradient(87deg, #F6AC42 2.75%, #FBCF8F 97.36%);
+
+                    svg{
+                        stroke: #35333D;
+                    }
+                    
+
+                    &:before{
+                        background-image: linear-gradient(87deg, #F6AC42 2.75%, #FBCF8F 97.36%);
+                    }
+
+                    &:after {
+                        background-image: linear-gradient(87deg, #FFBC5C 2.75%, #FFD599 97.36%);
+                    }
+                }
+            }
+        }
+
+
+        &__orange{
+            position: relative;
+            display: block;
+            border-radius: 3.3rem;
+            padding: 3rem 1.5rem 5.5rem;
+            box-shadow: 0 0 5rem 0 rgba(182, 218, 251, 0.50);
+
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 1;
+                border-radius: 3.3rem;
+            }
+
+            &:before{
+                transition: opacity 0.4s ease-in-out;
+                background-image: linear-gradient(87deg, #F6AC42 2.75%, #FBCF8F 97.36%);
+                z-index: -1;
+            }
+
+
+
+            .card__circle2{
+                position: absolute;
+                display: block;
+                width: 7rem;
+                height: 7rem;
+                background-color: #fff;
+                border-radius: 50%;
+
+
+
+                &_back{
+                    position: absolute;
+                    height: 5.6rem;
+                    width: 5.6rem;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    &:before, &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        opacity: 1;
+                        border-radius: 3.3rem;
+                    }
+
+                    &:before{
+                        transition: opacity 0.4s ease-in-out;
+                        background-image: linear-gradient(87deg, #F6AC42 2.75%, #FBCF8F 97.36%);
+                        z-index: -1;
+                    }
+
+                    &:after {
+                        background-image: linear-gradient(87deg, #FFBC5C 2.75%, #FFD599 97.36%);
+                        z-index: -2;
+                    }
+
+                    svg{
+                        position: absolute;
+                        height: 2.4rem;
+                        width: 2.4rem;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        stroke: #35333D;
+                    }
+                }
+
+            }
+
+            &-title{
+                font-size: 2.3rem;
+                font-weight: 900;
+                padding-bottom: 1rem;
+            }
+
+            .text{
+                padding-bottom: 1rem;
+            }
+
+            .phone{
+                font-size: 2.2rem;
+                font-weight: 900;
             }
         }
     }
@@ -256,19 +369,66 @@
             }
             
         }
+
+        .card{
+            &__item{
+                &_orange{
+                    &:after {
+                        background-image: linear-gradient(87deg, #FFBC5C 2.75%, #FFD599 97.36%);
+                    }
+
+                    .text{
+                        transition: color .4s ease-in-out;
+                    }
+
+                    &:hover{
+                        &:before{
+                            opacity: 0;
+                        }
+
+                        .text{
+                            color: #9E396E;
+                        }
+                    }
+ 
+                }
+            }
+
+            &__orange{
+                &:after {
+                    background-image: linear-gradient(87deg, #FFBC5C 2.75%, #FFD599 97.36%);
+                    z-index: -2;
+                }
+
+                transition: filter .4s ease-in-out;
+                &:hover{
+                    filter: drop-shadow(0 0 50px rgba(229, 119, 177, .5));
+                    &:before{
+                        opacity: 0;
+                    }
+
+                    .card__circle2{
+                        &_back{
+                            &:before{
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+                    .text{
+                        color: #9E396E;
+                    }
+                }
+            }
+
+
+        }
+
     }
 
 }
 
 @media (max-width: 767px){
-    .card{
-        &__description{
-            max-width: 30rem;
-            margin: 0 auto; 
-        }
-
-
-    }
 
     .cards{
         &__red{
@@ -284,6 +444,30 @@
 
             }
         }
+
+        .card{
+            &__orange{
+                //margin-right: 2.8rem;
+                &-title{
+                    text-align: center;
+                }
+
+                .text{
+                    text-align: center;
+                }
+
+                .phone{
+                    text-align: center;
+                }
+
+                .card__circle2{
+                    bottom: -3.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+        }
     }
 }
 
@@ -293,14 +477,48 @@
         gap: 3rem;
 
         &__red{
-            gap: 3rem 5rem;
+            gap: 3rem 2.2rem;
 
             .card{
                 .text{
                     font-size: 2.6rem;
                 }
+
+                .icon{
+                    svg{
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
             }
         }
+
+        .card{
+
+            &__orange{
+                padding: 3rem 6rem 3rem 4rem; 
+                width: 57.2rem;
+                height: 25.8rem;
+                &-title{
+                    font-size: 2.6rem;
+                }
+
+                .card__circle2{
+                    top: 50%;
+                    right: -3.5rem;
+                    transform: translateY(-50%);
+                }
+
+                .phone{
+                    font-size: 2.6rem;
+                }
+            }
+
+        }
+
+
+
+    
     }
 
 }

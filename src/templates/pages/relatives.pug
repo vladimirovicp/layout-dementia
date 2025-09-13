@@ -1,0 +1,134 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Родственникам
+
+block content
+
+  .title__page
+      .container Родственникам
+
+  .breadcrumbs
+    .container
+      ul.breadcrumbs__list
+        li.breadcrumbs__item 
+          a(href="index.html" class="breadcrumbs__link link__red") Главная
+        li.breadcrumbs__item  
+          span.breadcrumbs__current Родственникам
+
+  main.page.page__relatives
+    .hero-image
+      .container
+        picture
+          img(src='./img/hero-image/relatives.png' alt="Родственникам") 
+
+    .relatives__info
+        .container
+            .cards.cards__first 
+                .card.card__one
+                    .text Когда Вы&nbsp;заботитесь о&nbsp;близком человеке с&nbsp;деменцией, <strong>необходимо уделять внимание собственному психологическому состоянию,</strong> учиться работать со&nbsp;стрессом
+
+                    a(href="#" class="card__orange")
+                        .card__orange-title Записаться в&nbsp;группу поддержки (очную или дистанционную)
+                        .text для родственников людей с&nbsp;деменцией на&nbsp;базе Благотворительного центра &laquo;Хэсэд Авраам&raquo; (Санкт-Петербург)
+                        .phone 8 (812) 309-48-49
+                        .card__circle2 
+                            .card__circle2_back
+                                +svgDataArrow('topRight')
+
+                .card.card__two
+                    .title-section Важно:
+                    .cards 
+                        .card
+                            .picture
+                                +svgDataPages('7')
+                            .text Примите заболевание своего близкого
+                        .card
+                            .picture
+                                +svgDataPages('7')
+                            .text Научитесь отделять себя от больного человека
+                        .card
+                            .picture
+                                +svgDataPages('7')
+                            .text Делитесь своими переживаниями с людьми
+                        .card
+                            .picture
+                                +svgDataPages('7')
+                            .text Оставляйте время для себя и для своего отдыха
+                        .card
+                            .picture
+                                +svgDataPages('7')
+                            .text Знайте пределы собственных возможностей
+                        .card
+                            .picture
+                                +svgDataPages('7')
+                            .text Не отвергайте помощь, если она необходима
+
+
+    .relatives__emphasis
+      .highlight-background.highlight-background__radius-top 
+      .container
+        .title-section Ключевые потребности людей, ухаживающих за&nbsp;близкими с&nbsp;деменцией
+        .cards 
+          .card 
+            .picture__box
+              .picture
+                img(src='./img/page/relatives/specialist-help.png' class="img-responsive" alt="Помощь специалистов") 
+            .text
+              .card__title Помощь специалистов
+              .card__description Медицинская помощь в&nbsp;диагностике и&nbsp;уходе за&nbsp;больным, помощь социального работника и/или специалистов для дневного и&nbsp;постоянного ухода, консультации юриста (при необходимости)
+          .card 
+            .picture__box
+              .picture
+                img(src='./img/page/relatives/periodic-rest-and-support.png' class="img-responsive" alt="Помощь специалистов") 
+            .text
+              .card__title Периодический отдых и поддержка
+              .card__description Время для психического и&nbsp;физического самовосстановления, психологическая помощь, отдых от&nbsp;ухода за&nbsp;больным, регулярный медицинский осмотр и&nbsp;профилактика
+
+
+    
+    .relatives__box-cards
+      .highlight-background.highlight-background__radius-bottom
+      .container
+        .cards.cards__red.cards__circle-right
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('6')
+            .text Юридические вопросы
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('7')
+            .text Социальное обслуживание
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('8')
+            .text Психологическая поддержка
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+            
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('9')
+            .text Путеводитель
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link card__item_orange")
+            .icon
+              +svgDataCardsRed('10')
+            .text Онлайн-курс для родственников
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
