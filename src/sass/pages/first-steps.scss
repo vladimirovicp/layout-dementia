@@ -1,0 +1,41 @@
+.page__first-steps{
+    
+}
+
+.first-steps{
+    &__box-text {
+        margin: 0 auto;
+        font-size: 2.4rem;
+        padding-bottom: 4rem;
+
+    }
+
+    &__cards{
+        padding-bottom: 7rem;
+    }
+}
+
+@media (max-width: 767px){
+
+    
+
+}
+
+
+@media (min-width: 768px){
+
+    .first-steps{
+        &__box-text{
+            width: 100rem;
+            font-size: 2.6rem;
+            padding-bottom: 6rem;
+            text-align: center;
+        }
+
+        &__cards{
+            padding-bottom: 9rem;
+        }
+    }
+
+}
+
