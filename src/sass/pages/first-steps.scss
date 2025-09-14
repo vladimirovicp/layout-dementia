@@ -9,6 +9,7 @@
     &__cards{
        
         padding-bottom: 7rem;
+
     }
 
     &__info {
@@ -22,6 +23,7 @@
                     display: flex;
                     flex-direction: column;
                     gap: 2rem;
+                    font-size: 2.4rem;
                 }
             }
         }
@@ -59,6 +61,9 @@
         &__info {
             padding-top: 9rem;
             padding-bottom: 9rem;
+            .cards{
+                gap: 2rem;
+            }
             .card{
 
                 &__one{
