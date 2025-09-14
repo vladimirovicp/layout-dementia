@@ -219,12 +219,6 @@
             padding: 2rem;
         }
 
-        &-4{
-            // .card{
-            //     width: 33.5rem;
-            //     flex: 0 0 33.5rem;
-            // }
-        }
         
     }
 
@@ -472,19 +466,20 @@
 
         &__white{
             &-m2{
-                gap: 2rem;
+                gap: 2rem 1rem;
                 flex-direction: row;
                 justify-content: space-between;
+                
                 .card{
                     width: 21rem;
                     flex: 0 0 21rem;
+                    padding: 2rem .5rem;
                 }
             }
         }
 
         .card{
             &__orange{
-                //margin-right: 2.8rem;
                 &-title{
                     text-align: center;
                 }
@@ -516,7 +511,8 @@
         gap: 3rem;
 
         &__red{
-            gap: 3rem 2.2rem;
+            gap: 3rem 1rem;
+            justify-content: center;
 
             .card{
                 .text{
@@ -535,8 +531,8 @@
         &__white{
 
             &-d4{
-                gap: 2rem;
-
+                gap: 2rem 1rem;
+                justify-content: space-between;
                 .card{
                     width: 33.5rem;
                     flex: 0 0 33.5rem;
