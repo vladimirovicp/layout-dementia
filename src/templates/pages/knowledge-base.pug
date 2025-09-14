@@ -1,0 +1,23 @@
+extends ../layouts/_layout.pug
+
+block title
+  title База знаний
+
+block content
+
+  .title__page
+      .container База знаний
+
+  .breadcrumbs
+    .container
+      ul.breadcrumbs__list
+        li.breadcrumbs__item 
+          a(href="index.html" class="breadcrumbs__link link__red") Главная
+        li.breadcrumbs__item  
+          span.breadcrumbs__current База знаний
+
+  main.page.page__relatives
+    .hero-image
+      .container
+        picture
+          img(src='./img/hero-image/relatives.png' alt="База знаний") 
