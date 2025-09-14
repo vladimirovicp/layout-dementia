@@ -1,0 +1,126 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Первые шаги
+
+block content
+
+  .title__page
+      .container 
+        .sizing.sizing__first-steps Я подозреваю деменцию у себя или у близкого человека: <span class="title__page_color-red">первые шаги</span>
+
+  .breadcrumbs
+    .container
+      ul.breadcrumbs__list
+        li.breadcrumbs__item 
+          a(href="index.html" class="breadcrumbs__link link__red") Главная
+        li.breadcrumbs__item  
+          span.breadcrumbs__current Первые шаги
+
+  main.page.page__first-steps
+    .hero-image
+      .container
+        picture
+          img(src='./img/hero-image/first-steps.png' alt="Первые шаги") 
+    .first-steps__box-text 
+      .container 
+        .wrapper 
+          strong Деменция&nbsp;&mdash; 
+          | это приобретённое хроническое состояние, при котором нарушается способность мозга усваивать и&nbsp;обрабатывать информацию об&nbsp;окружающем мире, постепенно утрачиваются усвоенные знания и&nbsp;практические навыки (снижаются когнитивные способности)
+
+    .first-steps__cards
+      .container
+        .title-section.text-center Признаки возможной деменции:
+        .cards.cards__white.cards__white-d4.cards__white-m2
+          .card 
+            .picture.icons__svg.icons__svg_33 
+               +svgDataCardsRed('11')
+            .text.text-center <strong>забывчивость</strong> в&nbsp;отношении имён, недавних событий и&nbsp;значимых дат
+          .card
+            picture.icons__svg.icons__svg_33 
+              +svgDataCardsRed('12')
+            .text.text-center <strong>затруднения при подборе слов</strong> для обозначения знакомых предметов
+          .card
+            picture.icons__svg.icons__svg_33 
+              +svgDataCardsRed('13')
+            .text.text-center частая <strong>смена настроения,</strong> изменение личностных качеств
+          .card 
+            picture.icons__svg.icons__svg_33 
+              +svgDataCardsRed('14')
+            .text.text-center трудности при <strong>выполнении привычных задач</strong>
+          .card 
+            picture.icons__svg.icons__svg_33 
+              +svgDataCardsRed('15')
+            .text.text-center сложности с&nbsp;<strong>ориентацией во&nbsp;времени и&nbsp;пространстве</strong>
+          .card 
+            picture.icons__svg.icons__svg_33 
+              +svgDataCardsRed('16')
+            .text.text-center <strong>обесценивание</strong> чувств других людей, ухудшение характера
+          .card 
+            picture.icons__svg.icons__svg_33 
+              +svgDataCardsRed('17')
+            .text.text-center <strong>зацикленность,</strong> повторение одних и&nbsp;тех&nbsp;же мыслей и&nbsp;вопросов
+          .card 
+            picture.icons__svg.icons__svg_33 
+              +svgDataCardsRed('18')
+            .text.text-center <strong>необычное социальное поведение,</strong> нарушение принятых норм
+
+    .first-steps__info 
+      .highlight-background.highlight-background__radius-top 
+      .container
+        .title-section.text-center Обратите внимание:
+        .cards
+          .card.card__one
+            .box-text 
+              .text Если Вы&nbsp;обнаружили у&nbsp;себя или у&nbsp;близкого человека признаки возможной деменции, не&nbsp;нужно самостоятельно ставить себе или другому человеку диагноз.
+              .text Похожие нарушения часто выявляются в&nbsp;ситуациях острого или хронического стресса, а&nbsp;также могут быть симптомами нервно-психических заболеваний, черепно-мозговых травм или опухолей головного мозга.
+              .text <strong> В&nbsp;любом случае не&nbsp;следует игнорировать эти признаки и&nbsp;считать их&nbsp;нормой для пожилого человека.</strong>
+          .card.card__two
+             picture
+              img(src='./img/page/first-steps/attention.png' class="img-responsive" alt="Обратите внимание") 
+
+
+    .relatives__box-cards
+      .highlight-background.highlight-background__radius-bottom
+      .container
+        .cards.cards__red.cards__circle-right
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('19')
+            .text Важно знать о деменции
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('20')
+            .text Тест на выявление ранних признаков деменции 
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('21')
+            .text Как поговорить с&nbsp;близким о&nbsp;визите к&nbsp;врачу
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+            
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('22')
+            .text К какому врачу обратиться
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link card__item_orange")
+            .icon
+              +svgDataCardsRed('23')
+            .text Онлайн-курс «Деменция. Самое главное» 
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')

@@ -1,0 +1,98 @@
+.first-steps{
+    &__box-text {
+        margin: 0 auto;
+        font-size: 2.4rem;
+        padding-bottom: 4rem;
+
+    }
+
+    &__cards{
+       
+        padding-bottom: 7rem;
+
+    }
+
+    &__info {
+        position: relative;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+
+        .card{
+            &__one{
+                .box-text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 767px){
+
+
+    // .first-steps{
+    //     .highlight-background{
+    //         height: 34.25rem;
+    //     }
+    // } 
+    
+
+}
+
+
+@media (min-width: 768px){
+
+    .first-steps{
+        &__box-text{
+            width: 100rem;
+            font-size: 2.6rem;
+            padding-bottom: 6rem;
+            text-align: center;
+        }
+
+        &__cards{
+            padding-bottom: 9rem;
+        }
+
+        &__info {
+            padding-top: 9rem;
+            padding-bottom: 9rem;
+            .cards{
+                gap: 2rem;
+            }
+            .card{
+
+                &__one{
+                    .box-text{
+                        font-size: 2.6rem;
+                        max-width: 80.8rem;
+                    }
+
+                }
+
+                &__two{
+                    width: 57.2rem;
+                    flex: 0 0 57.2rem;
+                    display: flex;
+                    align-items: end;
+
+                    picture{
+                        display: flex;
+                        height: 31.5rem;
+                        width: 57.2rem;
+
+                    }
+                }
+            }
+
+        }
+
+    }
+    
+
+}
+
