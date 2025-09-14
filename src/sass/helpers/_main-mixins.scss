@@ -1,0 +1,25 @@
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin box-text-center($width: 100rem, $font-size-mobile: 2.4rem, $font-size-desktop: 2.6rem, $padding-bottom-mobile: 4rem, $padding-bottom-desktop: 6rem) {
+    margin: 0 auto;
+    font-size: $font-size-mobile;
+    padding-bottom: $padding-bottom-mobile;
+
+    @include desktop {
+        width: $width;
+        font-size: $font-size-desktop;
+        padding-bottom: $padding-bottom-desktop;
+        text-align: center;
+    }
+}
