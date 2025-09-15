@@ -39,8 +39,69 @@
   border-radius: $radius;
   padding: $padding;
   width: $width;
+  flex: 0 0 $width;
+  margin-right: 3rem;
 
   @if $shadow != null {
     box-shadow: $shadow;
   }
 }
+
+
+@mixin card__circle2( $right: -3.5rem){
+    position: absolute;
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    background-color: #F3F5FD;
+    border-radius: 50%;
+    top: 50%;
+    right: $right;
+    transform: translateY(-50%);
+}
+
+@mixin card__circle2_back{
+    position: absolute;
+    height: 5.6rem;
+    width: 5.6rem;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin card_before-after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    border-radius: 3.3rem;
+}
+
+@mixin card__circle2_back-before-gold{
+    transition: opacity 0.4s ease-in-out;
+    background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
+    z-index: -1;
+}
+
+@mixin card__circle2_back-after-gold{
+    background-image: linear-gradient(87deg, #A6316E 2.75%, #F66DB5 97.36%);
+    z-index: -2;
+}
+
+@mixin card__circle2_back-svg($stroke: #fff){
+    position: absolute;
+    height: 2.4rem;
+    width: 2.4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    stroke: $stroke;
+}
+
+
+

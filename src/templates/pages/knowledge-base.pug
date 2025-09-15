@@ -5,6 +5,20 @@ block title
 
 block content
 
+  - 
+    var dataCards = [
+      {      
+        'title': 'О нас',
+        'numIcon': '24',
+        'text': 'Комплексная экосистема помощи людям с&nbsp;деменцией Благотворительного центра &laquo;Хэсэд Авраам&raquo; объединяет Центр памяти и&nbsp;здоровья, Центр дневного ухода &laquo;Лоскутки&raquo;, Пансионат &laquo;Курортный&raquo;, Центр знаний о&nbsp;деменции и&nbsp;Фонд целевого капитала &laquo;Человек Рассеянный&raquo;'
+      },
+      {      
+        'title': 'О нас',
+        'numIcon': '24',
+        'text': 'Комплексная экосистема помощи людям с&nbsp;деменцией Благотворительного центра &laquo;Хэсэд Авраам&raquo; объединяет Центр памяти и&nbsp;здоровья, Центр дневного ухода &laquo;Лоскутки&raquo;, Пансионат &laquo;Курортный&raquo;, Центр знаний о&nbsp;деменции и&nbsp;Фонд целевого капитала &laquo;Человек Рассеянный&raquo;'
+      },
+
+    ]
   .title__page
       .container База знаний
 
@@ -31,13 +45,16 @@ block content
       .highlight-background.highlight-background__radius-top.highlight-background__radius-bottom
       .container
         .cards.cards__white-circle.cards__white-circle-d2
-          a(href="#" class="card card__link")
-            .card__header 
-              .icon
-                +svgDataCardsRed('24')
-              .title О нас
-            .text Комплексная экосистема помощи людям с&nbsp;деменцией Благотворительного центра &laquo;Хэсэд Авраам&raquo; объединяет Центр памяти и&nbsp;здоровья, Центр дневного ухода &laquo;Лоскутки&raquo;, Пансионат &laquo;Курортный&raquo;, Центр знаний о&nbsp;деменции и&nbsp;Фонд целевого капитала &laquo;Человек Рассеянный&raquo;
-            .card__circle2 
-              .card__circle2_back
-                +svgDataArrow('topRight')
+          each el in dataCards
+            a(href="#" class="card card__link")
+              .card__header 
+                .icon
+                  +svgDataCardsRed(el.numIcon)
+                .title 
+                  != el.title
+              .text 
+                != el.text
+              .card__circle2 
+                .card__circle2_back
+                  +svgDataArrow('topRight')
 
