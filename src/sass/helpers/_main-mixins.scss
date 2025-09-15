@@ -11,6 +11,16 @@
     }
 }
 
+
+@mixin padding-y-default{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    @include desktop {
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
+}
+
 @mixin box-text-center($width: 100rem, $font-size-mobile: 2.4rem, $font-size-desktop: 2.6rem, $padding-bottom-mobile: 4rem, $padding-bottom-desktop: 6rem) {
     margin: 0 auto;
     font-size: $font-size-mobile;
@@ -22,4 +32,15 @@
         padding-bottom: $padding-bottom-desktop;
         text-align: center;
     }
+}
+
+@mixin card($bg: #fff, $shadow: null, $radius: 3.3rem, $padding: 2rem, $width: 66.3rem) {
+  background-color: $bg;
+  border-radius: $radius;
+  padding: $padding;
+  width: $width;
+
+  @if $shadow != null {
+    box-shadow: $shadow;
+  }
 }

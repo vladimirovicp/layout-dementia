@@ -1,3 +1,5 @@
+@use '../helpers/main-mixins' as *;
+
 .cards{
 
     display: flex;
@@ -84,6 +86,10 @@
                 color: #9E396E;
             }
             
+        }
+
+        &__header{
+            display: flex;
         }
 
 
@@ -220,6 +226,16 @@
         }
 
         
+    }
+
+    &__white-circle{
+
+        &-d2{
+
+            @include card($padding: 4rem 5.3rem 3rem 4rem);
+
+        }
+
     }
 
 
