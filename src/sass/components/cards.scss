@@ -194,7 +194,7 @@
 
                     &:before{
                         transition: opacity 0.4s ease-in-out;
-                        background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);;
+                        background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
                         z-index: -1;
                     }
 
@@ -243,14 +243,12 @@
         .card__circle2{
             @include card__circle2($right: -3.5rem);
 
+
             &_back{
-
                 @include card__circle2_back;
-
                 &:before, &:after {
                     @include card_before-after;
                 }
-
                     &:before{
                            @include card__circle2_back-before-gold;
                     }
@@ -258,7 +256,6 @@
                     &:after{
                             @include card__circle2_back-after-gold;
                     }
-
                     svg{
                         @include card__circle2_back-svg;
                     }
@@ -268,8 +265,9 @@
 
         
         &-d2{
+
             .card{
-                @include card($padding: 4rem 5.3rem 3rem 4rem);
+                @include card($padding: 4rem 4.3rem 3rem 4rem);
 
                 .card__header{
                     padding-bottom: 2rem;
@@ -283,6 +281,29 @@
             }
         }
 
+
+        .card_wine{
+
+            &:before, &:after {
+                @include card_before-after;
+            }
+
+            &::before{
+                background-image: linear-gradient(87deg, #932860 2.75%, #DA61A0 97.36%);
+                z-index: -1;
+            }
+
+            .card__header{
+                .title{
+                    color: #fff;
+                }
+            }
+
+            .text{
+                color: #fff;
+            }
+        }
+
     }
 
 
@@ -293,12 +314,10 @@
                 &:before{  
                     background-image: linear-gradient(87deg, #F6AC42 2.75%, #FBCF8F 97.36%);
                 }
-
                 .text{
                     color: #35333D;
                     font-weight: 900;
                 }
-
                 .card__circle2_back{
                     background-image: linear-gradient(87deg, #F6AC42 2.75%, #FBCF8F 97.36%);
 
@@ -425,7 +444,7 @@
         &__red{
             .card__link{
                 &:after {
-                    background-image: linear-gradient(87deg, #A6316E 2.75%, #F66DB5 97.36%);
+                    background-image: $wine-gradient-hover;
                     z-index: -2;
                 }
 
@@ -452,10 +471,41 @@
 
             .card{
                 transition: filter .4s ease-in-out;
+                .card__circle2_back{
+                    &::before{
+                        transition: opacity .4s ease-in-out;
+                    }
+                }
+
+                &.card_wine{
+                    &:before{
+                        transition: opacity .4s ease-in-out;
+                    }
+                    &:after {
+                        background-image: $wine-gradient-hover;
+                        z-index: -2;
+                    }
+                }
+
                 &:hover{
                     filter: drop-shadow(0 0 50px rgba(229, 119, 177, 0.50));
+                    .card__circle2_back{
+                        &::before{
+                            opacity: 0;
+                        }
+                    }
+
+                    &.card_wine{
+                        &:before {
+                            opacity: 0;
+                        }
+                    }
                 }
+
+
             }
+
+
 
         }
 
@@ -612,6 +662,20 @@
                     flex: 0 0 33.5rem;
                 }
             }
+
+
+
+            &-circle{
+
+                &-d2{
+
+                    flex-wrap: wrap;
+                    gap: 4rem 0;
+
+                }
+            }
+
+
         }
 
         .card{
