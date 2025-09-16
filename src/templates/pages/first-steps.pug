@@ -5,23 +5,20 @@ block title
 
 block content
 
-  .title__page
-      .container 
-        .sizing.sizing__first-steps Я подозреваю деменцию у себя или у близкого человека: <span class="title__page_color-red">первые шаги</span>
-
-  .breadcrumbs
-    .container
-      ul.breadcrumbs__list
-        li.breadcrumbs__item 
-          a(href="index.html" class="breadcrumbs__link link__red") Главная
-        li.breadcrumbs__item  
-          span.breadcrumbs__current Первые шаги
+  +titlePage(
+    'Я подозреваю деменцию у себя или у близкого человека: ',
+    'первые шаги',
+    'sizing__first-steps'
+  )
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'Первые шаги', current: true }
+  ])
+      
 
   main.page.page__first-steps
-    .hero-image
-      .container
-        picture
-          img(src='./img/hero-image/first-steps.png' alt="Первые шаги") 
+    +heroImage('./img/hero-image/first-steps.png', 'Первые шаги')
+
     .first-steps__box-text 
       .container 
         .wrapper 

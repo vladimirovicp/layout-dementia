@@ -109,3 +109,32 @@ mixin svgDataPages(name)
 
 mixin svgDataCardsRed(name)
     != svgCardsRed[name]
+
+
+mixin breadcrumbs(items)
+  nav.breadcrumbs
+    .container
+      ul.breadcrumbs__list
+        each item, i in items
+          li.breadcrumbs__item
+            if item.url && !item.current
+              a.breadcrumbs__link.link__red(href=item.url)= item.title
+            else
+              span.breadcrumbs__current= item.title
+
+mixin heroImage(src, alt)
+  .hero-image
+    .container
+      picture
+        img(src=src, alt=alt)
+
+
+mixin titlePage(text, highlight='', sizingClass='')
+  .title__page
+    .container
+      if highlight
+        .sizing(class=sizingClass)
+          | #{text}
+          span.title__page_color-red #{highlight}
+      else
+        | #{text}

@@ -5,22 +5,14 @@ block title
 
 block content
 
-  .title__page
-      .container Специалистам
-
-  .breadcrumbs
-    .container
-      ul.breadcrumbs__list
-        li.breadcrumbs__item 
-          a(href="index.html" class="breadcrumbs__link link__red") Главная
-        li.breadcrumbs__item  
-          span.breadcrumbs__current Специалистам 
+  +titlePage('Специалистам')
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'Специалистам', current: true }
+  ])
 
   main.page.page__for-specialists
-    .hero-image
-      .container
-        picture
-          img(src='./img/hero-image/for-specialists.png' alt="") 
+    +heroImage('./img/hero-image/for-specialists.png', 'Специалистам')
 
     .info-text.for-specialists__info 
       .container 

@@ -44,22 +44,15 @@ block content
       },
 
     ]
-  .title__page
-      .container База знаний
 
-  .breadcrumbs
-    .container
-      ul.breadcrumbs__list
-        li.breadcrumbs__item 
-          a(href="index.html" class="breadcrumbs__link link__red") Главная
-        li.breadcrumbs__item  
-          span.breadcrumbs__current База знаний
+  +titlePage('База знаний')
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'База знаний', current: true }
+  ])
 
   main.page.page__knowledge-base
-    .hero-image
-      .container
-        picture
-          img(src='./img/hero-image/knowledge-base.png' alt="База знаний") 
+    +heroImage('./img/hero-image/knowledge-base.png', 'База знаний')
 
     
     .knowledge-base__box-text 
