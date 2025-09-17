@@ -89,6 +89,33 @@ block content
                 +svgDataArrow('topRight')
 
 
-    .popup__feedback-form    
+    .modal.modal__feedback-form
+      .modal__close 
+      .modal__panel
+        header.modal__header
+          .modal-title Свяжитесь с нами
+          .modal-description Напишите нам через форму обратной связи или свяжитесь любым удобным для Вас способом
+        .modal__body
+          form(id="contact-form" action="/feedback-form" method="post")
+            .modal__field.modal__field-select
+              <label for="category">Категория</label>
+              select#category(name="category" required)
+                option(value="") Выберите категорию
+                option(value="info") Узнать подробнее о наших информационных продуктах
+                option(value="partner") Стать нашим партнёром
+                option(value="author") Предложить авторский материал о деменции
+                option(value="other") Другое
+            .modal__field
+              label(for="name") Имя
+              input(id="name" name="name" required)
+            .modal__field
+              label(for="message") Ваши вопросы и предложения
+              textarea#message(name="message" required)
+
+
+            button(type="submit") Отправить
+
+
+
       
 
