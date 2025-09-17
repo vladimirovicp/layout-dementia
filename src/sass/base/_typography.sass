@@ -23,6 +23,9 @@ a.link__red
     font-weight: 700
     .svg
         fill: #9E396E
+    &-lg
+        font-size: 2.4rem
+        font-weight: 900
 
 
 .title-section
@@ -42,19 +45,6 @@ a.link__red
     margin: 0 auto
     max-width: 111rem
 
-@media (min-width: 768px)
-    html 
-        font-size: 0.694vw
-
-    .title-section
-        font-size: 4.8rem
-        padding-bottom: 4rem
-
-
-@media (min-width: 1440px)
-    html
-        font-size: 10px
-
 @media (hover: hover)
     a.link__red
         transition: color .4s ease-in-out
@@ -64,3 +54,20 @@ a.link__red
            color: #D24A91
            .svg
                 fill:#D24A91
+
+@media (min-width: 768px)
+    html 
+        font-size: 0.694vw
+
+    .title-section
+        font-size: 4.8rem
+        padding-bottom: 4rem
+
+    a.link__red
+        &-lg
+            font-size: 2.6rem
+
+
+@media (min-width: 1440px)
+    html
+        font-size: 10px

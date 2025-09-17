@@ -16,6 +16,11 @@
         height: 7rem;
         overflow: hidden;
 
+        &-md{
+            width: 5rem;
+            height: 5rem;
+        }
+
         &:before, &:after {
             content: '';
             position: absolute;
