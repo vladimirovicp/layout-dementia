@@ -21,7 +21,7 @@
     }
 }
 
-@mixin box-text-center($width: 100rem, $font-size-mobile: 2.4rem, $font-size-desktop: 2.6rem, $padding-bottom-mobile: 4rem, $padding-bottom-desktop: 6rem) {
+@mixin box-text-center($width: 100rem, $font-size-mobile: 2.4rem, $font-size-desktop: 2.6rem, $padding-bottom-mobile: 4rem, $padding-bottom-desktop: 9rem) {
     margin: 0 auto;
     font-size: $font-size-mobile;
     padding-bottom: $padding-bottom-mobile;
@@ -41,6 +41,7 @@
     border-radius: $radius;
     padding: $padding;
     margin-right: $margin-right;
+    position: relative;
 
     @if $shadow-d != null {
         box-shadow: $shadow-d;

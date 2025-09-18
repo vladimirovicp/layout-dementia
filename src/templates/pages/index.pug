@@ -6,6 +6,8 @@ block title
 
 block content
 
+  include ../help/variables.pug
+
   - 
     var heroCategories = [
       {
@@ -129,7 +131,7 @@ block content
                       +svgDataIco('briefcase')
                     span.text Стажировка
                 li.info-people__list-item
-                  a(href="#" class="info-people__list-link link__red") 
+                  a(href=knowledgeBase class="info-people__list-link link__red") 
                     span.svg
                       +svgDataIco('book-open')
                     span.text База знаний
@@ -227,7 +229,7 @@ block content
                 | , 2023 год
 
         .text-center
-          a(href="#" class="btn btn__icon")
+          a(href=knowledgeBase class="btn btn__icon")
             span.btn__text В базу знаний
             span.btn__svg
               +svgDataArrow('topRight')

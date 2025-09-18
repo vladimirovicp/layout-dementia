@@ -24,7 +24,7 @@ block content
         'text': '&laquo;Хэсэд Авраам&raquo; развивает разнообразные партнёрские проекты и&nbsp;открыт для сотрудничества с&nbsp;организациями, заинтересованными в&nbsp;построении системной помощи людям с&nbsp;деменцией в&nbsp;России'
       },
       {      
-        'title': 'О нас',
+        'title': 'Конференции',
         'numIcon': '27i',
         'text': 'С&nbsp;2003 года &laquo;Хэсэд Авраам&raquo; регулярно выступает организатором крупных отраслевых событий, которые объединяют специалистов в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией для обмена актуальным опытом'
       },
@@ -63,7 +63,7 @@ block content
     .knowledge-base__box-cards
       .highlight-background.highlight-background__radius-top.highlight-background__radius-bottom
       .container
-        .cards.cards__white-circle.cards__white-circle-d2
+        .cards.cards__white-circle.cards__white-circle-d2.cards__white-circle-m
           each el in dataCards
             a(href="#" class="card card__link")
               .card__header 
@@ -78,7 +78,7 @@ block content
                   +svgDataArrow('topRight')
 
 
-          a(href="#" class="card card__link card_wine")
+          span(class="card card__link card_wine modal-open")
             .card__header 
               .icon
                 +svgDataCardsRed("31")
@@ -90,8 +90,10 @@ block content
                 +svgDataArrow('topRight')
 
 
+  .modal__bg
     .modal.modal__feedback-form
       .modal__close 
+        +svgDataSysem('close')
       .modal__panel
         header.modal__header
           .modal-title Свяжитесь с нами
@@ -135,7 +137,7 @@ block content
                   a(href=vk class="soc__link soc__link-md vk")
                     +svgDataSocialNetwork('vk')
                   a(href=vk class="link__red link__red-lg") vk.com/hesedavrahamspb 
-                  
+                
             
 
 

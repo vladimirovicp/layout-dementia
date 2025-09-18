@@ -94,6 +94,10 @@
 
     }
 
+    var svgSysem = {
+      'close': `<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"> <path d="M35.6066 14.6068L14.3934 35.8201L35.6066 14.6068ZM14.3934 14.6068L35.6066 35.8201L14.3934 14.6068Z" /> <path d="M35.6066 14.6068L14.3934 35.8201M14.3934 14.6068L35.6066 35.8201" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/> </svg>`,
+    }
+
 mixin svgData(name)
     != svgCategory[name]
 
@@ -111,6 +115,10 @@ mixin svgDataPages(name)
 
 mixin svgDataCardsRed(name)
     != svgCardsRed[name]
+
+mixin svgDataSysem(name)
+    != svgSysem[name]
+
 
 
 mixin breadcrumbs(items)

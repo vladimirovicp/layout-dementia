@@ -1,3 +1,5 @@
+include ../help/variables.pug
+
 header.header
   .container
     .header__item.header__logo
@@ -73,7 +75,7 @@ header.header
           .card
             ul.menu__list
               li.menu__item
-                a(href="knowledge-base" class="menu__link") «Хэсэд Авраам»: база знаний
+                a(href=knowledgeBase class="menu__link") «Хэсэд Авраам»: база знаний
                 ul.menu__list-nested 
                   li.menu__item-nested 
                     a(href="#" class="menu__link-nested") О нас
