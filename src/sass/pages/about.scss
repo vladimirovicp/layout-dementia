@@ -1,0 +1,76 @@
+.about{
+
+    &__info{
+        position: relative;
+
+        &-title{
+            padding-bottom: 3rem;
+        }
+
+        .card{
+            box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
+            background-color: #fff;
+            border-radius: 3rem;
+            padding: 5rem 0;
+        }
+        
+        .number{
+            color:  #FAC373;
+            text-align: center;
+            font-size: 3.2rem;
+            font-weight: 900;
+        }
+
+        .text{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .highlight-background{
+            height: 50%;
+        }
+    }
+
+    &__description{
+        position: relative;
+        padding-bottom: 6rem;
+        .text{
+            font-size: 2.4rem;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+}
+
+
+@media (max-width: 767px){
+
+}
+
+@media (min-width: 768px){
+   .about{
+
+        &__info{
+
+            &-title{
+                padding-bottom: 4rem;
+            }
+            
+            .number{
+                font-size: 7.2rem;
+            }
+
+            .text{
+                font-size: 2.6rem;
+            }
+        }
+
+        &__description{
+            .text{
+                font-size: 2.6rem;
+                font-weight: 700;
+            }
+        }
+
+    } 
+}

@@ -17,13 +17,56 @@ block content
   main.page.page__about
     +heroImage('./img/hero-image/about.png', 'О нас')
 
-    .container
-        .cards
-            .card.card__one
-                .box-text
-                    .text Поддержка людей с&nbsp;деменцией и&nbsp;их&nbsp;близких&nbsp;&mdash; одно из&nbsp;приоритетных направлений работы Благотворительного центра &laquo;Хэсэд Авраам&raquo;, который был основан в&nbsp;1993 году организациями еврейской общины Санкт-Петербурга.
-                    .text Центр ориентирован на&nbsp;оказание помощи людям старшего возраста с&nbsp;ограниченными возможностями здоровья, малообеспеченным и&nbsp;находящимся в&nbsp;трудной жизненной ситуации.
-            .card.card__two
-        
+    
 
+    .about__history.pb-b
+      .container
+        .cards
+          .card.card__one
+            .box-text
+                .text Поддержка людей с&nbsp;деменцией и&nbsp;их&nbsp;близких&nbsp;&mdash; одно из&nbsp;приоритетных направлений работы Благотворительного центра &laquo;Хэсэд Авраам&raquo;, который был основан в&nbsp;1993 году организациями еврейской общины Санкт-Петербурга.
+                .text Центр ориентирован на&nbsp;оказание помощи людям старшего возраста с&nbsp;ограниченными возможностями здоровья, малообеспеченным и&nbsp;находящимся в&nbsp;трудной жизненной ситуации.
+
+          .card.card__two
+            .cards.cards__red.cards__circle-right
+              a(href="#" class="card card__link")
+                .icon
+                  +svgDataCardsRed('1')
+                .text Курсы
+                .card__circle2 
+                  .card__circle2_back
+                    +svgDataArrow('topRight')
+
+              a(href="#" class="card card__link")
+                .icon
+                  +svgDataCardsRed('2')
+                .text Стажировки
+                .card__circle2 
+                  .card__circle2_back
+                    +svgDataArrow('topRight')
+    
+    .about__info-title
+      .container
+        .sizing-110
+          .title-3.text-center Сегодня «Хэсэд Авраам» — одна из крупнейших общественных благотворительных организаций России
+
+    .about__info.pb-b
+      .container
+        .highlight-background.highlight-background__radius-top
+        .cards
+          .card
+            .number >1000
+            .text сотрудников
+          .card 
+            .number >400
+            .text волонтеров
+          .card
+            .number >10000
+            .text подопечных
+        
+    .about__description
+      .highlight-background
+      .container
+        .sizing-90
+          .text Специалистами &laquo;Хэсэд Авраам&raquo; накоплен обширный опыт реализации программ для пожилых людей с&nbsp;когнитивными нарушениями на&nbsp;базе очных площадок, не&nbsp;имеющих аналогов в&nbsp;стране и&nbsp;объединённых в&nbsp;единую экосистему помощи
 
