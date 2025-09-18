@@ -1,0 +1,29 @@
+extends ../layouts/_layout.pug
+
+block title
+  title О нас
+
+block content
+
+  include ../help/variables.pug
+
+  +titlePage('О нас')
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'База знаний', url: 'knowledge-base.html' },
+    { title: 'О нас', current: true}
+  ])
+
+  main.page.page__about
+    +heroImage('./img/hero-image/about.png', 'О нас')
+
+    .container
+        .cards
+            .card.card__one
+                .box-text
+                    .text Поддержка людей с&nbsp;деменцией и&nbsp;их&nbsp;близких&nbsp;&mdash; одно из&nbsp;приоритетных направлений работы Благотворительного центра &laquo;Хэсэд Авраам&raquo;, который был основан в&nbsp;1993 году организациями еврейской общины Санкт-Петербурга.
+                    .text Центр ориентирован на&nbsp;оказание помощи людям старшего возраста с&nbsp;ограниченными возможностями здоровья, малообеспеченным и&nbsp;находящимся в&nbsp;трудной жизненной ситуации.
+            .card.card__two
+        
+
+
