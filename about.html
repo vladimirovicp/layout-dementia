@@ -73,9 +73,9 @@
                 </div>
                 <div class="card">
                   <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="#">«Хэсэд Авраам»: база знаний</a>
+                    <li class="menu__item"><a class="menu__link" href="knowledge-base">«Хэсэд Авраам»: база знаний</a>
                       <ul class="menu__list-nested"> 
-                        <li class="menu__item-nested"> <a class="menu__link-nested" href="#">О нас</a></li>
+                        <li class="menu__item-nested"> <a class="menu__link-nested" href="about">О нас</a></li>
                         <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Обучение</a></li>
                         <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Партнерство</a></li>
                         <li class="menu__item-nested"> <a class="menu__link-nested" href="#">Методические материалы</a></li>
@@ -111,12 +111,39 @@
           </div>
         </div>
       </header>
-      <main>
-        <h2>About Us</h2>
-        <svg class="icon-facebook">
-          <use xlink:href="/img/sprite.svg#facebook"></use>
-        </svg>
-        <p>This is the about page.</p>
+      <div class="title__page">
+        <div class="container">О нас
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link link__red" href="index.html">Главная</a>
+            </li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link link__red" href="knowledge-base.html">База знаний</a>
+            </li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__current">О нас</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main class="page page__about">
+        <div class="hero-image">
+          <div class="container">
+            <picture><img src="./img/hero-image/about.png" alt="О нас"/></picture>
+          </div>
+        </div>
+        <div class="container">
+          <div class="cards">
+            <div class="card card__one">
+              <div class="box-text">
+                <div class="text">Поддержка людей с&nbsp;деменцией и&nbsp;их&nbsp;близких&nbsp;&mdash; одно из&nbsp;приоритетных направлений работы Благотворительного центра &laquo;Хэсэд Авраам&raquo;, который был основан в&nbsp;1993 году организациями еврейской общины Санкт-Петербурга.</div>
+                <div class="text">Центр ориентирован на&nbsp;оказание помощи людям старшего возраста с&nbsp;ограниченными возможностями здоровья, малообеспеченным и&nbsp;находящимся в&nbsp;трудной жизненной ситуации.</div>
+              </div>
+            </div>
+            <div class="card card__two"></div>
+          </div>
+        </div>
       </main>
       <footer>
         <p>© 2025 My Site</p>
