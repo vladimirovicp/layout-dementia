@@ -5,22 +5,14 @@ block title
 
 block content
 
-  .title__page
-      .container Специалистам
-
-  .breadcrumbs
-    .container
-      ul.breadcrumbs__list
-        li.breadcrumbs__item 
-          a(href="index.html" class="breadcrumbs__link link__red") Главная
-        li.breadcrumbs__item  
-          span.breadcrumbs__current Специалистам 
+  +titlePage('Специалистам')
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'Специалистам', current: true }
+  ])
 
   main.page.page__for-specialists
-    .hero-image
-      .container
-        picture
-          img(src='./img/hero-image/for-specialists.png' alt="") 
+    +heroImage('./img/hero-image/for-specialists.png', 'Специалистам')
 
     .info-text.for-specialists__info 
       .container 
@@ -68,9 +60,7 @@ block content
       .highlight-background
       .container
         .title-section Мы предлагаем
-        .text коллегам в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией, а&nbsp;также сотрудникам банков, МФЦ и&nbsp;других учреждений, которые посещают люди с&nbsp;когнитивными нарушениями
-    
-    
+        .text коллегам в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией, а&nbsp;также сотрудникам банков, МФЦ и&nbsp;других учреждений, которые посещают люди с&nbsp;когнитивными нарушениями 
     .for-specialists__box-cards
       .highlight-background.highlight-background__radius-bottom
       .container

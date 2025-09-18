@@ -1,0 +1,18 @@
+@use '../helpers/main-mixins' as *;
+
+.knowledge-base{
+
+
+    &__box-text {
+        @include box-text-center($width: 110rem);
+    }
+
+    &__box-cards{
+        position: relative;
+        @include padding-y-default;
+
+        
+    }
+
+    
+}

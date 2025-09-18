@@ -5,22 +5,14 @@ block title
 
 block content
 
-  .title__page
-      .container Родственникам
-
-  .breadcrumbs
-    .container
-      ul.breadcrumbs__list
-        li.breadcrumbs__item 
-          a(href="index.html" class="breadcrumbs__link link__red") Главная
-        li.breadcrumbs__item  
-          span.breadcrumbs__current Родственникам
+  +titlePage('Родственникам')
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'Родственникам', current: true }
+  ])
 
   main.page.page__relatives
-    .hero-image
-      .container
-        picture
-          img(src='./img/hero-image/relatives.png' alt="Родственникам") 
+    +heroImage('./img/hero-image/relatives.png', 'Родственникам')
 
     .relatives__info
         .container
@@ -80,7 +72,7 @@ block content
           .card 
             .picture__box
               .picture
-                img(src='./img/page/relatives/periodic-rest-and-support.png' class="img-responsive" alt="Помощь специалистов") 
+                img(src='./img/page/relatives/periodic-rest-and-support.jpg' class="img-responsive" alt="Помощь специалистов") 
             .text
               .card__title Периодический отдых и поддержка
               .card__description Время для психического и&nbsp;физического самовосстановления, психологическая помощь, отдых от&nbsp;ухода за&nbsp;больным, регулярный медицинский осмотр и&nbsp;профилактика
@@ -126,7 +118,7 @@ block content
 
           a(href="#" class="card card__link card__item_orange")
             .icon
-              +svgDataCardsRed('10')
+              +svgDataCardsRed('23')
             .text Онлайн-курс для родственников
             .card__circle2 
               .card__circle2_back

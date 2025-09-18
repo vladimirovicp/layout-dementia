@@ -104,6 +104,12 @@
     }
 }
 
+button{
+    &.btn__red{
+        font-size: 2rem;
+    }
+}
+
 
 @media (hover: hover){
    .btn{

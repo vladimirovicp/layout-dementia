@@ -15,6 +15,13 @@
         width: 7rem;
         height: 7rem;
         overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+
+        &-md{
+            width: 5rem;
+            height: 5rem;
+        }
 
         &:before, &:after {
             content: '';
@@ -32,8 +39,7 @@
             z-index: 2;
         } 
 
-        border-radius: 50%;
-        position: relative;
+
 
 
 

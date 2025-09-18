@@ -1,0 +1,74 @@
+/*
+ПРИМЕРЫ ИСПОЛЬЗОВАНИЯ МИКСИНА box-text-center С ПАРАМЕТРАМИ
+
+Все параметры имеют значения по умолчанию, поэтому можно передавать только нужные.
+*/
+
+// 1. Использование без параметров (все значения по умолчанию)
+.example-1 {
+    @include box-text-center;
+}
+
+// 2. Передача только ширины
+.example-2 {
+    @include box-text-center($width: 80rem);
+}
+
+// 3. Передача ширины и размера шрифта для мобильных
+.example-3 {
+    @include box-text-center($width: 120rem, $font-size-mobile: 2rem);
+}
+
+// 4. Передача всех параметров
+.example-4 {
+    @include box-text-center(
+        $width: 90rem,
+        $font-size-mobile: 2.2rem,
+        $font-size-desktop: 2.8rem,
+        $padding-bottom-mobile: 3rem,
+        $padding-bottom-desktop: 5rem
+    );
+}
+
+// 5. Передача параметров по имени (можно в любом порядке)
+.example-5 {
+    @include box-text-center(
+        $padding-bottom-desktop: 8rem,
+        $width: 110rem,
+        $font-size-desktop: 3rem
+    );
+}
+
+// 6. Передача параметров по позиции (по порядку)
+.example-6 {
+    @include box-text-center(75rem, 2rem, 2.4rem, 3rem, 5rem);
+}
+
+// 7. Использование в разных компонентах
+.knowledge-base {
+    &__title {
+        @include box-text-center($width: 100rem, $font-size-desktop: 3rem);
+    }
+    
+    &__subtitle {
+        @include box-text-center($width: 80rem, $font-size-mobile: 1.8rem);
+    }
+    
+    &__text {
+        @include box-text-center; // значения по умолчанию
+    }
+}
+
+.article {
+    &__header {
+        @include box-text-center(
+            $width: 90rem,
+            $font-size-mobile: 2.2rem,
+            $font-size-desktop: 2.8rem
+        );
+    }
+    
+    &__content {
+        @include box-text-center($width: 85rem, $padding-bottom-desktop: 7rem);
+    }
+}
