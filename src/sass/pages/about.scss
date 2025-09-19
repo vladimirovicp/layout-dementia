@@ -1,5 +1,23 @@
 .about{
 
+    &__history{
+
+        .card__one{
+            .text{
+                padding-bottom: 2rem;
+                font-size: 2.4rem;
+            }
+        }
+
+        .card__two{
+            .card__link{
+                height: auto;
+            }
+        }
+
+
+    }
+
     &__info{
         position: relative;
 
@@ -49,6 +67,23 @@
 
 @media (min-width: 768px){
    .about{
+
+        &__history{
+
+            .card__one{
+                width: 80.8rem;
+                flex: 0 0 80.8rem;
+
+                .text{
+                    font-size: 2.6rem;
+                    padding-bottom: 1rem;
+                }
+            }
+
+
+
+
+        }
 
         &__info{
 
