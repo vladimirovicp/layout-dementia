@@ -7,6 +7,49 @@ block content
 
   include ../help/variables.pug
 
+  - 
+    var list_1 = [
+      {      
+        imgUrl: './img/page/about/1.png',
+        imgAlt: 'Центр памяти и здоровья',
+        title: 'Центр памяти и здоровья',
+        paragraphs: [
+          {
+          text: 'В&nbsp;Центре памяти и&nbsp;здоровья, открытом в&nbsp;2014&nbsp;году, ежедневно проходят занятия для пожилых людей с&nbsp;преддементными нарушениями и&nbsp;деменцией, которые столкнулись с&nbsp;ухудшением памяти и&nbsp;ориентации во&nbsp;времени и&nbsp;пространстве, расстройствами внимания, понимания и&nbsp;речи.',
+          },
+          {
+            text: 'Психологи Центра занимаются диагностикой деменции, проводят занятия, направленные на&nbsp;сохранение и&nbsp;восстановление когнитивных способностей (в&nbsp;том числе в&nbsp;формате арт-терапии), а&nbsp;также работают с&nbsp;родственниками подопечных в&nbsp;специальной группе поддержки.'
+          }
+        ]
+      },
+      {      
+        imgUrl: './img/page/about/2.png',
+        imgAlt: 'Центр дневного ухода «Лоскутки»',
+        title: 'Центр дневного ухода «Лоскутки»',
+        paragraphs: [
+          {
+          text: 'Центр дневного ухода &laquo;Лоскутки&raquo;, который работает с&nbsp;2020 года и&nbsp;является уникальной площадкой в&nbsp;масштабе страны, позволяет обеспечивать пожилым людям с&nbsp;когнитивными нарушениями и&nbsp;сниженной способностью к&nbsp;самообслуживанию профессиональный уход в&nbsp;формате полустационара (с&nbsp;питанием, гигиеническими процедурами и&nbsp;прогулками).',
+          },
+          {
+            text: 'Специалисты Центра проводят занятия для поддержания физического и&nbsp;психологического здоровья подопечных и&nbsp;досуговые мероприятия, а&nbsp;также встречи с&nbsp;родственниками по&nbsp;вопросам ухода за&nbsp;близким и&nbsp;заботы о&nbsp;себе.'
+          }
+        ]
+      },
+      {      
+        imgUrl: './img/page/about/3.png',
+        imgAlt: 'Пансионат «Курортный»',
+        title: 'Пансионат «Курортный»',
+        paragraphs: [
+          {
+          text: 'Пансионат &laquo;Курортный&raquo; для пожилых людей, нуждающихся в&nbsp;круглосуточном стационарном уходе, открылся в&nbsp;Курортном районе Санкт Петербурга (посёлке Песочный) в&nbsp;2016&nbsp;году. Он&nbsp;размещается в&nbsp;трёхэтажном здании, построенном по&nbsp;специальному проекту и&nbsp;оборудованном с&nbsp;учётом израильских и&nbsp;европейских стандартов, и&nbsp;располагает всем необходимым для комфортного постоянного проживания пожилого человека.',
+          },
+          {
+            text: 'Пансионат реализует комплексные программы социально-медицинского и&nbsp;восстановительного ухода с&nbsp;особым вниманием к&nbsp;адаптационному периоду.'
+          }
+        ]
+      },
+    ]
+
   +titlePage('О нас')
   +breadcrumbs([
     { title: 'Главная', url: 'index.html' },
@@ -70,15 +113,98 @@ block content
         .sizing-90
           .text Специалистами &laquo;<a href="#" class="link__red">Хэсэд Авраам</a>&raquo; накоплен обширный опыт реализации программ для пожилых людей с&nbsp;когнитивными нарушениями на&nbsp;базе очных площадок, не&nbsp;имеющих аналогов в&nbsp;стране и&nbsp;объединённых в&nbsp;единую экосистему помощи
 
-    .container
-      .pair
-        .pair__img 
-          picture 
-            img(src="./img/page/about/1.png", alt="Центр памяти и здоровья")
-        .pair__info 
-          .pair__title Центр памяти и здоровья
-          .pair__text
-            p В&nbsp;Центре памяти и&nbsp;здоровья, открытом в&nbsp;2014&nbsp;году, ежедневно проходят занятия для пожилых людей с&nbsp;преддементными нарушениями и&nbsp;деменцией, которые столкнулись с&nbsp;ухудшением памяти и&nbsp;ориентации во&nbsp;времени и&nbsp;пространстве, расстройствами внимания, понимания и&nbsp;речи.
-            p Психологи Центра занимаются диагностикой деменции, проводят занятия, направленные на&nbsp;сохранение и&nbsp;восстановление когнитивных способностей (в&nbsp;том числе в&nbsp;формате арт-терапии), а&nbsp;также работают с&nbsp;родственниками подопечных в&nbsp;специальной группе поддержки.
+    .pair__box
+      .highlight-background.highlight-background__radius-bottom
+      .container
+        each el in list_1
+          .pair
+            .pair__img 
+              picture 
+                img(src=el.imgUrl, alt=el.imgAlt)
+            .pair__info 
+              .pair__title 
+                != el.title
+              .pair__text
+                each data in el.paragraphs
+                  p
+                    != data.text
 
 
+    .about__history.p-tb
+      .container
+        .cards
+          .card.card__two
+            .cards.cards__red.cards__circle-right
+              a(href="#" class="card card__link")
+                .icon
+                  +svgDataCardsRed('34')
+                .text Конференции
+                .card__circle2 
+                  .card__circle2_back
+                    +svgDataArrow('topRight')
+
+              a(href="#" class="card card__link")
+                .icon
+                  +svgDataCardsRed('35')
+                .text Вебинары
+                .card__circle2 
+                  .card__circle2_back
+                    +svgDataArrow('topRight')
+          .card.card__one
+            .box-text
+                .text Благотворительный центр &laquo;Хэсэд Авраам&raquo; также регулярно организует обмен накопленным опытом для специалистов со&nbsp;всей России, проводит конференции и&nbsp;вебинары.
+                .text <strong>Эта работа активизировалась на&nbsp;базе двух новых площадок: Фонда целевого капитала &laquo;Человек Рассеянный&raquo; и&nbsp;Центра знаний о&nbsp;деменции.</strong>
+
+
+    .split__box.backgroung__ice-blue_20.pb-b
+      .container
+        .split
+          .split__img
+            picture 
+                img(src='./img/page/about/2-1.png', alt='Фонд целевого капитала &laquo;Человек Рассеянный&raquo;')
+          .split__info
+            .split__title Фонд целевого капитала &laquo;Человек Рассеянный&raquo;
+            .split__text
+              p Фонд целевого капитала &laquo;Человек Рассеянный&raquo; основан в&nbsp;2022 году и&nbsp;нацелен на&nbsp;то, чтобы стать основным узловым фондом, который осуществляет финансирование некоммерческих организаций в&nbsp;сфере поддержки людей с&nbsp;деменцией во&nbsp;всех регионах России и&nbsp;помогает им&nbsp;развиваться.
+              p <strong>Ключевая цель Фонда&nbsp;&mdash; добиться появления и&nbsp;дальнейшего развития профессионального сообщества, решающего проблемы заботы о&nbsp;пациентах с&nbsp;деменцией.</strong>
+
+        .split
+          .split__img
+            picture 
+                img(src='./img/page/about/2-1.png', alt='Фонд целевого капитала &laquo;Человек Рассеянный&raquo;')
+          .split__info
+            .split__title Фонд целевого капитала &laquo;Человек Рассеянный&raquo;
+            .split__text
+              p Фонд целевого капитала &laquo;Человек Рассеянный&raquo; основан в&nbsp;2022 году и&nbsp;нацелен на&nbsp;то, чтобы стать основным узловым фондом, который осуществляет финансирование некоммерческих организаций в&nbsp;сфере поддержки людей с&nbsp;деменцией во&nbsp;всех регионах России и&nbsp;помогает им&nbsp;развиваться.
+              p <strong>Ключевая цель Фонда&nbsp;&mdash; добиться появления и&nbsp;дальнейшего развития профессионального сообщества, решающего проблемы заботы о&nbsp;пациентах с&nbsp;деменцией.</strong>
+
+        
+    .about__box-cards.backgroung__ice-blue
+      .container
+        .cards.cards__red.cards__circle-right
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('26')
+            .text Курсы
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('27')
+            .text Стажировки
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+          a(href="#" class="card card__link")
+            .icon
+              +svgDataCardsRed('28')
+            .text Методические материалы
+            .card__circle2 
+              .card__circle2_back
+                +svgDataArrow('topRight')
+
+    
+      

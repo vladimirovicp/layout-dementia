@@ -5,7 +5,8 @@
 
     &__list{
         display: flex;
-        gap: 3.5rem
+        gap: 1rem 3.5rem;
+        flex-wrap: wrap;
     }
 
     &__item{

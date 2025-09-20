@@ -25,11 +25,15 @@
             padding-bottom: 3rem;
         }
 
+        .cards{
+            flex-direction: row;
+        }
+
         .card{
-            box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
+            box-shadow: 0 0 5rem 0 rgba(182, 218, 251, 0.50);
             background-color: #fff;
             border-radius: 3rem;
-            padding: 5rem 0;
+            padding: 3rem 0;
         }
         
         .number{
@@ -44,7 +48,7 @@
             font-size: 2rem;
         }
         .highlight-background{
-            height: 50%;
+            height: 70%;
         }
     }
 
@@ -58,11 +62,26 @@
         }
     }
 
+    &__box-cards{
+        .cards__red{
+            .card{
+                height: auto;
+            }
+        }
+    }
+
 }
 
 
 @media (max-width: 767px){
 
+    .page__about{
+        .pair{
+            &__title{
+                font-size: 3.1rem;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px){
@@ -87,6 +106,10 @@
 
         &__info{
 
+            .card{
+                padding: 5rem 0;
+            }
+
             &-title{
                 padding-bottom: 4rem;
             }
@@ -97,6 +120,10 @@
 
             .text{
                 font-size: 2.6rem;
+            }
+
+            .highlight-background{
+                height: 62%;
             }
         }
 
