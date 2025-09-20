@@ -4,7 +4,7 @@
 
         .card__one{
             .text{
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
                 font-size: 2.4rem;
             }
         }
@@ -41,6 +41,7 @@
             text-align: center;
             font-size: 3.2rem;
             font-weight: 900;
+            line-height: 1;
         }
 
         .text{
@@ -81,6 +82,27 @@
                 font-size: 3.1rem;
             }
         }
+
+
+
+    }
+
+    .about{
+        &__history{
+            .cards{
+                gap: 4rem;
+            }
+
+            .card__two{
+                .cards{
+                    gap: 3rem;
+                }
+            }
+        }
+
+        &__description{
+            padding-bottom: 4rem;
+        }
     }
 }
 
@@ -95,7 +117,20 @@
 
                 .text{
                     font-size: 2.6rem;
-                    padding-bottom: 1rem;
+                    //padding-bottom: 1rem;
+                }
+            }
+
+            .card__two{
+                .cards__red{
+                    justify-content: end;
+                }
+
+                &.start{
+                    .cards{
+                        justify-content: start;
+                    }
+                    
                 }
             }
 
@@ -111,7 +146,7 @@
             }
 
             &-title{
-                padding-bottom: 4rem;
+                padding-bottom: 3rem;
             }
             
             .number{

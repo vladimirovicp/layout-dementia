@@ -41,6 +41,7 @@
     box-shadow: 0 0 5rem 0 rgba(182, 218, 251, 0.50);
      border-radius: 3rem;
      overflow: hidden;
+     background-color: #fff;
 
     &__box{
         position: relative;
@@ -87,6 +88,8 @@
 
 .backgroung__ice-blue{
     background-color: #F3F5FD;
+    position: relative;
+    z-index: -5;
 }
 
 .backgroung__ice-blue_20{
@@ -117,7 +120,7 @@
 @media (min-width: 768px){
     .pair{
         gap: 6.2rem;
-        padding-bottom:5rem;
+        padding-bottom:4rem;
 
         &__box{
             padding-bottom: 2rem;
@@ -160,6 +163,13 @@
                 gap:2rem;
             }
         }
+
+        &__text{
+                p{
+                    text-align: center;
+                }
+                
+            }
 
     }
 }
