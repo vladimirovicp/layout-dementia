@@ -8,6 +8,8 @@ if(header){
     if(nav){
         const menuBtn = nav.querySelector('.header__nav-wrapper');
         menuBtn.addEventListener('click', () => menuClick(body, nav,header));
+
+
     }
    
 }
@@ -21,5 +23,15 @@ function menuClick(body, nav, header){
     const container = header.querySelector('.container');
     container.classList.toggle('_menu-active');
     body.classList.toggle('_lock');
+
+
+    document.onclick = function (e) {
+        if(e.target.className == "_lock"){
+            navMenu.classList.toggle('_active');
+            icoBurger.classList.toggle('_active');
+            container.classList.toggle('_menu-active');
+            body.classList.toggle('_lock');
+        }
+    };
 
 }

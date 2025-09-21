@@ -16,3 +16,18 @@
 
     
 }
+
+@media (max-width: 767px){
+    .knowledge-base{
+        &__box-cards{
+            .card_wine{
+                padding: 3rem 3.8rem 3rem 2rem;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px){
+
+}
