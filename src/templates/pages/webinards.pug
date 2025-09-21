@@ -1,0 +1,32 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Вебинары
+
+block content
+
+  +titlePage('Вебинары')
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'База знаний', url: 'knowledge-base.html' },
+    { title: 'Вебинары', current: true }
+  ])
+
+  main.page.page__webinards
+    +heroImage('./img/hero-image/webinards.jpg', 'Родственникам')
+
+    .text-center--d.text-center--d-110 В&nbsp;2021&ndash;2022 годах Благотворительный центр &laquo;<strong>Хэсэд Авраам</strong>&raquo; и&nbsp;Женская еврейская организация <strong>&laquo;Проект Кешер&raquo;</strong> провели цикл вебинаров &laquo;Деменция. Как быть рядом&raquo;, адресованный родственникам людей с&nbsp;деменцией, но&nbsp;представляющий интерес также для социальных работников и&nbsp;специалистов по&nbsp;уходу
+
+    .webinards-box
+        .container
+            .media-pairs 
+                .media-pair 
+                    .media-pair__video
+                    .media-pair__info
+                        .media-pair__number #01
+                        .media-pair__title Деменция. Взгляд изнутри 
+                        .media-pair__text О&nbsp;ключевых причинах и&nbsp;признаках деменции, об&nbsp;основных принципах профилактики и&nbsp;лечения когнитивных нарушений
+                        .media-pair__autor 
+                            .media-pair__name Лидия Ивановна Гузева 
+                            .media-pair__autor-info Член Ассоциации неврологов Санкт-Петербурга, ведущий врач-невролог Международного медицинского центра &laquo;Согаз&raquo;
+
