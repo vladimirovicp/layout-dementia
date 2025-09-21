@@ -131,6 +131,12 @@
 
     &__feedback-form{
 
+        top: 0;
+
+        &.active{
+            transform: translate(-50%, 0) scale(1);
+        }
+
        .modal__footer{
             .cards {
                 gap: 0;
