@@ -1,0 +1,173 @@
+.about{
+
+    &__history{
+
+        .card__one{
+            .text{
+                padding-bottom: 1rem;
+                font-size: 2.4rem;
+            }
+        }
+
+        .card__two{
+            .card__link{
+                height: auto;
+            }
+        }
+
+
+    }
+
+    &__info{
+        position: relative;
+
+        &-title{
+            padding-bottom: 3rem;
+        }
+
+        .cards{
+            flex-direction: row;
+        }
+
+        .card{
+            box-shadow: 0 0 5rem 0 rgba(182, 218, 251, 0.50);
+            background-color: #fff;
+            border-radius: 3rem;
+            padding: 3rem 0;
+        }
+        
+        .number{
+            color:  #FAC373;
+            text-align: center;
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .text{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .highlight-background{
+            height: 70%;
+        }
+    }
+
+    &__description{
+        position: relative;
+        padding-bottom: 6rem;
+        .text{
+            font-size: 2.4rem;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+    &__box-cards{
+        .cards__red{
+            .card{
+                height: auto;
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 767px){
+
+    .page__about{
+        .pair{
+            &__title{
+                font-size: 3.1rem;
+            }
+        }
+
+
+
+    }
+
+    .about{
+        &__history{
+            .cards{
+                gap: 4rem;
+            }
+
+            .card__two{
+                .cards{
+                    gap: 3rem;
+                }
+            }
+        }
+
+        &__description{
+            padding-bottom: 4rem;
+        }
+    }
+}
+
+@media (min-width: 768px){
+   .about{
+
+        &__history{
+
+            .card__one{
+                width: 80.8rem;
+                flex: 0 0 80.8rem;
+
+                .text{
+                    font-size: 2.6rem;
+                    //padding-bottom: 1rem;
+                }
+            }
+
+            .card__two{
+                .cards__red{
+                    justify-content: end;
+                }
+
+                &.start{
+                    .cards{
+                        justify-content: start;
+                    }
+                    
+                }
+            }
+
+
+
+
+        }
+
+        &__info{
+
+            .card{
+                padding: 5rem 0;
+            }
+
+            &-title{
+                padding-bottom: 3rem;
+            }
+            
+            .number{
+                font-size: 7.2rem;
+            }
+
+            .text{
+                font-size: 2.6rem;
+            }
+
+            .highlight-background{
+                height: 62%;
+            }
+        }
+
+        &__description{
+            .text{
+                font-size: 2.6rem;
+                font-weight: 700;
+            }
+        }
+
+    } 
+}

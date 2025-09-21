@@ -11,6 +11,7 @@ block content
       {      
         'title': 'О нас',
         'numIcon': '24',
+        'link': 'about',
         'text': 'Комплексная экосистема помощи людям с&nbsp;деменцией Благотворительного центра &laquo;Хэсэд Авраам&raquo; объединяет Центр памяти и&nbsp;здоровья, Центр дневного ухода &laquo;Лоскутки&raquo;, Пансионат &laquo;Курортный&raquo;, Центр знаний о&nbsp;деменции и&nbsp;Фонд целевого капитала &laquo;Человек Рассеянный&raquo;'
       },
       {      
@@ -65,7 +66,7 @@ block content
       .container
         .cards.cards__white-circle.cards__white-circle-d2.cards__white-circle-m
           each el in dataCards
-            a(href="#" class="card card__link")
+            a(href= el.link ? el.link : "#" class="card card__link")
               .card__header 
                 .icon
                   +svgDataCardsRed(el.numIcon)

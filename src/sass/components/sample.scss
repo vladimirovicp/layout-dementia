@@ -1,0 +1,175 @@
+.pair{
+
+    display: flex;
+    padding-bottom:4rem;
+
+    &__box{
+        position: relative;
+        padding-bottom: 5rem;
+    }
+
+    &__img{
+        picture{
+            display: flex;
+            border-radius: 3rem;
+            overflow: hidden;
+            box-shadow: 0 0 5rem 0 rgba(182, 218, 251, 0.50);
+        }
+
+        img{
+           height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__title{
+        font-size: 3.2rem;
+        font-weight: 900;
+        padding-bottom: 2rem;
+    }
+
+    &__text{
+        p{
+            padding-bottom: 1rem;
+        }
+    }
+
+}
+
+.split{
+    box-shadow: 0 0 5rem 0 rgba(182, 218, 251, 0.50);
+     border-radius: 3rem;
+     overflow: hidden;
+     background-color: #fff;
+
+    &__box{
+        position: relative;
+        .container{
+            display: flex;
+            gap: 3rem;
+        }
+    }
+
+    &__img{
+        picture{
+            display: flex;
+            border-radius: 3rem;
+            overflow: hidden;
+        }
+
+        img{
+           height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__info{
+        background-color: #fff;
+        padding: 4rem 4rem 5rem 4rem;
+    }
+
+
+    &__title{
+        font-size: 3.6rem;
+        font-weight: 900;
+        padding-bottom: 2rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    &__text{
+        p{
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+.backgroung__ice-blue{
+    background-color: #F3F5FD;
+    position: relative;
+    z-index: -5;
+}
+
+.backgroung__ice-blue_20{
+    background: linear-gradient(to bottom, #fff 0%, #fff 20%, #F3F5FD 20%, #F3F5FD 100%);
+}
+
+
+
+
+@media (max-width: 767px){
+    .pair{
+        gap: 3rem;
+        flex-direction: column;
+    }
+
+    .split{
+        &__box{
+            .container{
+                flex-direction: column;
+            }
+        }
+    }
+
+
+}
+
+
+@media (min-width: 768px){
+    .pair{
+        gap: 6.2rem;
+        padding-bottom:4rem;
+
+        &__box{
+            padding-bottom: 2rem;
+        }
+
+        &__img{
+            picture{
+                width: 53rem;
+                height: 30rem;
+            }
+
+            img{
+            height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &__title{
+            font-size: 3.6rem;
+            font-weight: 900;
+            padding-bottom: 2rem;
+        }
+
+        &__text{
+            p{
+                padding-bottom: 1rem;
+            }
+        }
+
+    }
+
+    .split{
+        //max-width: 49%;
+        width: 69rem;
+
+        &__box{
+            .container{
+                justify-content: space-between;
+                gap:2rem;
+            }
+        }
+
+        &__text{
+                p{
+                    text-align: center;
+                }
+                
+            }
+
+    }
+}
