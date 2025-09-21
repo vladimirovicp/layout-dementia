@@ -21,12 +21,12 @@ block content
       },
       {      
         'title': 'Партнерство',
-        'numIcon': '26i',
+        'numIcon': '26',
         'text': '&laquo;Хэсэд Авраам&raquo; развивает разнообразные партнёрские проекты и&nbsp;открыт для сотрудничества с&nbsp;организациями, заинтересованными в&nbsp;построении системной помощи людям с&nbsp;деменцией в&nbsp;России'
       },
       {      
         'title': 'Конференции',
-        'numIcon': '27i',
+        'numIcon': '27',
         'text': 'С&nbsp;2003 года &laquo;Хэсэд Авраам&raquo; регулярно выступает организатором крупных отраслевых событий, которые объединяют специалистов в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией для обмена актуальным опытом'
       },
             {      
@@ -62,7 +62,7 @@ block content
         .wrapper Специалистами Благотворительного центра &laquo;Хэсэд Авраам&raquo; накоплен <strong>обширный опыт реализации программ для пожилых людей с&nbsp;когнитивными нарушениями на&nbsp;базе очных площадок, не&nbsp;имеющих аналогов в&nbsp;стране</strong> и&nbsp;объединённых в&nbsp;комплексную экосистему помощи
 
     .knowledge-base__box-cards
-      .highlight-background.highlight-background__radius-top.highlight-background__radius-bottom
+      .highlight-background.highlight-background__radius-tb
       .container
         .cards.cards__white-circle.cards__white-circle-d2.cards__white-circle-m
           each el in dataCards
@@ -97,7 +97,7 @@ block content
         +svgDataSysem('close')
       .modal__panel
         header.modal__header
-          .modal-title Свяжитесь с нами
+          .modal-title Связаться с&nbsp;нами
           .modal-description Напишите нам через форму обратной связи или свяжитесь любым удобным для Вас способом
         .modal__body
           form(id="contact-form" action="/feedback-form" method="post")
@@ -114,6 +114,8 @@ block content
             .text-center
               button(type="submit" class="btn__red")
                 .btn__text Отправить обращение
+                span.btn__svg
+                  +svgDataArrow('arrow-right-white')
         footer.modal__footer
           .cards  
             .card

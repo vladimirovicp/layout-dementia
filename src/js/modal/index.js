@@ -28,4 +28,12 @@ function modalOpen(modal,modalBg){
     modalBg.classList.add('active');
      modal.classList.add('active');
      body.classList.add('_lock');
+
+     document.onclick = function (e) {
+        if(e.target.className == "modal__bg active"){
+            modalBg.classList.remove('active');
+            modal.classList.remove('active');
+            body.classList.remove('_lock');
+        }
+    };
 }
