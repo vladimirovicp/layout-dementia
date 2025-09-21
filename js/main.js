@@ -5137,6 +5137,14 @@ function menuClick(body, nav, header) {
   var container = header.querySelector('.container');
   container.classList.toggle('_menu-active');
   body.classList.toggle('_lock');
+  document.onclick = function (e) {
+    if (e.target.className == "_lock") {
+      navMenu.classList.toggle('_active');
+      icoBurger.classList.toggle('_active');
+      container.classList.toggle('_menu-active');
+      body.classList.toggle('_lock');
+    }
+  };
 }
 var body = document.querySelector('body');
 var modalBg = document.querySelector('.modal__bg');
@@ -5164,6 +5172,13 @@ function modalOpen(modal, modalBg) {
   modalBg.classList.add('active');
   modal.classList.add('active');
   body.classList.add('_lock');
+  document.onclick = function (e) {
+    if (e.target.className == "modal__bg active") {
+      modalBg.classList.remove('active');
+      modal.classList.remove('active');
+      body.classList.remove('_lock');
+    }
+  };
 }
 
 //# sourceMappingURL=main.js.map
