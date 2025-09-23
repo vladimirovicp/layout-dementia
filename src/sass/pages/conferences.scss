@@ -1,0 +1,30 @@
+.conferences{
+    &__list{
+        position: relative;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+}
+
+
+@media (max-width: 767px){
+
+}
+
+@media (min-width: 768px){
+    .conferences{
+        &__list{
+            padding-top: 9rem;
+            padding-bottom: 9rem;
+        }
+    }
+
+    .page__conferences{
+        .media-pair__text{
+            height: 15rem;
+            overflow: hidden;
+            padding-bottom: 0;
+            margin-bottom: 2rem;
+        }
+    }
+}

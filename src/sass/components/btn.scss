@@ -6,6 +6,7 @@
     border-radius: 9.9rem; 
     cursor: pointer;
     position: relative;
+    z-index: 1;
     overflow: hidden;
 
     &:before, &:after {

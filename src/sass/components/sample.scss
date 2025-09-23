@@ -140,6 +140,13 @@
         line-height: 1.2;
     }
 
+    &__year{
+        color: #FAC373;
+        font-size: 2.4rem;
+        font-weight: 900;
+        padding-bottom: 1rem;
+    }
+
     &__title{
         font-size: 3.2rem;
         font-weight: 800;
@@ -149,6 +156,10 @@
     }
 
     &__text{
+        padding-bottom: 3rem;
+    }
+
+    &__text-2{
         font-size: 2.4rem;
         padding-bottom: 2.5rem;
     }
@@ -185,10 +196,14 @@
             iframe{
                 // height: 37.2rem;
                 // width: 66rem;
-
                 aspect-ratio: 660 / 372;
                 width: 100%;
                 max-width: 66rem;
+            }
+
+            iframe{
+                // В вк absolute прокидывается
+                position: static!important;
             }
         }
         &__play{
@@ -360,11 +375,19 @@
             font-size: 2.6rem;
         }
 
+        &__year{
+            font-size: 2.6rem;
+        }
+
         &__title{
             font-size: 3.6rem;
         }
 
         &__text{
+            padding-bottom: 2rem;
+        }
+
+        &__text-2{
             font-size: 2.6rem;
         }
 

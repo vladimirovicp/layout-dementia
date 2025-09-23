@@ -8,32 +8,31 @@ block content
   - 
     var videos = [
       {
-        idVideo: 'SbecE1N27hM',
-        img: './img/page/webinards/1.jpg',
-        number: '#01',
-        title: 'Деменция. Взгляд изнутри',
-        text: 'О&nbsp;ключевых причинах и&nbsp;признаках деменции, об&nbsp;основных принципах профилактики и&nbsp;лечения когнитивных нарушений',
-        name: 'Лидия Ивановна Гузева',
-        autorInfo: 'Член Ассоциации неврологов Санкт-Петербурга, ведущий врач-невролог Международного медицинского центра &laquo;Согаз&raquo;'
-
+        vkLink: `https://vkvideo.ru/video_ext.php?oid=-91671644&id=456239186`,
+        img: './img/page/conferences/1.jpg',
+        year: '2024',
+        title: 'Обмен новыми практиками в работе с деменцией',
+        text: `<b>Конференция &laquo;Объединяя усилия: обмен новыми практиками в&nbsp;работе с&nbsp;деменцией и&nbsp;болезнью Альцгеймера&raquo; состоялась в&nbsp;2024 году в&nbsp;Конгрессно-выставочном центре &laquo;Экспофорум&raquo;</b> и&nbsp;была посвящена актуальным практическим наработкам в&nbsp;сфере взаимодействия с&nbsp;людьми с&nbsp;когнитивными нарушениями, включая когнитивные тренировки и&nbsp;арт-терапевтические практики`,
+        btn: 'Программа',
+        btnLink: '#',
       },
       {
         idVideo: 'MpNY8vWId6Q',
-        img: './img/page/webinards/2.jpg',
-        number: '#02',
+        img: './img/page/conferences/2.jpg',
+        year: '2023',
         title: 'Основы проведения когнитивного тренинга',
-        text: 'Об&nbsp;основных принципах построения и&nbsp;проведения занятий по&nbsp;тренировке памяти, внимания и&nbsp;мышления пожилых людей',
-        name: 'Наталия Анатольевна Краснопольская',
-        autorInfo: 'Клинический психолог Центра памяти и&nbsp;здоровья Благотворительного центра &laquo;Хэсэд Авраам&raquo;'
+        text: `<b>Конференция, посвящённая вопросам оказания социально-медицинской помощи людям с&nbsp;деменцией, состоялась в&nbsp;2023 году в&nbsp;главном офисе Благотворительного центра &laquo;Хэсэд Авраам&raquo;</b> и&nbsp;охватила широкий спектр вопросов: от&nbsp;особенностей работы памяти в&nbsp;зрелом возрасте до&nbsp;проблем реализации &laquo;Антидементного плана действий&raquo; и&nbsp;цифровых технологий в&nbsp;работе с&nbsp;деменцией`,
+        btn: 'Программа',
+        btnLink: '#',
       },
       {
         idVideo: '0vWDcZMKrzs',
-        img: './img/page/webinards/3.jpg',
-        number: '#03',
-        title: 'Эрготерапия в&nbsp;работе с&nbsp;людьми с&nbsp;деменцией',
-        text: 'О&nbsp;принципах эрготерапии для восстановления утраченных функций пациентов, в&nbsp;том числе с&nbsp;помощью особой организации пространства и&nbsp;быта',
-        name: 'Екатерина Анатольевна Мишина',
-        autorInfo: 'Врач-невролог, эрготерапевт'
+        img: './img/page/conferences/3.jpg',
+        year: '2022',
+        title: '<b>Эрготерапия в&nbsp;работе с&nbsp;людьми с&nbsp;деменцией',
+        text: `Конференция прошла в&nbsp;2022 году на&nbsp;площадке Конгрессно-выставочного центра &laquo;Экспофорум&raquo;</b> и&nbsp;позволила заинтересованной аудитории познакомиться с&nbsp;социальными, медицинскими и&nbsp;психологическими аспектами взаимодействия с&nbsp;людьми с&nbsp;когнитивными нарушениями, различными моделями психологической помощи и&nbsp;социального ухода.`,
+        btn: 'Программа',
+        btnLink: '#',
       },
     ]
 
@@ -44,7 +43,7 @@ block content
     { title: 'Конференции', current: true }
   ])
 
-  main.page.page__webinards
+  main.page.page__conferences
     +heroImage('./img/hero-image/conferences.jpg', 'Родственникам')
 
     .box 
@@ -52,6 +51,63 @@ block content
         .text-center--d.text-center--d-110 
             p.pb-d-2.pb-m-1 <b>Благотворительный центр</b> &laquo;<a href="#" class="link__red">Хэсэд Авраам</a>&raquo; <b>с&nbsp;2003 года регулярно выступает организатором крупных отраслевых событий,</b> объединяющих специалистов в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией для обмена методическими разработками и&nbsp;практическим опытом.
             p <b>С 2022 года конференции включены в программу Международного форума «Старшее поколение»,</b> который ежегодно проходит в Санкт-Петербурге при поддержке городского Комитета по социальной политике.
+    
+    .conferences__list
+      .container
+        .highlight-background.highlight-background__radius-tb
+        .media-pairs 
+          each el in videos
+            .media-pair 
+
+              if el.idVideo
+                .media-pair__video.video-preview(
+                  data-youtube-id=el.idVideo
+                  tabindex="0"
+                  aria-label="Play video"
+                )
+
+                  .video-preview__inner
+                    img(
+                      class="video-preview__thumb"
+                      src=el.img
+                      alt="Video preview"
+                      loading="lazy"
+                      decoding="async"
+                    )
+                    button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
+                      img(src="./img/svg/play.svg", alt="")
+
+
+              else
+                .media-pair__video.video-preview(
+                  data-vk-embed=el.vkLink
+                  tabindex="0"
+                  aria-label="Play VK video"
+                )
+                  .video-preview__inner
+                    img(
+                      class="video-preview__thumb"
+                      src=el.img
+                      alt="Video preview"
+                      loading="lazy"
+                      decoding="async"
+                    )
+                    button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
+                      img(src="./img/svg/play.svg", alt="")                
+
+              .media-pair__info
+                  .media-pair__year
+                    != el.year
+                  .media-pair__title
+                    != el.title
+                  .media-pair__text 
+                    != el.text
+                  .media-pair__btn-box 
+                      a(href=el.btnLink class="btn btn__icon")
+                        span.btn__text 
+                          != el.btn
+                        span.btn__svg
+                          +svgDataArrow('topRight')
 
     
 
