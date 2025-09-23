@@ -1,0 +1,147 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Вебинары
+
+block content
+
+  - 
+    var videos = [
+      {
+        idVideo: 'SbecE1N27hM',
+        img: './img/page/webinards/1.jpg',
+        number: '#01',
+        title: 'Деменция. Взгляд изнутри',
+        text: 'О&nbsp;ключевых причинах и&nbsp;признаках деменции, об&nbsp;основных принципах профилактики и&nbsp;лечения когнитивных нарушений',
+        name: 'Лидия Ивановна Гузева',
+        autorInfo: 'Член Ассоциации неврологов Санкт-Петербурга, ведущий врач-невролог Международного медицинского центра &laquo;Согаз&raquo;'
+
+      },
+      {
+        idVideo: 'MpNY8vWId6Q',
+        img: './img/page/webinards/2.jpg',
+        number: '#02',
+        title: 'Основы проведения когнитивного тренинга',
+        text: 'Об&nbsp;основных принципах построения и&nbsp;проведения занятий по&nbsp;тренировке памяти, внимания и&nbsp;мышления пожилых людей',
+        name: 'Наталия Анатольевна Краснопольская',
+        autorInfo: 'Клинический психолог Центра памяти и&nbsp;здоровья Благотворительного центра &laquo;Хэсэд Авраам&raquo;'
+      },
+      {
+        idVideo: '0vWDcZMKrzs',
+        img: './img/page/webinards/3.jpg',
+        number: '#03',
+        title: 'Эрготерапия в&nbsp;работе с&nbsp;людьми с&nbsp;деменцией',
+        text: 'О&nbsp;принципах эрготерапии для восстановления утраченных функций пациентов, в&nbsp;том числе с&nbsp;помощью особой организации пространства и&nbsp;быта',
+        name: 'Екатерина Анатольевна Мишина',
+        autorInfo: 'Врач-невролог, эрготерапевт'
+      },
+      {
+        idVideo: 'iSKW1SjM_Hs',
+        img: './img/page/webinards/4.jpg',
+        number: '#04',
+        title: 'Поддержание двигательной активности в&nbsp;пожилом возрасте и&nbsp;старше',
+        text: 'О&nbsp;ключевых аспектах сохранения физической активности',
+        name: 'Ольга Юрьевна Карогодская',
+        autorInfo: 'Специалист по&nbsp;реабилитации, методист по&nbsp;лечебной физкультуре Центра памяти и&nbsp;здоровья Благотворительного центра &laquo;Хэсэд Авраам&raquo;'
+      },
+      {
+        idVideo: 'zvvr0pps-Sw',
+        img: './img/page/webinards/5.jpg',
+        number: '#05',
+        title: '&laquo;Плохое&raquo; поведение: как помочь пожилому человеку и&nbsp;сберечь себя',
+        text: 'Об&nbsp;основных поведенческих нарушениях у&nbsp;пожилых людей и&nbsp;о&nbsp;том, как c&nbsp;ними взаимодействовать, не&nbsp;выгорая эмоционально',
+        name: 'Элина Маратовна Ахметзянова',
+        autorInfo: 'Клинический психолог Национального медицинского исследовательского центра психиатрии и&nbsp;неврологии&nbsp;им. В.М. Бехтерева'
+      },
+      {
+        idVideo: 'JuyDQBzO31E',
+        img: './img/page/webinards/6.jpg',
+        number: '#06',
+        title: 'Гарантированная государственная помощь. Практические рекомендации',
+        text: 'О&nbsp;законах, программах и&nbsp;социальных службах, которые могут быть полезны семьям, заботящимся о&nbsp;близких с&nbsp;деменцией',
+        name: 'Лариса Петровна Рохлина',
+        autorInfo: 'Руководитель службы кейс-менеджеров Благотворительного центра «Хэсэд Авраам»'
+      },
+      {
+        idVideo: 'GYpTFosArbc',
+        img: './img/page/webinards/7.jpg',
+        number: '#07',
+        title: 'Практические рекомендации по&nbsp;получению социальных услуг',
+        text: 'Информация для родственников, ухаживающих за&nbsp;людьми с&nbsp;деменцией: куда и&nbsp;зачем можно обратиться, какие документы оформлять и&nbsp;на&nbsp;что рассчитывать',
+        name: 'Светлана Сергеевна Игнатенко',
+        autorInfo: 'Кейс-менеджер Благотворительного центра «Хэсэд Авраам»'
+      },
+      {
+        idVideo: 'KXpAe3h6szI',
+        img: './img/page/webinards/8.jpg',
+        number: '#08',
+        title: 'Психологические рекомендации для родственников',
+        text: 'Практические советы, как ухаживающим родственникам совладать с&nbsp;различными сложными проявлениями близкого человека с&nbsp;деменцией и&nbsp;при этом успешно справляться с&nbsp;собственным стрессом',
+        name: 'Татьяна Владимировна Ромашова',
+        autorInfo: 'Клинический психолог Центра памяти и здоровья Благотворительного центра «Хэсэд Авраам»'
+      },
+      {
+        idVideo: 'whldazqQHPI',
+        img: './img/page/webinards/9.jpg',
+        number: '#08',
+        title: 'Особенности питания лиц пожилого возраста',
+        text: 'Об&nbsp;особенностях работы организма человека в&nbsp;пожилом возрасте и&nbsp;о&nbsp;том, какой вклад правильное питание вносит в&nbsp;реабилитацию людей с&nbsp;деменцией',
+        name: 'Иван Викторович Яковлев',
+        autorInfo: 'Врач-гериатр, терапевт, врач по гигиене питания'
+      }
+    ]
+
+  +titlePage('Вебинары')
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'База знаний', url: 'knowledge-base.html' },
+    { title: 'Вебинары', current: true }
+  ])
+
+  main.page.page__webinards
+    +heroImage('./img/hero-image/webinards.jpg', 'Родственникам')
+
+    .box 
+      .container 
+        .text-center--d.text-center--d-110 В&nbsp;2021&ndash;2022 годах Благотворительный центр &laquo;<strong>Хэсэд Авраам</strong>&raquo; и&nbsp;Женская еврейская организация <strong>&laquo;Проект Кешер&raquo;</strong> провели цикл вебинаров &laquo;Деменция. Как быть рядом&raquo;, адресованный родственникам людей с&nbsp;деменцией, но&nbsp;представляющий интерес также для социальных работников и&nbsp;специалистов по&nbsp;уходу
+
+    .webinars__list
+      .container
+        .highlight-background.highlight-background__radius-tb
+        .media-pairs 
+            each el in videos
+              .media-pair 
+                .media-pair__video.video-preview(
+                  data-youtube-id=el.idVideo
+                  tabindex="0"
+                  aria-label="Play video"
+                )
+                  .video-preview__inner
+                    img(
+                      class="video-preview__thumb"
+                      src=el.img
+                      alt="Video preview"
+                      loading="lazy"
+                      decoding="async"
+                    )
+                    button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
+                      img(src="./img/svg/play.svg", alt="")
+                .media-pair__info
+                    .media-pair__number 
+                      != el.number
+                    .media-pair__title
+                      != el.title
+                    .media-pair__text 
+                      != el.text
+                    .media-pair__autor
+                      .media-pair__autor-ico
+                        img(
+                          src="/img/svg/user-mini.svg", 
+                          alt=el.title
+                          )
+                      .media-pair__autor-container
+                          .media-pair__name
+                            != el.name
+                          .media-pair__autor-info 
+                            != el.autorInfo
+

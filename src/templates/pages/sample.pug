@@ -1,0 +1,52 @@
+extends ../layouts/_layout.pug
+
+block title
+  title sample
+
+block content
+
+    main 
+
+        .pair__box
+            .container
+                .title__page 
+                    .container .pair
+                .pair
+                    .pair__img 
+                        picture 
+                            img(src='./img/page/about/1.png', alt='Центр памяти и&nbsp;здоровья')
+                    .pair__info 
+                        .pair__title Центр памяти и здоровья
+                        .pair__text
+                            p В Центре памяти и здоровья, открытом в 2014 году, ежедневно проходят занятия для пожилых людей с преддементными нарушениями и деменцией, которые столкнулись с ухудшением памяти и ориентации во времени и пространстве, расстройствами внимания, понимания и речи.
+                            p Психологи Центра занимаются диагностикой деменции, проводят занятия, направленные на сохранение и восстановление когнитивных способностей (в том числе в формате арт-терапии), а также работают с родственниками подопечных в специальной группе поддержки.
+                  
+                .title__page 
+                    .container .text-center--d.text-center--d-110
+                .text-center--d.text-center--d-110 В&nbsp;2021&ndash;2022 годах Благотворительный центр &laquo;<strong>Хэсэд Авраам</strong>&raquo; и&nbsp;Женская еврейская организация <strong>&laquo;Проект Кешер&raquo;</strong> провели цикл вебинаров &laquo;Деменция. Как быть рядом&raquo;, адресованный родственникам людей с&nbsp;деменцией, но&nbsp;представляющий интерес также для социальных работников и&nbsp;специалистов по&nbsp;уходу
+
+        .box
+            .container
+                .media-pairs 
+                    .media-pair 
+                        div(class="media-pair__video video-preview" data-youtube-id="SbecE1N27hM" tabindex="0" aria-label="Play video")
+                            .video-preview__inner(style="--aspect-ratio: 56.25%;")
+                            img(
+                                class="video-preview__thumb"
+                                src="./img/page/webinards/1.jpg"
+                                alt="Video preview"
+                                loading="lazy"
+                                decoding="async"
+                            )
+                            button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
+                                img(src="./img/svg/play.svg", alt="")
+                        .media-pair__info
+                            .media-pair__number #01
+                            .media-pair__title Деменция. Взгляд изнутри 
+                            .media-pair__text О&nbsp;ключевых причинах и&nbsp;признаках деменции, об&nbsp;основных принципах профилактики и&nbsp;лечения когнитивных нарушений
+                            .media-pair__autor
+                                .media-pair__autor-ico
+                                img(src="/img/svg/user-mini.svg", alt="")
+                                .media-pair__autor-container
+                                    .media-pair__name Лидия Ивановна Гузева 
+                                    .media-pair__autor-info Член Ассоциации неврологов Санкт-Петербурга, ведущий врач-невролог Международного медицинского центра &laquo;Согаз&raquo;

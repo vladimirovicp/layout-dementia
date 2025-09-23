@@ -97,6 +97,142 @@
 }
 
 
+.text-center{
+        &--d{
+            font-size: 2.4rem;
+            padding-bottom: 7rem;
+        }
+}
+
+.media-pairs{
+
+}
+
+.media-pair{
+    
+    &__video{
+        box-shadow: 0 0 50px 0 rgba(182, 218, 251, 0.50);
+        border-radius: 3rem;
+        overflow: hidden;
+
+        aspect-ratio: 660 / 372;
+        width: 100%;
+        max-width: 66rem;
+
+        .video-preview__thumb{
+            border-radius: 3rem;
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+        }
+
+    }
+
+    &__info{
+
+    }
+
+    &__number{
+        color: #B3D9FB;
+        font-size: 2.4rem;
+        font-weight: 800;
+        padding-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    &__title{
+        font-size: 3.2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        padding-bottom: 1rem;
+
+    }
+
+    &__text{
+        font-size: 2.4rem;
+        padding-bottom: 2.5rem;
+    }
+
+    &__autor{
+        display: flex;
+        gap: 2rem;
+
+        &-ico{
+            img{
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        
+    }
+
+    &__name{
+        font-weight: 700;
+    }
+
+    &__autor-info{
+
+    }
+}
+
+.video{
+    &-preview{
+
+        &__inner{
+            position: relative;
+            width: 100%;
+
+            iframe{
+                // height: 37.2rem;
+                // width: 66rem;
+
+                aspect-ratio: 660 / 372;
+                width: 100%;
+                max-width: 66rem;
+            }
+        }
+        &__play{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 7.1rem;
+            height: 7.1rem;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #FAC373;
+            color: #0b2bff;
+            line-height: 1;
+            border: none;
+            z-index: 2;
+            cursor: pointer;
+
+                img{
+                    width: 3.8rem;
+                    height: 3.8rem;
+                    height: 3.8rem;
+                    width: 3.8rem;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+        }
+
+        &.is-playing{
+            .video-preview__play{
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.9);
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+
+
+
 
 
 @media (max-width: 767px){
@@ -110,6 +246,14 @@
             .container{
                 flex-direction: column;
             }
+        }
+    }
+
+
+    .media-pair{
+        padding-bottom: 4rem;
+        &__info{
+            padding-top: 2rem;
         }
     }
 
@@ -154,7 +298,6 @@
     }
 
     .split{
-        //max-width: 49%;
         width: 69rem;
 
         &__box{
@@ -171,5 +314,69 @@
                 
             }
 
+    }
+
+    .text-center{
+        &--d{
+            text-align: center;
+            font-size: 2.6rem;
+            padding-bottom: 9rem;
+
+            &-110{
+                width: 110rem;
+                margin: 0 auto;
+            }
+        }
+
+    }
+
+    .media-pairs{
+
+    }
+
+    .media-pair{
+        display: flex;
+        gap: 5rem;
+        padding-bottom: 7.6rem;
+
+        &__video{
+            width: 66rem;
+            height: 37.2rem;
+            flex-shrink: 0;
+
+           .video-preview__thumb{
+                // border-radius: 3rem;
+                // width: 66rem;
+                // height: 37.2rem;
+            }
+        }
+
+        &__info{
+
+        }
+
+        &__number{
+            font-size: 2.6rem;
+        }
+
+        &__title{
+            font-size: 3.6rem;
+        }
+
+        &__text{
+            font-size: 2.6rem;
+        }
+
+        &__autor{
+            
+        }
+
+        &__name{
+
+        }
+
+        &__autor-info{
+            
+        }
     }
 }
