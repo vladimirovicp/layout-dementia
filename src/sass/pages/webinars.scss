@@ -1,0 +1,25 @@
+.webinars{
+    &__list{
+        position: relative;
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }
+    
+}
+
+
+@media (max-width: 767px){
+   .webinars{
+
+   } 
+}
+
+
+@media (min-width: 768px){
+   .webinars{
+        &__list{
+            padding-top: 5.5rem;
+            padding-bottom: 1.4rem;
+        }
+   } 
+}
