@@ -5334,14 +5334,17 @@ function modalOpen(modal, modalBg) {
     // fade-in iframe, fade-out thumb and remove it after transition
     requestAnimationFrame(function () {
       iframe.style.opacity = '1';
-      var thumb = inner.querySelector(THUMB_SELECTOR);
-      if (thumb) {
-        thumb.style.transition = 'opacity 320ms ease';
-        thumb.style.opacity = '0';
-        setTimeout(function () {
-          if (thumb.parentNode) thumb.parentNode.removeChild(thumb);
-        }, 350);
-      }
+
+      // const thumb = inner.querySelector(THUMB_SELECTOR);
+
+      // if (thumb) {
+      //   thumb.style.transition = 'opacity 320ms ease';
+      //   thumb.style.opacity = '0';
+      //   setTimeout(() => {
+      //     if (thumb.parentNode) thumb.parentNode.removeChild(thumb);
+      //   }, 350);
+      // }
+
       var playBtn = inner.querySelector('.video-preview__play');
       if (playBtn) playBtn.setAttribute('aria-hidden', 'true');
     });
