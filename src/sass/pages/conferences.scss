@@ -1,13 +1,68 @@
 .conferences{
+
     &__list{
         position: relative;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    &__cards{
         padding-top: 7rem;
         padding-bottom: 7rem;
+        .card__one{
+            .title{
+                color: #35333D;
+                font-size: 4rem;
+                font-weight: 800;
+                line-height: 120%;
+                max-width: 57.2rem;
+                padding-bottom: 3rem;
+            }
+        }
+
+        .card__two{
+            .title{
+                color: #35333D;
+                font-size: 2.6rem;
+                font-weight: 700;
+                padding-bottom: 2rem;
+            }
+        }
     }
 }
 
 
 @media (max-width: 767px){
+    .conferences{
+        &__box{
+            .text-center--d{
+                padding-bottom: 4rem;
+            }
+        }
+
+        &__list{
+            .media-pair{
+                padding-bottom: 7rem;
+
+                &:last-child{
+                    padding-bottom: 0;
+                }
+            }
+           
+        }
+
+        &__cards{
+            .cards{
+                gap: 7rem;
+            }
+            
+            .card__one{
+                text-align: center;
+            }
+        }
+
+    }
+
 
 }
 
@@ -16,6 +71,17 @@
         &__list{
             padding-top: 9rem;
             padding-bottom: 9rem;
+        }
+
+        &__cards{
+            padding-top: 9rem;
+            padding-bottom: 9rem;
+
+            .card__one{
+                .title{
+                    padding-bottom: 4rem;
+                }
+            }
         }
     }
 

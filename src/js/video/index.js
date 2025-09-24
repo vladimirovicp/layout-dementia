@@ -127,14 +127,16 @@
     requestAnimationFrame(() => {
       iframe.style.opacity = '1';
 
-      const thumb = inner.querySelector(THUMB_SELECTOR);
-      if (thumb) {
-        thumb.style.transition = 'opacity 320ms ease';
-        thumb.style.opacity = '0';
-        setTimeout(() => {
-          if (thumb.parentNode) thumb.parentNode.removeChild(thumb);
-        }, 350);
-      }
+      // const thumb = inner.querySelector(THUMB_SELECTOR);
+
+
+      // if (thumb) {
+      //   thumb.style.transition = 'opacity 320ms ease';
+      //   thumb.style.opacity = '0';
+      //   setTimeout(() => {
+      //     if (thumb.parentNode) thumb.parentNode.removeChild(thumb);
+      //   }, 350);
+      // }
 
       const playBtn = inner.querySelector('.video-preview__play');
       if (playBtn) playBtn.setAttribute('aria-hidden', 'true');
