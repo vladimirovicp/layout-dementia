@@ -80,7 +80,15 @@
         .pair{
             &__title{
                 font-size: 3.1rem;
+            }            
+            
+            &__box{
+                padding-bottom: 0;
             }
+        }
+
+        .split__title{
+            text-align: left;
         }
 
 

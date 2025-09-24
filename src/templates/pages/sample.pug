@@ -31,15 +31,15 @@ block content
                     .media-pair 
                         div(class="media-pair__video video-preview" data-youtube-id="SbecE1N27hM" tabindex="0" aria-label="Play video")
                             .video-preview__inner(style="--aspect-ratio: 56.25%;")
-                            img(
-                                class="video-preview__thumb"
-                                src="./img/page/webinards/1.jpg"
-                                alt="Video preview"
-                                loading="lazy"
-                                decoding="async"
-                            )
-                            button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
-                                img(src="./img/svg/play.svg", alt="")
+                                img(
+                                    class="video-preview__thumb"
+                                    src="./img/page/webinards/1.jpg"
+                                    alt="Video preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                )
+                                button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
+                                    img(src="./img/svg/play.svg", alt="")
                         .media-pair__info
                             .media-pair__number #01
                             .media-pair__title Деменция. Взгляд изнутри 
@@ -50,3 +50,34 @@ block content
                                 .media-pair__autor-container
                                     .media-pair__name Лидия Ивановна Гузева 
                                     .media-pair__autor-info Член Ассоциации неврологов Санкт-Петербурга, ведущий врач-невролог Международного медицинского центра &laquo;Согаз&raquo;
+
+
+        .box
+            .container
+                .media-pairs 
+                    .media-pair 
+                        div(
+                            class="media-pair__video video-preview" 
+                            data-vk-embed="https://vkvideo.ru/video_ext.php?oid=-91671644&id=456239186"
+                            tabindex="0" 
+                            aria-label="Play VK video"
+                            )
+                            .video-preview__inner(style="--aspect-ratio: 56.25%;")
+                                img(
+                                    class="video-preview__thumb"
+                                    src="./img/page/conferences/1.jpg"
+                                    alt="Video preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                )
+                                button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
+                                    img(src="./img/svg/play.svg", alt="")
+                        .media-pair__info
+                            .media-pair__year 2024
+                            .media-pair__title Обмен новыми практиками в&nbsp;работе с&nbsp;деменцией
+                            .media-pair__text <b>Конференция &laquo;Объединяя усилия: обмен новыми практиками в&nbsp;работе с&nbsp;деменцией и&nbsp;болезнью Альцгеймера&raquo; состоялась в&nbsp;2024 году в&nbsp;Конгрессно-выставочном центре &laquo;Экспофорум&raquo;</b> и&nbsp;была посвящена актуальным практическим наработкам в&nbsp;сфере взаимодействия с&nbsp;людьми с&nbsp;когнитивными нарушениями, включая когнитивные тренировки и&nbsp;арт-терапевтические практики
+                            .media-pair__btn-box 
+                                a(href=knowledgeBase class="btn btn__icon")
+                                    span.btn__text Программа
+                                    span.btn__svg
+                                        +svgDataArrow('topRight')
