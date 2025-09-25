@@ -1,0 +1,27 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Страница не найдена
+
+block content
+
+  +titlePage('Страница не найдена')
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'Не найдено', current: true }
+  ])
+
+  main.page.page__404
+    +heroImage('./img/hero-image/404.jpg', 'Страница не найдена')
+
+    .box
+        .container
+            .text-center.text-center--d-90
+                .title-standart Ой, такой страницы не&nbsp;существует!
+                .text-standart Вероятно, Вы&nbsp;ввели неверный адрес страницы. На&nbsp;нашем сайте много интересного&nbsp;&mdash; поищите нужную страницу в&nbsp;меню или&nbsp;воспользуйтесь поиском!
+                .btn__container  
+                    a(href="index" class="btn__red btn__icon")
+                        span.btn__text Узнать больше
+                        span.btn__svg
+                            +svgDataArrow('arrow-right-white')
+
