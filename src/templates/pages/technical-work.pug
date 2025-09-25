@@ -1,0 +1,28 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Страница не найдена
+
+block content
+
+  +titlePage('Технические работы')
+  +breadcrumbs([
+    { title: 'Главная', url: 'index.html' },
+    { title: 'Технические работы', current: true }
+  ])
+
+  main.page.page__404
+    +heroImage('./img/hero-image/technical-work.jpg', 'Технические работы')
+
+    .box
+        .container
+            .text-center
+                .title-standart Скоро эта страница будет доступна
+                .text-standart 
+                    p Пока здесь ведутся технические работы.
+                    p Приносим свои извинения за&nbsp;временные неудобства!
+                .btn__container  
+                    a(href="index" class="btn__red btn__icon")
+                        span.btn__text На главную
+                        span.btn__svg.btn__svg-white
+                            +svgDataArrow('topRight')
