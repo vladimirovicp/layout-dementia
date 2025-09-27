@@ -1,0 +1,24 @@
+.page__403{
+    .box{
+        padding-bottom: 7rem;
+    }
+    .text-standart{
+        padding: 0 0 3rem;
+        font-weight: 700;
+    }
+
+
+}
+
+@media (min-width: 768px){
+
+   .page__403{
+        .box{
+            padding-bottom: 9rem;
+        }
+
+        .text-standart{
+            padding: 0 2rem 4rem;
+        }
+    } 
+}
