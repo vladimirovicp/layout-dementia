@@ -15,6 +15,10 @@
         border-radius: 9.9rem;
         position: relative;
 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
         &:not(:last-child):after{
             content: '';
             background-image: url(../img/svg/arrow-up-2.svg);
