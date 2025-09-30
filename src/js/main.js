@@ -43,3 +43,31 @@ const swiperHero = new Swiper('.news__slider', {
 
 });
 
+
+const newsSlider =  new Swiper('.news__page-slider',{
+    slidesPerView: 1,
+    spaceBetween: 20,
+    slidesPerGroup: 1,
+
+    // breakpoints: {
+    //   768: {
+    //     slidesPerView: 3,
+    //     slidesPerGroup: 3,
+    //   }
+    // },
+
+    pagination: {
+        el: '.news__pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.news__arrow-next',
+        prevEl: '.news__arrow-prev',
+    },
+
+      scrollbar: {
+    el: '.hero__swiper-scrollbar',
+  },
+});
+

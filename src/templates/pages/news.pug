@@ -1,0 +1,84 @@
+extends ../layouts/_layout.pug
+
+block title
+  title В Санкт-Петербурге пройдёт «День Альцгеймера»
+
+block content
+
+  main.page.page__news
+
+    +titlePage('В Санкт-Петербурге пройдёт «День Альцгеймера»')
+    +breadcrumbs([
+      { title: 'Главная', url: 'index' },
+      { title: 'Новости', url: 'news-list' },
+      { title: 'В Санкт-Петербурге пройдёт «День Альцгеймера»', current: true }
+    ])
+
+    article
+      .container
+        .news__header
+            .news__header-info
+              .news__header-date 
+                span.ico 
+                  +svgDataIco('date')
+                span 15/09/2025
+              .news__header-text
+                p <strong>25&nbsp;сентября в&nbsp;Санкт-Петербурге, в&nbsp;Благотворительном центре &laquo;Хэсэд Авраам&raquo;, пройдёт &laquo;День Альцгеймера&raquo;,</strong> который будет посвящён различным аспектам психологической, социальной и&nbsp;медицинской помощи людям, страдающим деменцией.
+                p Напомним, болезнь Альцгеймера&nbsp;&mdash; одно из&nbsp;ключевых заболеваний, приводящих к&nbsp;развитию деменции.
+            .news__header-img 
+              picture 
+                img(src="./img/page/news/1.jpg", class="img-responsive" alt="День Альцгеймера")
+          
+        .news__content
+          p Программа &laquo;Дня Альцгеймера&raquo; объединит несколько мероприятий. Приглашённый врач-психиатр предложит гостям лекцию о&nbsp;профилактике деменции и&nbsp;о&nbsp;том, как сохранить здоровье в&nbsp;старшем возрасте. Все желающие, включая специалистов в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией, в&nbsp;течение дня смогут стать участниками практических занятий Центра памяти и&nbsp;здоровья (когнитивных тренингов, музыкально-двигательной терапии, музыкальной стимуляции и&nbsp;правополушарного рисования) и&nbsp;познакомиться изнутри с&nbsp;работой специалистов Благотворительного центра &laquo;Хэсэд Авраам&raquo;.
+          p Также можно будет пройти диагностику когнитивных нарушений и&nbsp;получить консультацию врачей-психиатров и&nbsp;клинических психологов.
+          p <b>Приглашаем петербуржцев старшего возраста и&nbsp;их&nbsp;близких, а&nbsp;также заинтересованных коллег-специалистов на&nbsp;&laquo;День Альцгеймера&raquo;!</b>
+          p <b>Встречаемся в&nbsp;11.00 по&nbsp;адресу:</b> ул.. Большая Разночинная 25А, здание Дома еврейской культуры ЕСОД.
+          p <b>Для справки:</b> Всемирный день борьбы с&nbsp;болезнью Альцгеймера (другие варианты названия&nbsp;&mdash; Международный день распространения информации о&nbsp;болезни Альцгеймера, Международный день Альцгеймера) отмечается ежегодно 21&nbsp;сентября.
+          p Этот День был учреждён в&nbsp;1994 году по&nbsp;инициативе Международной организации по&nbsp;борьбе с&nbsp;болезнью Альцгеймера. С&nbsp;2012 года организация проводит масштабную международную кампанию по&nbsp;повышению осведомлённости о&nbsp;болезни Альцгеймера ежегодно в&nbsp;течение всего сентября.
+
+        .news__slider-box
+          .swiper__container
+            .swiper.news__page-slider
+              .swiper-wrapper
+                - var i = 0
+                while i < 3
+                  .swiper-slide
+                    .swiper-slide__img
+                      picture
+                        img(src='./img/page/news/slider/1.png' class="img-responsive" alt="") 
+
+                  .swiper-slide
+                    .swiper-slide__img
+                      picture
+                        img(src='./img/page/news/slider/2.png' class="img-responsive" alt="")      
+
+                  .swiper-slide
+                    .swiper-slide__img
+                      picture
+                        img(src='./img/page/news/slider/3.png' class="img-responsive" alt="") 
+
+                  - i++     
+
+            .swiper-controlling
+              .swiper-pagination.news__pagination
+              .swiper-arrow.swiper-arrow__gold
+                .news__arrow-prev.swiper-button-prev
+                  +svgDataArrow('arrow-left-swiper')
+                .news__arrow-next.swiper-button-next
+                  +svgDataArrow('arrow-right-swiper')
+
+        .news__share-actions
+          .title Поделиться новостью:
+          .links 
+            a.link.link-copy(href="#")
+              +svgDataSocialNetwork('copy-link')
+            a.link.link-vk(href="#")
+              +svgDataSocialNetwork('vk2')
+            a.link.link-telegram(href="#")
+              +svgDataSocialNetwork('telegram2')
+            a.link.link-ok(href="#")
+              +svgDataSocialNetwork('ok')
+            a.link.link-whatsapp(href="#")
+              +svgDataSocialNetwork('whatsapp')
+

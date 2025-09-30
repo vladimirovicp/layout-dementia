@@ -6,14 +6,13 @@ html(lang="ru")
     include _head
 
   body(class=bodyClass)
-    .out(class=outClass)
-      block header
-        include ../partials/_header
+    block header
+      include ../partials/_header
 
-      block content
+    block content
 
-      block footer
-        include ../partials/_footer
+    block footer
+      include ../partials/_footer
 
     block scripts
       script(type="module" src="js/main.js")

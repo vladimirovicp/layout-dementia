@@ -1,0 +1,28 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Доступ запрещён
+
+block content
+
+  main.page.page__403
+    +titlePage('Доступ запрещён')
+    +breadcrumbs([
+      { title: 'Главная', url: 'index.html' },
+      { title: 'Доступ запрещён', current: true }
+    ])
+
+    article
+      +heroImage('./img/hero-image/403.jpg', 'Доступ запрещён')
+
+      .box
+          .container
+              .text-center.text-center--d-90
+                  .title-standart У&nbsp;Вас недостаточно прав для просмотра этой страницы
+                  .text-standart Доступ к запрашиваемой странице запрещён или у пользователя нет прав на просмотр контента
+                  .btn__container  
+                      a(href="index" class="btn__red btn__icon")
+                          span.btn__text На главную
+                          span.btn__svg.btn__svg-white
+                              +svgDataArrow('topRight')
+

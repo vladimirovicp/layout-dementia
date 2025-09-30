@@ -27,7 +27,16 @@
             top: 0;
             right: -3.7rem;
         };
+
+
+        &:last-child{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
     }
+
 
     &__current{
         color: #000;
