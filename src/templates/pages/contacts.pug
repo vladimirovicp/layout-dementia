@@ -1,0 +1,85 @@
+extends ../layouts/_layout.pug
+
+block title
+  title Контакты
+
+block content
+
+  main.page.page__contacts
+    +titlePage('Контакты')
+    +breadcrumbs([
+      { title: 'Главная', url: 'index.html' },
+      { title: 'Контакты', current: true }
+    ])
+
+    article
+        +heroImage('./img/hero-image/contacts.jpg', 'Контакты')
+
+        .front-contact
+            .highlight-background.highlight-background__radius-top
+            .container
+                .cards
+                    .card.card__address
+                        .card__head
+                            .card__ico
+                                +svgDataIco('address')
+                            .card__title Адрес
+                        .card__content
+                            .card__text
+                                .bold-font Благотворительный центр «Хэсэд&nbsp;Авраам»:
+                            .card__text 197110, Санкт-Петербург,<br>ул. Большая Разночинная, д. 25 (литера А)
+
+                    .card
+                        .card__head
+                            .card__ico 
+                                +svgDataIco('contacts')
+                            .card__title Контакты
+                        .card__content
+                            .card__text
+                                span.bold-font тел: 
+                                a.link__red(href="tel:+78123094849") 8 (812) 309-48-49
+                            .card__text  
+                                span.bold-font e-mail: 
+                                a.link__red(href="mailto:office@hesed.spb.ru") office@hesed.spb.ru
+
+                    .card
+                        .card__head
+                            .card__ico
+                                +svgDataIco('opening-hours')
+                            .card__title Часы работы
+                        .card__content
+                            .card__text
+                                .bold-font Будем рады вашим звонкам и электронным письмам:
+                            .card__text
+                                span будние дни
+                            .card__text
+                                span с 11.00 до 17.00
+
+        .form__feedback
+            .container
+                header.form__header
+                    .form-title Связаться с&nbsp;нами
+                    .form-description Напишите нам через форму обратной связи или свяжитесь любым удобным для Вас способом
+                .form__body
+                    form(id="contact-form" action="/feedback-form" method="post")
+                        .form__fields
+                            .form__field
+                                label(for="name" class="required") Имя
+                                input(id="name" name="name" required)
+                            .form__field
+                                label(for="email" class="required") Ваш E-mail:
+                                input(type="email" id="email" name="email" required)
+                            .form__field
+                                label(for="message" class="required") Ваши вопросы и предложения
+                                textarea#message(name="message" required)
+
+                            form__field
+                                input(type="checkbox", id="iAgree" name="iAgree")
+                                label(for="iAgree") Соглашаюсь с <a href="#" class="link__red">политикой обработки персональных данных</a>
+                        .text-center
+                            button(type="submit" class="btn__red")
+                                .btn__text Отправить обращение
+                                span.btn__svg
+                                +svgDataArrow('arrow-right-white')
+
+
