@@ -1,0 +1,73 @@
+.page__contacts{
+    padding-bottom: 9rem;
+
+    .front-contact{
+        position: relative;
+        background: unset;
+        padding-bottom: 7rem;
+
+        .highlight-background{
+            height: 50%;
+        }    
+        
+        .card{
+            padding: 4rem 3rem 2rem;
+            box-shadow: 0 0 5rem 0 rgba(182, 218, 251, 0.50);
+        }
+    }
+
+    .form__feedback{
+        position: relative;
+        padding-bottom: 5rem;
+    }
+}
+
+.hotline{
+    position: relative;
+    padding-bottom: 7rem;
+    &__wrapper{
+        background-color: #FAC373;
+        border-radius: 3.3rem;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    &__title{
+        font-size: 2.6rem;
+        font-weight: 900;
+        padding-bottom: 1rem;
+    }
+
+    .link__red{
+        font-size: 3.2rem;
+    }
+}
+
+
+@media (max-width: 767px){
+
+
+}
+
+
+@media (min-width: 768px){
+    .page__contacts{
+        .front-contact{
+            padding-bottom: 9rem;
+        }
+
+        .form__feedback{
+            padding-bottom: 9rem;
+        }
+    }
+
+    .hotline{
+        padding-bottom: 9rem;
+        &__wrapper{
+            width: 69rem;
+            margin: 0 auto;
+        }
+    }
+
+
+}
