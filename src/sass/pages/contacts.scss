@@ -4,6 +4,7 @@
     .front-contact{
         position: relative;
         background: unset;
+        padding-bottom: 7rem;
 
         .highlight-background{
             height: 50%;
@@ -17,20 +18,18 @@
 
     .form__feedback{
         position: relative;
-        padding-bottom: 9rem;
+        padding-bottom: 5rem;
     }
 }
 
 .hotline{
     position: relative;
-    padding-bottom: 9rem;
+    padding-bottom: 7rem;
     &__wrapper{
         background-color: #FAC373;
-        width: 69rem;
         border-radius: 3.3rem;
         padding: 3rem;
         text-align: center;
-        margin: 0 auto;
     }
 
     &__title{
@@ -52,5 +51,23 @@
 
 
 @media (min-width: 768px){
+    .page__contacts{
+        .front-contact{
+            padding-bottom: 9rem;
+        }
+
+        .form__feedback{
+            padding-bottom: 9rem;
+        }
+    }
+
+    .hotline{
+        padding-bottom: 9rem;
+        &__wrapper{
+            width: 69rem;
+            margin: 0 auto;
+        }
+    }
+
 
 }

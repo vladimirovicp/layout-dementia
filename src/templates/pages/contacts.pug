@@ -65,7 +65,7 @@ block content
                     form(id="contact-form" action="/feedback-form" method="post")
                         .form__fields
                             .form__field
-                                label(for="name" class="required") Имя
+                                label(for="name" class="required") Ваше имя:
                                 input(id="name" name="name" required)
                             .form__field
                                 label(for="email" class="required") Ваш E-mail:
@@ -76,7 +76,8 @@ block content
 
                             .form__field.form__field-checkbox
                                 input(type="checkbox", id="iAgree" name="iAgree")
-                                label(for="iAgree") Соглашаюсь с&nbsp;<a href="#" class="link__red">политикой обработки персональных данных</a>
+                                label(for="iAgree") 
+                                    span Соглашаюсь с&nbsp;<a href="#" class="link__red">политикой обработки персональных данных</a>
                         .text-center
                             button(type="submit" class="btn__red")
                                 .btn__text Отправить обращение
