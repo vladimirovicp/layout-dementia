@@ -1,2 +1,30 @@
-footer
-  p © 2025 My Site
+footer.footer
+  .footer__content 
+    .container
+      .cards 
+        .card
+          .footer__logo
+            a(href='index.html' class="footer__site-link")
+              .logo.footer__site-logo
+                img(src='./img/logo.png', class="header__site-img" alt="логотип Хэсэд Авраам")
+              .footer__site-text
+                .footer__site-slogan Проект благотворительного центра 
+                  span.text-accent Хэсэд Авраам
+                .footer__site-name 
+                  span.text-accent Деменция. 
+                  |Главное
+          .footer__search
+            .footer__search-wrapper
+              input(name="text" type="search" value="" class="search__input-text" placeholder="Поиск по сайту" autocomplete="off")
+              .circle__btn
+                +svgDataIco('search')
+                input(class="search__submit" type="button" value="search")
+        .card
+          a(href="#" class="btn__red btn__standart")
+            span.btn__text Политика конфиденциальности
+          
+          .footer__policy При использовании материалов активная ссылка на&nbsp;соответствующий раздел сайта обязательна
+
+        .card 3
+  .footer__bottom 
+    .container Над сайтом работали
