@@ -56,6 +56,7 @@ block content
                                 span с 11.00 до 17.00
 
         .form__feedback
+            .highlight-background
             .container
                 header.form__header
                     .form-title Связаться с&nbsp;нами
@@ -73,13 +74,19 @@ block content
                                 label(for="message" class="required") Ваши вопросы и предложения
                                 textarea#message(name="message" required)
 
-                            form__field
+                            .form__field.form__field-checkbox
                                 input(type="checkbox", id="iAgree" name="iAgree")
-                                label(for="iAgree") Соглашаюсь с <a href="#" class="link__red">политикой обработки персональных данных</a>
+                                label(for="iAgree") Соглашаюсь с&nbsp;<a href="#" class="link__red">политикой обработки персональных данных</a>
                         .text-center
                             button(type="submit" class="btn__red")
                                 .btn__text Отправить обращение
                                 span.btn__svg
-                                +svgDataArrow('arrow-right-white')
+                                    +svgDataArrow('arrow-right-white')
 
+        .hotline
+            .highlight-background.highlight-background__radius-bottom
+            .container
+                .hotline__wrapper
+                    .hotline__title Горячая линия
+                    a.link__red(href="tel:+78123094849") 8 (812) 309-48-49
 
