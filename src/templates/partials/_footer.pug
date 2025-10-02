@@ -1,2 +1,61 @@
-footer
-  p © 2025 My Site
+footer.footer
+  .footer__content 
+    .container
+      .cards 
+        .card
+          .footer__logo
+            a(href='index.html' class="footer__site-link")
+              .logo.footer__site-logo
+                img(src='./img/logo.png', class="header__site-img" alt="логотип Хэсэд Авраам")
+              .footer__site-text
+                .footer__site-slogan Проект благотворительного центра 
+                  span.text-accent Хэсэд Авраам
+                .footer__site-name 
+                  span.text-accent Деменция. 
+                  |Главное
+          .footer__search
+            .footer__search-wrapper
+              input(name="text" type="search" value="" class="search__input-text" placeholder="Поиск по сайту" autocomplete="off")
+              .circle__btn
+                +svgDataIco('search')
+                input(class="search__submit" type="button" value="search")
+        .card.footer__card-center
+          a(href="#" class="btn__red btn__standart")
+            span.btn__text Политика конфиденциальности
+          
+          .footer__policy При использовании материалов активная ссылка на&nbsp;соответствующий раздел сайта обязательна
+
+        .card
+          .footer__organization-name Центр знаний о&nbsp;деменции Благотворительного Центра &laquo;Хэсэд Авраам&raquo;
+          .footer__contacts-date
+            a.link__sky-light(href="tel:+78123094849") 8 (812) 309-48-49
+            a.link__sky-light(href="mailto:znaniya@hesed.spb.ru") znaniya@hesed.spb.ru
+
+  .footer__bottom 
+    .container 
+      .footer__modal-open Над сайтом работали
+    
+    .footer__modal-bg.active
+      .footer__modal.active
+        .footer__modal-bg-cyrcle
+        .modal__close 
+          +svgDataSysem('close')
+        .footer__modal-panel
+          header.footer__modal-header
+            .footer__modal-title Над сайтом работали:
+          .footer__modal-body
+            p.tip
+              span.tip__label Редактор:
+              span.tip__text &nbsp;Виктория Мещерякова
+            p.tip
+              span.tip__label Разработчик:
+              span.tip__text &nbsp;Артем Хмыров
+            p.tip
+              span.tip__label Дизайнер:
+              span.tip__text &nbsp;Ирина Ковалёва
+            p.tip
+              span.tip__label Иллюстратор:
+              span.tip__text &nbsp;Владислав Оршер
+            p.tip
+              span.tip__label Материалы для разделов предоставили:
+              span.tip__text &nbsp;Юлия Косенко, Ирина Филиппова, Софья Соколова (Благотворительный центр «Хэсэд Авраам»)         
