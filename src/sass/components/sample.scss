@@ -193,16 +193,9 @@
             width: 100%;
 
             iframe{
-                // height: 37.2rem;
-                // width: 66rem;
                 aspect-ratio: 660 / 372;
                 width: 100%;
                 max-width: 66rem;
-            }
-
-            iframe{
-                // В вк absolute прокидывается
-                // position: static!important;
             }
         }
         &__play{
@@ -261,7 +254,6 @@ ul.list--check{
         position: relative;
         padding-left: 4rem;
         margin-bottom: 1rem;
-        //list-style-image: url('../../img/svg/check.svg');
 
         &::before {
             content: '';
@@ -316,6 +308,12 @@ ul.list--check{
 
     &__text{
         
+    }
+}
+
+.page{
+    .article{
+        padding-bottom: 12rem;
     }
 }
 
