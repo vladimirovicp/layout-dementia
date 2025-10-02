@@ -174,9 +174,88 @@
         gap: 1rem;
     }
 
+    &__bottom{
+        padding: 3.8rem 0;
+        .container{
+            text-align: center;
+        }
 
 
+    }
+
+
+    &__modal{
+        width: 100%;
+        padding: 5rem 2rem;
+        background-color: #F3F5FD;
+        border-radius: 3.3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        color: #000;
+        cursor: default;
+        overflow: hidden;
+
+        &.active{
+            transform: translate(-50%, -50%) scale(1);
+            transition: 0.5s all;
+        }
+
+        &-bg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.5s all;
+            font-size: 1.5rem;
+            color: rgba(0,0,0,.5);
+            z-index: 10;
+            cursor: pointer;
+            overflow: auto;
+            &.active{
+                opacity: 1;
+                pointer-events: all;
+                transition: 0.5s all;
+            }
+        }
+
+        &-title{
+            font-size: 3.2rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        &-header{
+            padding-bottom: 3rem;
+        }
+
+        &-bg-cyrcle{
+            position: absolute;
+            width: 109.7rem;
+            height: 109.7rem;
+            border-radius: 109.7rem;
+            background: radial-gradient(39.79% 39.79% at 50% 50%, #E2F1FF 0%, rgba(182, 218, 251, 0.00) 100%);
+            filter: blur(54.29999923706055px);
+            top: -40rem;
+            left: -40rem;
+
+            z-index: -1;
+        }
+    }
+    
 }
+
+.footer__modal-open{
+    font-weight: 700;
+    display: inline;
+    cursor: pointer;
+}
+
 
 @media (hover: hover){
     .footer{
@@ -238,6 +317,11 @@
         .cards{
             gap: unset;
         }
+
+        &__modal-title{
+            text-align: left;
+            max-width: 30rem;
+        }
     }
 }
 
@@ -269,6 +353,19 @@
             }
 
 
+        }
+
+        &__modal{
+            width: 100rem;
+            padding: 6rem 10rem 8rem;
+
+            &-title{
+                font-size: 4.8rem;
+                }
+
+            &-header{
+                padding-bottom: 4rem;
+            }
         }
     }
 

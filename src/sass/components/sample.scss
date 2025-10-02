@@ -307,6 +307,18 @@ ul.list--check{
     font-size: 2.4rem;
 }
 
+.tip{
+    font-size: 2.6rem;
+    padding-bottom: 2.6rem;
+    &__label{
+        font-weight: 700;
+    }
+
+    &__text{
+        
+    }
+}
+
 
 
 @media (max-width: 767px){

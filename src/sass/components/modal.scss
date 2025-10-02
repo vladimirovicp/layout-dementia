@@ -5,12 +5,10 @@
     background-color: #F3F5FD;
     border-radius: 3.3rem;
     position: relative;
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-
     color: #000;
     cursor: default;
 
@@ -36,10 +34,7 @@
         color: rgba(0,0,0,.5);
         z-index: 10;
         cursor: pointer;
-        //cursor: pointer;
-
         overflow: auto;
-
         &.active{
             opacity: 1;
             pointer-events: all;

@@ -32,4 +32,30 @@ footer.footer
             a.link__sky-light(href="mailto:znaniya@hesed.spb.ru") znaniya@hesed.spb.ru
 
   .footer__bottom 
-    .container Над сайтом работали
+    .container 
+      .footer__modal-open Над сайтом работали
+    
+    .footer__modal-bg.active
+      .footer__modal.active
+        .footer__modal-bg-cyrcle
+        .modal__close 
+          +svgDataSysem('close')
+        .footer__modal-panel
+          header.footer__modal-header
+            .footer__modal-title Над сайтом работали:
+          .footer__modal-body
+            p.tip
+              span.tip__label Редактор:
+              span.tip__text &nbsp;Виктория Мещерякова
+            p.tip
+              span.tip__label Разработчик:
+              span.tip__text &nbsp;Артем Хмыров
+            p.tip
+              span.tip__label Дизайнер:
+              span.tip__text &nbsp;Ирина Ковалёва
+            p.tip
+              span.tip__label Иллюстратор:
+              span.tip__text &nbsp;Владислав Оршер
+            p.tip
+              span.tip__label Материалы для разделов предоставили:
+              span.tip__text &nbsp;Юлия Косенко, Ирина Филиппова, Софья Соколова (Благотворительный центр «Хэсэд Авраам»)         
