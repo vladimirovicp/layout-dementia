@@ -1,9 +1,10 @@
 .footer{
     
+    color:#fff;
 
     &__content{
-        padding-top: 7.5rem;
-        padding-bottom: 7.5rem;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
         background-color: #35333D;
 
     }
@@ -72,11 +73,11 @@
         width: 34rem;
         &-wrapper{
             width: 34rem;
-            height: 8rem;
+            height: 6rem;
 
             .circle__btn{
-                width: 7rem;
-                height: 7rem;
+                width: 5rem;
+                height: 5rem;
                 border-radius: 50%;
                 position: absolute;
                 right: .5rem;
@@ -148,15 +149,42 @@
         }
     }
 
-    &__policy{
-        color: #fff;
+    &__card-center{
+        text-align: center;
     }
+
+    &__policy{
+        padding-top: 4rem;
+        color: #fff;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    &__organization-name{
+        width: 30rem;
+        text-align: right;
+        margin-left: auto;
+        padding-bottom: 1rem;
+    }
+
+    &__contacts-date{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+    }
+
 
 
 }
 
 @media (hover: hover){
     .footer{
+        &__content{
+            
+        }
+
+
         &__search{
             .circle__btn{
                 &:after {
@@ -177,11 +205,53 @@
     }
 }
 
+@media (max-width: 767px){
+    .footer{
+
+        &__logo{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 5rem;
+        }
+
+
+        &__search{
+            margin: 0 auto;
+            padding-bottom: 3rem;
+        }
+
+        &__policy{
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+        }
+
+        &__organization-name{
+            margin: 0 auto;
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        &__contacts-date{
+            align-items: center;
+        }
+
+        .cards{
+            gap: unset;
+        }
+    }
+}
+
 
 
 @media (min-width: 768px){
     .footer{
+        &__content{
+            padding-top: 7.5rem;
+            padding-bottom: 7.5rem;
+        }
+
         &__search{
+
             width: 33.5rem;
             &-wrapper{
                 width: 33.5rem;
@@ -197,6 +267,8 @@
                     }
                 }
             }
+
+
         }
     }
 
