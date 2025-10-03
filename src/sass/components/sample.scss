@@ -115,6 +115,7 @@
         overflow: hidden;
 
         aspect-ratio: 660 / 372;
+        //aspect-ratio: 660 / 371,5;
         width: 100%;
         max-width: 66rem;
 
@@ -260,7 +261,7 @@ ul.list--check{
             display: block;
             width: 2rem;
             height: 2rem;
-            background: url('../../img/svg/check.svg');
+            background: url('../img/svg/check.svg');
             background-size: 2rem;
             position: absolute;
             left: 0;
