@@ -5,106 +5,107 @@ block title
 
 block content
 
-  +titlePage('Специалистам')
-  +breadcrumbs([
-    { title: 'Главная', url: 'index.html' },
-    { title: 'Специалистам', current: true }
-  ])
-
   main.page.page__for-specialists
-    +heroImage('./img/hero-image/for-specialists.png', 'Специалистам')
+    +titlePage('Специалистам')
+    +breadcrumbs([
+      { title: 'Главная', url: 'index.html' },
+      { title: 'Специалистам', current: true }
+    ])
 
-    .info-text.for-specialists__info 
-      .container 
-        .text Центр знаний о&nbsp;деменции был открыт на&nbsp;базе Благотворительного центра &laquo;Хэсэд Авраам&raquo; в&nbsp;2023 году для масштабирования модели помощи людям с&nbsp;деменцией в&nbsp;России
+    article.article
+      +heroImage('./img/hero-image/for-specialists.png', 'Специалистам')
 
-    .for-specialists__cards
-      .highlight-background.highlight-background__radius-top
-      .container
-        .title-section Направления работы Центра знаний
-        .cards 
-          .card 
-            .picture 
-               +svgDataPages('1')
-            .text разработка и&nbsp;проведение <strong>образовательных курсов и&nbsp;стажировок</strong> <br>для специалистов
-          .card
-            picture
-              +svgDataPages('2')
-            .text <strong>экспертиза программ,</strong> адресованных людям с&nbsp;деменцией и&nbsp;их&nbsp;родственникам
-          .card
-            picture
-              +svgDataPages('3')
-            .text <strong>методическая поддержка</strong> специалистов, работающих в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией
-          .card 
-            picture
-              +svgDataPages('4')
-            .text <strong>проведение исследований,</strong> поиск и&nbsp;апробация новых методик работы с&nbsp;людьми с&nbsp;деменцией
-          .card 
-            picture
-              +svgDataPages('5')
-            .text <strong>организация отраслевых событий и&nbsp;публичных акций,</strong> посвящённых проблемам деменции
-          .card 
-            picture
-              +svgDataPages('6')
-            .text систематизация накопленных знаний и&nbsp;публичная <strong>презентация успешных практик</strong>
+      .info-text.for-specialists__info 
+        .container 
+          .text Центр знаний о&nbsp;деменции был открыт на&nbsp;базе Благотворительного центра &laquo;Хэсэд Авраам&raquo; в&nbsp;2023 году для масштабирования модели помощи людям с&nbsp;деменцией в&nbsp;России
 
-    .info-description.for-specialists__description
-      .highlight-background
-      .container
-        .text Благотворительный центр &laquo;Хэсэд Авраам&raquo; и&nbsp;Центр знаний о&nbsp;деменции открыты к&nbsp;сотрудничеству и&nbsp;активно делятся опытом работы в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией
-        a(href="#" class="btn__gold btn__icon")
-          span.btn__text Познакомиться с нашим опытом
-          span.btn__svg
-            +svgDataArrow('arrow-right')
-    .for-specialists__we-offer
-      .highlight-background
-      .container
-        .title-section Мы предлагаем
-        .text коллегам в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией, а&nbsp;также сотрудникам банков, МФЦ и&nbsp;других учреждений, которые посещают люди с&nbsp;когнитивными нарушениями 
-    .for-specialists__box-cards
-      .highlight-background.highlight-background__radius-bottom
-      .container
-        .cards.cards__red.cards__circle-right
-          a(href="#" class="card card__link")
-            .icon
-              +svgDataCardsRed('1')
-            .text Курсы
-            .card__circle2 
-              .card__circle2_back
-                +svgDataArrow('topRight')
+      .for-specialists__cards
+        .highlight-background.highlight-background__radius-top
+        .container
+          .title-section Направления работы Центра знаний
+          .cards 
+            .card 
+              .picture 
+                +svgDataPages('1')
+              .text разработка и&nbsp;проведение <strong>образовательных курсов и&nbsp;стажировок</strong> <br>для специалистов
+            .card
+              picture
+                +svgDataPages('2')
+              .text <strong>экспертиза программ,</strong> адресованных людям с&nbsp;деменцией и&nbsp;их&nbsp;родственникам
+            .card
+              picture
+                +svgDataPages('3')
+              .text <strong>методическая поддержка</strong> специалистов, работающих в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией
+            .card 
+              picture
+                +svgDataPages('4')
+              .text <strong>проведение исследований,</strong> поиск и&nbsp;апробация новых методик работы с&nbsp;людьми с&nbsp;деменцией
+            .card 
+              picture
+                +svgDataPages('5')
+              .text <strong>организация отраслевых событий и&nbsp;публичных акций,</strong> посвящённых проблемам деменции
+            .card 
+              picture
+                +svgDataPages('6')
+              .text систематизация накопленных знаний и&nbsp;публичная <strong>презентация успешных практик</strong>
 
-          a(href="#" class="card card__link")
-            .icon
-              +svgDataCardsRed('2')
-            .text Стажировки
-            .card__circle2 
-              .card__circle2_back
-                +svgDataArrow('topRight')
+      .info-description.for-specialists__description
+        .highlight-background
+        .container
+          .text Благотворительный центр &laquo;Хэсэд Авраам&raquo; и&nbsp;Центр знаний о&nbsp;деменции открыты к&nbsp;сотрудничеству и&nbsp;активно делятся опытом работы в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией
+          a(href="#" class="btn__gold btn__icon")
+            span.btn__text Познакомиться с нашим опытом
+            span.btn__svg
+              +svgDataArrow('arrow-right')
+      .for-specialists__we-offer
+        .highlight-background
+        .container
+          .title-section Мы предлагаем
+          .text коллегам в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией, а&nbsp;также сотрудникам банков, МФЦ и&nbsp;других учреждений, которые посещают люди с&nbsp;когнитивными нарушениями 
+      .for-specialists__box-cards
+        .highlight-background.highlight-background__radius-bottom
+        .container
+          .cards.cards__red.cards__circle-right
+            a(href="#" class="card card__link")
+              .icon
+                +svgDataCardsRed('1')
+              .text Курсы
+              .card__circle2 
+                .card__circle2_back
+                  +svgDataArrow('topRight')
 
-          a(href="#" class="card card__link")
-            .icon
-              +svgDataCardsRed('3')
-            .text Консультаци
-            .card__circle2 
-              .card__circle2_back
-                +svgDataArrow('topRight')
-            
+            a(href="#" class="card card__link")
+              .icon
+                +svgDataCardsRed('2')
+              .text Стажировки
+              .card__circle2 
+                .card__circle2_back
+                  +svgDataArrow('topRight')
 
-          a(href="#" class="card card__link")
-            .icon
-              +svgDataCardsRed('4')
-            .text Правила общения при деменции
-            .card__circle2 
-              .card__circle2_back
-                +svgDataArrow('topRight')
+            a(href="#" class="card card__link")
+              .icon
+                +svgDataCardsRed('3')
+              .text Консультаци
+              .card__circle2 
+                .card__circle2_back
+                  +svgDataArrow('topRight')
+              
 
-          a(href="#" class="card card__link")
-            .icon
-              +svgDataCardsRed('5')
-            .text Полезные практики
-            .card__circle2 
-              .card__circle2_back
-                +svgDataArrow('topRight')
+            a(href="#" class="card card__link")
+              .icon
+                +svgDataCardsRed('4')
+              .text Правила общения при деменции
+              .card__circle2 
+                .card__circle2_back
+                  +svgDataArrow('topRight')
+
+            a(href="#" class="card card__link")
+              .icon
+                +svgDataCardsRed('5')
+              .text Полезные практики
+              .card__circle2 
+                .card__circle2_back
+                  +svgDataArrow('topRight')
 
     
       

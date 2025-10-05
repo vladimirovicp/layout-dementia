@@ -1,7 +1,6 @@
 .about{
 
     &__history{
-
         .card__one{
             .text{
                 padding-bottom: 1rem;
@@ -14,8 +13,6 @@
                 height: auto;
             }
         }
-
-
     }
 
     &__info{
@@ -64,6 +61,8 @@
     }
 
     &__box-cards{
+        padding-bottom: 10rem;
+        background-color: #f3f5fd;
         .cards__red{
             .card{
                 height: auto;
@@ -73,6 +72,11 @@
 
 }
 
+.page__about{
+    .article{
+        padding-bottom: 0;
+    }
+}
 
 @media (max-width: 767px){
 
@@ -90,9 +94,6 @@
         .split__title{
             text-align: left;
         }
-
-
-
     }
 
     .about{
@@ -177,5 +178,16 @@
             }
         }
 
+        &__box-cards{
+            padding-bottom: 12rem;
+        }
     } 
+
+    .page__about{
+        .article{
+            padding-bottom: 0;
+        }
+    }
+
+
 }

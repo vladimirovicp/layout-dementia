@@ -5,31 +5,32 @@ block title
 
 block content
 
-  +titlePage('Текстовая страница')
-  +breadcrumbs([
-    { title: 'Главная', url: 'index.html' },
-    { title: 'База знаний', url: 'knowledge-base.html' },
-    { title: 'Текстовая страница', current: true }
-  ])
-
   main.page
-    +heroImage('./img/hero-image/text-page.jpg', 'Текстовая страница')
+    +titlePage('Текстовая страница')
+    +breadcrumbs([
+      { title: 'Главная', url: 'index.html' },
+      { title: 'База знаний', url: 'knowledge-base.html' },
+      { title: 'Текстовая страница', current: true }
+    ])
 
-    .page__text 
-        .container 
-            .box
-                p <b>Lorem ipsum dolor sit amet consectetur. Felis penatibus duis porta vulputate quis maecenas tempus at. Vitae eu adipiscing nec vel nunc.</b> Aliquam in cras viverra sed. Eget amet eu quam nisi sapien mauris odio. Pellentesque morbi lorem magnis penatibus tincidunt magna.
-                p Nisi in viverra at fermentum vitae. Pharetra consectetur condimentum lorem in potenti elit. Ridiculus turpis vitae scelerisque faucibus enim. Nec donec dictumst orci consequat vel. Sit consequat scelerisque justo nisl tincidunt. 
+    article.article
+      +heroImage('./img/hero-image/text-page.jpg', 'Текстовая страница')
 
-                p Quis sit felis mi nibh risus sagittis ullamcorper sit. Ornare purus tortor augue neque duis turpis ullamcorper urna. Sagittis eleifend dictum pretium dictum venenatis cras tristique luctus sagittis.
+      .page__text 
+          .container 
+              .box
+                  p <b>Lorem ipsum dolor sit amet consectetur. Felis penatibus duis porta vulputate quis maecenas tempus at. Vitae eu adipiscing nec vel nunc.</b> Aliquam in cras viverra sed. Eget amet eu quam nisi sapien mauris odio. Pellentesque morbi lorem magnis penatibus tincidunt magna.
+                  p Nisi in viverra at fermentum vitae. Pharetra consectetur condimentum lorem in potenti elit. Ridiculus turpis vitae scelerisque faucibus enim. Nec donec dictumst orci consequat vel. Sit consequat scelerisque justo nisl tincidunt. 
 
-                p Varius volutpat ullamcorper cras et felis nunc gravida habitasse. Consequat dolor fames semper volutpat nulla diam nunc scelerisque. <b>Vitae lectus id amet orci. Semper praesent id sit et. Senectus hac commodo tempor purus ante velit posuere tristique:</b>
-                ul 
-                    li Lorem ipsum dolor sit amet consectetur. Felis penatibus duis porta vulputate quis maecenas tempus at. Vitae eu adipiscing nec vel nunc.
-                    li Aliquam in cras viverra sed. 
-                    li Eget amet eu quam nisi sapien mauris odio. Pellentesque morbi lorem magnis penatibus tincidunt magna.
-                p Nisi in viverra at fermentum vitae. Pharetra consectetur condimentum lorem in potenti elit. Ridiculus turpis vitae scelerisque faucibus enim. Nec donec dictumst orci consequat vel. Sit consequat scelerisque justo nisl tincidunt. 
+                  p Quis sit felis mi nibh risus sagittis ullamcorper sit. Ornare purus tortor augue neque duis turpis ullamcorper urna. Sagittis eleifend dictum pretium dictum venenatis cras tristique luctus sagittis.
 
-                p <b>Quis sit felis mi nibh risus sagittis ullamcorper sit. Ornare purus tortor augue neque duis turpis ullamcorper urna. Sagittis eleifend dictum pretium dictum venenatis cras tristique luctus sagittis.</b>
+                  p Varius volutpat ullamcorper cras et felis nunc gravida habitasse. Consequat dolor fames semper volutpat nulla diam nunc scelerisque. <b>Vitae lectus id amet orci. Semper praesent id sit et. Senectus hac commodo tempor purus ante velit posuere tristique:</b>
+                  ul 
+                      li Lorem ipsum dolor sit amet consectetur. Felis penatibus duis porta vulputate quis maecenas tempus at. Vitae eu adipiscing nec vel nunc.
+                      li Aliquam in cras viverra sed. 
+                      li Eget amet eu quam nisi sapien mauris odio. Pellentesque morbi lorem magnis penatibus tincidunt magna.
+                  p Nisi in viverra at fermentum vitae. Pharetra consectetur condimentum lorem in potenti elit. Ridiculus turpis vitae scelerisque faucibus enim. Nec donec dictumst orci consequat vel. Sit consequat scelerisque justo nisl tincidunt. 
 
-                p Varius volutpat ullamcorper cras et felis nunc gravida habitasse. Consequat dolor fames semper volutpat nulla diam nunc scelerisque. Vitae lectus id amet orci. Semper praesent id sit et. Senectus hac commodo tempor purus ante velit posuere tristique. 
+                  p <b>Quis sit felis mi nibh risus sagittis ullamcorper sit. Ornare purus tortor augue neque duis turpis ullamcorper urna. Sagittis eleifend dictum pretium dictum venenatis cras tristique luctus sagittis.</b>
+
+                  p Varius volutpat ullamcorper cras et felis nunc gravida habitasse. Consequat dolor fames semper volutpat nulla diam nunc scelerisque. Vitae lectus id amet orci. Semper praesent id sit et. Senectus hac commodo tempor purus ante velit posuere tristique. 

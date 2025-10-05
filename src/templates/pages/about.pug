@@ -50,161 +50,160 @@ block content
       },
     ]
 
-  +titlePage('О нас')
-  +breadcrumbs([
-    { title: 'Главная', url: 'index.html' },
-    { title: 'База знаний', url: 'knowledge-base.html' },
-    { title: 'О нас', current: true}
-  ])
-
   main.page.page__about
-    +heroImage('./img/hero-image/about.png', 'О нас')
+    +titlePage('О нас')
+    +breadcrumbs([
+      { title: 'Главная', url: 'index.html' },
+      { title: 'База знаний', url: 'knowledge-base.html' },
+      { title: 'О нас', current: true}
+    ])
 
-    
+    article.article
+      +heroImage('./img/hero-image/about.png', 'О нас')
 
-    .about__history.pb-b
-      .container
-        .cards
-          .card.card__one
-            .box-text
-                .text <strong>Поддержка людей с&nbsp;деменцией и&nbsp;их&nbsp;близких</strong>&nbsp;&mdash; одно из&nbsp;приоритетных направлений работы Благотворительного центра &laquo;<a href="#" class="link__red">Хэсэд Авраам&raquo;</a>, который был основан в&nbsp;1993 году организациями еврейской общины Санкт-Петербурга.
-                .text Центр ориентирован на&nbsp;оказание помощи людям старшего возраста с&nbsp;ограниченными возможностями здоровья, малообеспеченным и&nbsp;находящимся в&nbsp;трудной жизненной ситуации.
+      .about__history.pb-b
+        .container
+          .cards
+            .card.card__one
+              .box-text
+                  .text <strong>Поддержка людей с&nbsp;деменцией и&nbsp;их&nbsp;близких</strong>&nbsp;&mdash; одно из&nbsp;приоритетных направлений работы Благотворительного центра &laquo;<a href="#" class="link__red">Хэсэд Авраам&raquo;</a>, который был основан в&nbsp;1993 году организациями еврейской общины Санкт-Петербурга.
+                  .text Центр ориентирован на&nbsp;оказание помощи людям старшего возраста с&nbsp;ограниченными возможностями здоровья, малообеспеченным и&nbsp;находящимся в&nbsp;трудной жизненной ситуации.
 
-          .card.card__two
-            .cards.cards__red.cards__circle-right
-              a(href="#" class="card card__link")
-                .icon
-                  +svgDataCardsRed('32')
-                .text Наши партнеры
-                .card__circle2 
-                  .card__circle2_back
-                    +svgDataArrow('topRight')
+            .card.card__two
+              .cards.cards__red.cards__circle-right
+                a(href="#" class="card card__link")
+                  .icon
+                    +svgDataCardsRed('32')
+                  .text Наши партнеры
+                  .card__circle2 
+                    .card__circle2_back
+                      +svgDataArrow('topRight')
 
-              a(href="#" class="card card__link")
-                .icon
-                  +svgDataCardsRed('33')
-                .text Наши амбассадоры
-                .card__circle2 
-                  .card__circle2_back
-                    +svgDataArrow('topRight')
-    
-    .about__info-title
-      .container
-        .sizing-110
-          .title-3.text-center Сегодня «Хэсэд Авраам» — одна из крупнейших общественных благотворительных организаций России
+                a(href="#" class="card card__link")
+                  .icon
+                    +svgDataCardsRed('33')
+                  .text Наши амбассадоры
+                  .card__circle2 
+                    .card__circle2_back
+                      +svgDataArrow('topRight')
+      
+      .about__info-title
+        .container
+          .sizing-110
+            .title-3.text-center Сегодня «Хэсэд Авраам» — одна из крупнейших общественных благотворительных организаций России
 
-    .about__info.pb-b
-      .container
-        .highlight-background.highlight-background__radius-top
-        .cards
-          .card
-            .number >1000
-            .text сотрудников
-          .card 
-            .number >400
-            .text волонтеров
-          .card
-            .number >10000
-            .text подопечных
-        
-    .about__description
-      .highlight-background
-      .container
-        .sizing-90
-          .text Специалистами &laquo;<a href="#" class="link__red">Хэсэд Авраам</a>&raquo; накоплен обширный опыт реализации программ для пожилых людей с&nbsp;когнитивными нарушениями на&nbsp;базе очных площадок, не&nbsp;имеющих аналогов в&nbsp;стране и&nbsp;объединённых в&nbsp;единую экосистему помощи
+      .about__info.pb-b
+        .container
+          .highlight-background.highlight-background__radius-top
+          .cards
+            .card
+              .number >1000
+              .text сотрудников
+            .card 
+              .number >400
+              .text волонтеров
+            .card
+              .number >10000
+              .text подопечных
+          
+      .about__description
+        .highlight-background
+        .container
+          .sizing-90
+            .text Специалистами &laquo;<a href="#" class="link__red">Хэсэд Авраам</a>&raquo; накоплен обширный опыт реализации программ для пожилых людей с&nbsp;когнитивными нарушениями на&nbsp;базе очных площадок, не&nbsp;имеющих аналогов в&nbsp;стране и&nbsp;объединённых в&nbsp;единую экосистему помощи
 
-    .pair__box
-      .highlight-background.highlight-background__radius-bottom
-      .container
-        each el in list_1
-          .pair
-            .pair__img 
+      .pair__box
+        .highlight-background.highlight-background__radius-bottom
+        .container
+          each el in list_1
+            .pair
+              .pair__img 
+                picture 
+                  img(src=el.imgUrl, alt=el.imgAlt)
+              .pair__info 
+                .pair__title 
+                  != el.title
+                .pair__text
+                  each data in el.paragraphs
+                    p
+                      != data.text
+
+
+      .about__history.p-tb
+        .container
+          .cards
+            .card.card__two.start
+              .cards.cards__red.cards__circle-right
+                a(href="#" class="card card__link")
+                  .icon
+                    +svgDataCardsRed('34')
+                  .text Конференции
+                  .card__circle2 
+                    .card__circle2_back
+                      +svgDataArrow('topRight')
+
+                a(href="webinards" class="card card__link")
+                  .icon
+                    +svgDataCardsRed('35')
+                  .text Вебинары
+                  .card__circle2 
+                    .card__circle2_back
+                      +svgDataArrow('topRight')
+            .card.card__one
+              .box-text
+                  .text Благотворительный центр &laquo;Хэсэд Авраам&raquo; также регулярно организует обмен накопленным опытом для специалистов со&nbsp;всей России, проводит конференции и&nbsp;вебинары.
+                  .text <strong>Эта работа активизировалась на&nbsp;базе двух новых площадок: Фонда целевого капитала &laquo;Человек Рассеянный&raquo; и&nbsp;Центра знаний о&nbsp;деменции.</strong>
+
+
+      .split__box.backgroung__ice-blue_20.pb-b
+        .container
+          .split
+            .split__img
               picture 
-                img(src=el.imgUrl, alt=el.imgAlt)
-            .pair__info 
-              .pair__title 
-                != el.title
-              .pair__text
-                each data in el.paragraphs
-                  p
-                    != data.text
+                  img(src='./img/page/about/2-1.png', alt='Фонд целевого капитала &laquo;Человек Рассеянный&raquo;')
+            .split__info
+              .split__title Фонд целевого капитала &laquo;Человек Рассеянный&raquo;
+              .split__text
+                p Фонд целевого капитала &laquo;Человек Рассеянный&raquo; основан в&nbsp;2022 году и&nbsp;нацелен на&nbsp;то, чтобы стать основным узловым фондом, который осуществляет финансирование некоммерческих организаций в&nbsp;сфере поддержки людей с&nbsp;деменцией во&nbsp;всех регионах России и&nbsp;помогает им&nbsp;развиваться.
+                p <strong>Ключевая цель Фонда&nbsp;&mdash; добиться появления и&nbsp;дальнейшего развития профессионального сообщества, решающего проблемы заботы о&nbsp;пациентах с&nbsp;деменцией.</strong>
 
+          .split
+            .split__img
+              picture 
+                  img(src='./img/page/about/2-2.png', alt='Фонд целевого капитала &laquo;Человек Рассеянный&raquo;')
+            .split__info
+              .split__title Центр знаний о&nbsp;деменции
+              .split__text
+                p Центр знаний о&nbsp;деменции, открытый в&nbsp;2023&nbsp;году, призван масштабировать модель помощи людям с&nbsp;деменцией в&nbsp;России, консолидировать усилия профессионального сообщества в&nbsp;борьбе с&nbsp;проблемами деменции, координировать обмен знаниями и&nbsp;практическим опытом.
+                p <strong>На&nbsp;базе Центра проводятся курсы и&nbsp;стажировки для специалистов со&nbsp;всей России, работающих в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией, а&nbsp;также выпускаются методические материалы.</strong>
 
-    .about__history.p-tb
-      .container
-        .cards
-          .card.card__two.start
-            .cards.cards__red.cards__circle-right
-              a(href="#" class="card card__link")
-                .icon
-                  +svgDataCardsRed('34')
-                .text Конференции
-                .card__circle2 
-                  .card__circle2_back
-                    +svgDataArrow('topRight')
+          
+      .about__box-cards
+        .container
+          .cards.cards__red.cards__circle-right
+            a(href="#" class="card card__link")
+              .icon
+                +svgDataCardsRed('36')
+              .text Курсы
+              .card__circle2 
+                .card__circle2_back
+                  +svgDataArrow('topRight')
 
-              a(href="webinards" class="card card__link")
-                .icon
-                  +svgDataCardsRed('35')
-                .text Вебинары
-                .card__circle2 
-                  .card__circle2_back
-                    +svgDataArrow('topRight')
-          .card.card__one
-            .box-text
-                .text Благотворительный центр &laquo;Хэсэд Авраам&raquo; также регулярно организует обмен накопленным опытом для специалистов со&nbsp;всей России, проводит конференции и&nbsp;вебинары.
-                .text <strong>Эта работа активизировалась на&nbsp;базе двух новых площадок: Фонда целевого капитала &laquo;Человек Рассеянный&raquo; и&nbsp;Центра знаний о&nbsp;деменции.</strong>
+            a(href="#" class="card card__link")
+              .icon
+                +svgDataCardsRed('37')
+              .text Стажировки
+              .card__circle2 
+                .card__circle2_back
+                  +svgDataArrow('topRight')
 
-
-    .split__box.backgroung__ice-blue_20.pb-b
-      .container
-        .split
-          .split__img
-            picture 
-                img(src='./img/page/about/2-1.png', alt='Фонд целевого капитала &laquo;Человек Рассеянный&raquo;')
-          .split__info
-            .split__title Фонд целевого капитала &laquo;Человек Рассеянный&raquo;
-            .split__text
-              p Фонд целевого капитала &laquo;Человек Рассеянный&raquo; основан в&nbsp;2022 году и&nbsp;нацелен на&nbsp;то, чтобы стать основным узловым фондом, который осуществляет финансирование некоммерческих организаций в&nbsp;сфере поддержки людей с&nbsp;деменцией во&nbsp;всех регионах России и&nbsp;помогает им&nbsp;развиваться.
-              p <strong>Ключевая цель Фонда&nbsp;&mdash; добиться появления и&nbsp;дальнейшего развития профессионального сообщества, решающего проблемы заботы о&nbsp;пациентах с&nbsp;деменцией.</strong>
-
-        .split
-          .split__img
-            picture 
-                img(src='./img/page/about/2-2.png', alt='Фонд целевого капитала &laquo;Человек Рассеянный&raquo;')
-          .split__info
-            .split__title Центр знаний о&nbsp;деменции
-            .split__text
-              p Центр знаний о&nbsp;деменции, открытый в&nbsp;2023&nbsp;году, призван масштабировать модель помощи людям с&nbsp;деменцией в&nbsp;России, консолидировать усилия профессионального сообщества в&nbsp;борьбе с&nbsp;проблемами деменции, координировать обмен знаниями и&nbsp;практическим опытом.
-              p <strong>На&nbsp;базе Центра проводятся курсы и&nbsp;стажировки для специалистов со&nbsp;всей России, работающих в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией, а&nbsp;также выпускаются методические материалы.</strong>
-
-        
-    .about__box-cards.backgroung__ice-blue.pb-b
-      .container
-        .cards.cards__red.cards__circle-right
-          a(href="#" class="card card__link")
-            .icon
-              +svgDataCardsRed('36')
-            .text Курсы
-            .card__circle2 
-              .card__circle2_back
-                +svgDataArrow('topRight')
-
-          a(href="#" class="card card__link")
-            .icon
-              +svgDataCardsRed('37')
-            .text Стажировки
-            .card__circle2 
-              .card__circle2_back
-                +svgDataArrow('topRight')
-
-          a(href="#" class="card card__link")
-            .icon
-              +svgDataCardsRed('38')
-            .text Методические материалы
-            .card__circle2 
-              .card__circle2_back
-                +svgDataArrow('topRight')
+            a(href="#" class="card card__link")
+              .icon
+                +svgDataCardsRed('38')
+              .text Методические материалы
+              .card__circle2 
+                .card__circle2_back
+                  +svgDataArrow('topRight')
 
     
       

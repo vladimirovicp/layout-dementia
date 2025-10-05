@@ -36,150 +36,151 @@ block content
       },
     ]
 
-  +titlePage('Конференции')
-  +breadcrumbs([
-    { title: 'Главная', url: 'index.html' },
-    { title: 'База знаний', url: 'knowledge-base.html' },
-    { title: 'Конференции', current: true }
-  ])
-
   main.page.page__conferences
-    +heroImage('./img/hero-image/conferences.jpg', 'Родственникам')
+    +titlePage('Конференции')
+    +breadcrumbs([
+      { title: 'Главная', url: 'index.html' },
+      { title: 'База знаний', url: 'knowledge-base.html' },
+      { title: 'Конференции', current: true }
+    ])
 
-    .conferences__box 
-      .container 
-        .text-center--d.text-center--d-110 
-            p.pb-d-2.pb-m-1 <b>Благотворительный центр</b> &laquo;<a href="#" class="link__red">Хэсэд Авраам</a>&raquo; <b>с&nbsp;2003 года регулярно выступает организатором крупных отраслевых событий,</b> объединяющих специалистов в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией для обмена методическими разработками и&nbsp;практическим опытом.
-            p <b>С 2022 года конференции включены в программу Международного форума «Старшее поколение»,</b> который ежегодно проходит в Санкт-Петербурге при поддержке городского Комитета по социальной политике.
-    
-    .conferences__list
-      .container
-        .highlight-background.highlight-background__radius-tb
-        .media-pairs 
-          each el in videos
-            .media-pair 
+    article.article
+      +heroImage('./img/hero-image/conferences.jpg', 'Родственникам')
 
-              if el.idVideo
-                .media-pair__video.video-preview(
-                  data-youtube-id=el.idVideo
-                  tabindex="0"
-                  aria-label="Play video"
-                )
-
-                  .video-preview__inner
-                    img(
-                      class="video-preview__thumb"
-                      src=el.img
-                      alt="Video preview"
-                      loading="lazy"
-                      decoding="async"
-                    )
-                    button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
-                      img(src="./img/svg/play.svg", alt="")
-
-
-              else
-                .media-pair__video.video-preview(
-                  data-vk-embed=el.vkLink
-                  tabindex="0"
-                  aria-label="Play VK video"
-                )
-                  .video-preview__inner
-                    img(
-                      class="video-preview__thumb"
-                      src=el.img
-                      alt="Video preview"
-                      loading="lazy"
-                      decoding="async"
-                    )
-                    button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
-                      img(src="./img/svg/play.svg", alt="")                
-
-              .media-pair__info
-                  .media-pair__year
-                    != el.year
-                  .media-pair__title
-                    != el.title
-                  .media-pair__text 
-                    != el.text
-                  .media-pair__btn-box 
-                      a(href=el.btnLink class="btn btn__icon")
-                        span.btn__text 
-                          != el.btn
-                        span.btn__svg
-                          +svgDataArrow('topRight')
-
-    
-    .conferences__cards 
-      .container
-        .cards 
-          .card.card__one
-            .title Приглашаем заинтересованных коллег к&nbsp;участию в&nbsp;наших отраслевых конференциях!
-            .btn__container  
-              span(class="btn__red btn__icon modal-open")
-                span.btn__text Связаться с нами
-                span.btn__svg
-                  +svgDataArrow('arrow-right-white')
-          .card.card__two
-            .title Докладчиками конференций традиционно становятся:
-            ul.list--check
-              li Представители национального медицинского исследовательского центра психиатрии и&nbsp;неврологии&nbsp;им. В.&nbsp;М.&nbsp;Бехтерева
-              li Представители Северо-Западного государственного медицинского университета&nbsp;им. И.&nbsp;И.&nbsp;Мечникова
-              li Представители научно-практического геронтопсихиатрического центра
-              li Сотрудники благотворительных фондов
-              li Практикующие врачи и&nbsp;социальные работники
-              li Психологи и&nbsp;арт-терапевты
-              li Заинтересованные эксперты из&nbsp;смежных сфер
-
-
-  .modal__bg
-    .modal.modal__feedback-form
-      .modal__close 
-        +svgDataSysem('close')
-      .modal__panel
-        header.modal__header
-          .modal-title Связаться с&nbsp;нами
-          .modal-description Напишите нам через форму обратной связи или свяжитесь любым удобным для Вас способом
-        .modal__body
-          form(id="contact-form" action="/feedback-form" method="post")
-            .modal__fields
-              .modal__field
-                label(for="name" class="required") Имя
-                input(id="name" name="name" required)
-              .modal__field
-                label(for="email" class="required") Ваш E-mail:
-                input(type="email" id="email" name="email" required)
-              .modal__field
-                label(for="message" class="required") Ваши вопросы и предложения
-                textarea#message(name="message" required)
-            .text-center
-              button(type="submit" class="btn__red")
-                .btn__text Отправить обращение
-                span.btn__svg
-                  +svgDataArrow('arrow-right-white')
-        footer.modal__footer
-          .cards  
-            .card
-
-              .items 
-                .item
-                  a(href="tel:+78123094849" class="soc__link soc__link-md phone")
-                    +svgDataSocialNetwork('phone')
-                  a(href="tel:+78123094849" class="link__red link__red-lg") 8 (812) 309-48-49 
-                .item
-                  a(href=vk class="soc__link soc__link-md mail")
-                    +svgDataSocialNetwork('mail')
-                  a(href="mailto:office@hesed.spb.ru" class="link__red link__red-lg") office@hesed.spb.ru
-
-            .card 
-              .items 
-                .item
-                  a(href=telegram class="soc__link soc__link-md")
-                    +svgDataSocialNetwork('telegram')
-                  a(href=telegram class="link__red link__red-lg") t.me/HesedAvraham
-                .item 
-                  a(href=vk class="soc__link soc__link-md vk")
-                    +svgDataSocialNetwork('vk')
-                  a(href=vk class="link__red link__red-lg") vk.com/hesedavrahamspb 
-                
+      .conferences__box 
+        .container 
+          .text-center--d.text-center--d-110 
+              p.pb-d-2.pb-m-1 <b>Благотворительный центр</b> &laquo;<a href="#" class="link__red">Хэсэд Авраам</a>&raquo; <b>с&nbsp;2003 года регулярно выступает организатором крупных отраслевых событий,</b> объединяющих специалистов в&nbsp;сфере заботы о&nbsp;людях с&nbsp;деменцией для обмена методическими разработками и&nbsp;практическим опытом.
+              p <b>С 2022 года конференции включены в программу Международного форума «Старшее поколение»,</b> который ежегодно проходит в Санкт-Петербурге при поддержке городского Комитета по социальной политике.
       
+      .conferences__list
+        .container
+          .highlight-background.highlight-background__radius-tb
+          .media-pairs 
+            each el in videos
+              .media-pair 
+
+                if el.idVideo
+                  .media-pair__video.video-preview(
+                    data-youtube-id=el.idVideo
+                    tabindex="0"
+                    aria-label="Play video"
+                  )
+
+                    .video-preview__inner
+                      img(
+                        class="video-preview__thumb"
+                        src=el.img
+                        alt="Video preview"
+                        loading="lazy"
+                        decoding="async"
+                      )
+                      button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
+                        img(src="./img/svg/play.svg", alt="")
+
+
+                else
+                  .media-pair__video.video-preview(
+                    data-vk-embed=el.vkLink
+                    tabindex="0"
+                    aria-label="Play VK video"
+                  )
+                    .video-preview__inner
+                      img(
+                        class="video-preview__thumb"
+                        src=el.img
+                        alt="Video preview"
+                        loading="lazy"
+                        decoding="async"
+                      )
+                      button(class="video-preview__play" aria-hidden="false" title="Play video" type="button")
+                        img(src="./img/svg/play.svg", alt="")                
+
+                .media-pair__info
+                    .media-pair__year
+                      != el.year
+                    .media-pair__title
+                      != el.title
+                    .media-pair__text 
+                      != el.text
+                    .media-pair__btn-box 
+                        a(href=el.btnLink class="btn btn__icon")
+                          span.btn__text 
+                            != el.btn
+                          span.btn__svg
+                            +svgDataArrow('topRight')
+
+      
+      .conferences__cards 
+        .container
+          .cards 
+            .card.card__one
+              .title Приглашаем заинтересованных коллег к&nbsp;участию в&nbsp;наших отраслевых конференциях!
+              .btn__container  
+                span(class="btn__red btn__icon modal-open")
+                  span.btn__text Связаться с нами
+                  span.btn__svg
+                    +svgDataArrow('arrow-right-white')
+            .card.card__two
+              .title Докладчиками конференций традиционно становятся:
+              ul.list--check
+                li Представители национального медицинского исследовательского центра психиатрии и&nbsp;неврологии&nbsp;им. В.&nbsp;М.&nbsp;Бехтерева
+                li Представители Северо-Западного государственного медицинского университета&nbsp;им. И.&nbsp;И.&nbsp;Мечникова
+                li Представители научно-практического геронтопсихиатрического центра
+                li Сотрудники благотворительных фондов
+                li Практикующие врачи и&nbsp;социальные работники
+                li Психологи и&nbsp;арт-терапевты
+                li Заинтересованные эксперты из&nbsp;смежных сфер
+
+
+    .modal__bg
+      .modal.modal__feedback-form
+        .modal__close 
+          +svgDataSysem('close')
+        .modal__panel
+          header.modal__header
+            .modal-title Связаться с&nbsp;нами
+            .modal-description Напишите нам через форму обратной связи или свяжитесь любым удобным для Вас способом
+          .modal__body
+            form(id="contact-form" action="/feedback-form" method="post")
+              .modal__fields
+                .modal__field
+                  label(for="name" class="required") Имя
+                  input(id="name" name="name" required)
+                .modal__field
+                  label(for="email" class="required") Ваш E-mail:
+                  input(type="email" id="email" name="email" required)
+                .modal__field
+                  label(for="message" class="required") Ваши вопросы и предложения
+                  textarea#message(name="message" required)
+              .text-center
+                button(type="submit" class="btn__red")
+                  .btn__text Отправить обращение
+                  span.btn__svg
+                    +svgDataArrow('arrow-right-white')
+          footer.modal__footer
+            .cards  
+              .card
+
+                .items 
+                  .item
+                    a(href="tel:+78123094849" class="soc__link soc__link-md phone")
+                      +svgDataSocialNetwork('phone')
+                    a(href="tel:+78123094849" class="link__red link__red-lg") 8 (812) 309-48-49 
+                  .item
+                    a(href=vk class="soc__link soc__link-md mail")
+                      +svgDataSocialNetwork('mail')
+                    a(href="mailto:office@hesed.spb.ru" class="link__red link__red-lg") office@hesed.spb.ru
+
+              .card 
+                .items 
+                  .item
+                    a(href=telegram class="soc__link soc__link-md")
+                      +svgDataSocialNetwork('telegram')
+                    a(href=telegram class="link__red link__red-lg") t.me/HesedAvraham
+                  .item 
+                    a(href=vk class="soc__link soc__link-md vk")
+                      +svgDataSocialNetwork('vk')
+                    a(href=vk class="link__red link__red-lg") vk.com/hesedavrahamspb 
+                  
+        

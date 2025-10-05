@@ -63,67 +63,58 @@ block content
       },
     ]
 
-  +titlePage('Новости')
-  +breadcrumbs([
-    { title: 'Главная', url: 'index.html' },
-    { title: 'Новости', current: true }
-  ])
-
   main.page.page__news-list
-    +heroImage('./img/hero-image/news-list.jpg', 'Новости')
-    
-    .box 
-      .container 
-        .text-center.text-center--d-90 Приглашаем познакомиться с&nbsp;новостями о&nbsp;ключевых событиях нашей экосистемы заботы о&nbsp;людях с&nbsp;деменцией
+    +titlePage('Новости')
+    +breadcrumbs([
+      { title: 'Главная', url: 'index.html' },
+      { title: 'Новости', current: true }
+    ])
 
-        
-    .news-list
-      .container
-        .news-list__items
+    article.article
+      +heroImage('./img/hero-image/news-list.jpg', 'Новости')
+      
+      .box 
+        .container 
+          .text-center.text-center--d-90 Приглашаем познакомиться с&nbsp;новостями о&nbsp;ключевых событиях нашей экосистемы заботы о&nbsp;людях с&nbsp;деменцией
 
-          //- .news-list__item
-          //-   .news-list__img 
-          //-     picture
-          //-       img(src='./img/page/news-list/1.jpg' class="img-adaptive" alt="Ученые раскрыли, почему стареющий мозг теряет защиту от&nbsp;деменции")
-          //-   .news-list__content
-          //-     .news-list__date 13/08/2025
-          //-     .news-list__title Ученые раскрыли, почему стареющий мозг теряет защиту от&nbsp;деменции Ученые раскрыли, почему стареющий мозг теряет защиту от&nbsp;деменции
-          //-     .news-list__text Ежедневная забота о&nbsp;близком человеке с&nbsp;деменцией требует много сил, терпения и&nbsp;эмоциональной устойчивости. Ежедневная забота о&nbsp;близком человеке с&nbsp;деменцией требует много сил, терпения и&nbsp;эмоциональной устойчивости. Ежедневная забота о&nbsp;близком человеке с&nbsp;деменцией требует много сил, терпения и&nbsp;эмоциональной устойчивости. Ежедневная забота о&nbsp;близком человеке с&nbsp;деменцией требует много сил, терпения и&nbsp;эмоциональной устойчивости.
+          
+      .news-list
+        .container
+          .news-list__items
+            each el in dataNews
+              a.news-list__item(href="#")
+                .news-list__img 
+                  picture
+                    img(src=el.imgNumber class="img-adaptive" alt="Ученые раскрыли, почему стареющий мозг теряет защиту от&nbsp;деменции")
+                .news-list__content
+                  .news-list__date 
+                    != el.date
+                  .news-list__title 
+                    != el.title
+                  .news-list__text
+                    != el.text
 
-          each el in dataNews
-            a.news-list__item(href="#")
-              .news-list__img 
-                picture
-                  img(src=el.imgNumber class="img-adaptive" alt="Ученые раскрыли, почему стареющий мозг теряет защиту от&nbsp;деменции")
-              .news-list__content
-                .news-list__date 
-                  != el.date
-                .news-list__title 
-                  != el.title
-                .news-list__text
-                  != el.text
+      .text-center       
+        a(href="#" class="btn__gold btn__icon")
+          span.btn__text Загрузить еще
+          span.btn__svg
+            +svgDataArrow('bottom')
 
-    .text-center       
-      a(href="#" class="btn__gold btn__icon")
-        span.btn__text Загрузить еще
-        span.btn__svg
-          +svgDataArrow('bottom')
+      nav.pagination
+        .container
+          .pagination__wrapper
+            a.pagination__arrow.pagination__arrow--disabled
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.278323 5.33344L5.65586 -1.17509e-07L7 1.33312L2.29454 6L7 10.6669L5.65585 12L0.278323 6.66656C0.100113 6.48976 5.02681e-07 6.25 5.24537e-07 6C5.46392e-07 5.75 0.100113 5.51024 0.278323 5.33344Z" fill="#B3D9FB"/>
+              </svg>
+            // Номера страниц
+            .pagination__numbers
+              a.pagination__number(href=`${baseUrl}?page=1`) 1
+              // Первая страница
+              span.pagination__dots ...
+              a.pagination__number.pagination__number--current(href='#')= 4
+              a.pagination__number(href='#')= 5
 
-    nav.pagination
-      .container
-        .pagination__wrapper
-          a.pagination__arrow.pagination__arrow--disabled
-            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.278323 5.33344L5.65586 -1.17509e-07L7 1.33312L2.29454 6L7 10.6669L5.65585 12L0.278323 6.66656C0.100113 6.48976 5.02681e-07 6.25 5.24537e-07 6C5.46392e-07 5.75 0.100113 5.51024 0.278323 5.33344Z" fill="#B3D9FB"/>
-            </svg>
-          // Номера страниц
-          .pagination__numbers
-            a.pagination__number(href=`${baseUrl}?page=1`) 1
-            // Первая страница
-            span.pagination__dots ...
-            a.pagination__number.pagination__number--current(href='#')= 4
-            a.pagination__number(href='#')= 5
-
-          a.pagination__arrow.pagination__arrow--next(href="#")
-            svg(width="7" height="12" viewBox="0 0 7 12" fill="none")
-              path(fill-rule="evenodd" clip-rule="evenodd" d="M6.72168 6.66656L1.34415 12L0 10.6669L4.70546 6L0 1.33312L1.34415 0L6.72168 5.33344C6.89989 5.51024 7 5.75 7 6C7 6.25 6.89989 6.48976 6.72168 6.66656Z")
+            a.pagination__arrow.pagination__arrow--next(href="#")
+              svg(width="7" height="12" viewBox="0 0 7 12" fill="none")
+                path(fill-rule="evenodd" clip-rule="evenodd" d="M6.72168 6.66656L1.34415 12L0 10.6669L4.70546 6L0 1.33312L1.34415 0L6.72168 5.33344C6.89989 5.51024 7 5.75 7 6C7 6.25 6.89989 6.48976 6.72168 6.66656Z")
